@@ -1,20 +1,25 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  pass-share
 //
-//  Created by Ching-Yi Lin on 2019/3/17.
+//  Created by Dev on 2019/3/25.
 //  Copyright © 2019 Pass Share. All rights reserved.
 //
 
 import UIKit
 import AuthenticationServices
 
-class ViewController: UIViewController {
-    
+class MainViewController: UITabBarController {
+    var btn : UIButton = UIButton()
     var store: ASCredentialIdentityStore = ASCredentialIdentityStore.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        provideCredentialToAutoFill()
+        setupBtn()
+    }
+    
+    func provideCredentialToAutoFill() {
         writeDemoData()
         let credential = RealmAPI.shared.read(filterBy: "demo_identifier")
         
@@ -27,6 +32,20 @@ class ViewController: UIViewController {
         }
     }
     
+    func setupBtn() {
+        // Setting image
+        let image = UIImage(named: "add-white")
+        btn.setImage(image, for: .normal)
+        
+        // Setting btn position
+        btn.frame.size = CGSize(width: 60, height: 60)
+        btn.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.height/2 - 15)
+        
+        // Adding btn to tab bar
+        tabBar.addSubview(btn)
+        btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
+    }
+    
     func writeDemoData() {
         let credential = Credential()
         credential.identifier = "demo_identifier"
@@ -35,5 +54,9 @@ class ViewController: UIViewController {
         credential.password = "demo1234"
         RealmAPI.shared.write(data: credential)
     }
+    
+    @objc func btnClick() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewLogin")
+        present(vc!, animated: true, completion: nil)
+    }
 }
-

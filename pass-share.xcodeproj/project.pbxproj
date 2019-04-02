@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1671373A223F1D8300BFCC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16713739223F1D8300BFCC9D /* AppDelegate.swift */; };
-		1671373C223F1D8300BFCC9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671373B223F1D8300BFCC9D /* ViewController.swift */; };
 		1671373F223F1D8300BFCC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1671373D223F1D8300BFCC9D /* Main.storyboard */; };
-		16713741223F1D8400BFCC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16713740223F1D8400BFCC9D /* Assets.xcassets */; };
 		16713744223F1D8400BFCC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16713742223F1D8400BFCC9D /* LaunchScreen.storyboard */; };
 		6D8659FF2244BF240060417B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8659FE2244BF240060417B /* AuthenticationServices.framework */; };
 		6D865A052244C77B0060417B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8659FE2244BF240060417B /* AuthenticationServices.framework */; };
@@ -25,6 +23,9 @@
 		B665CFDB22520068003DDFB5 /* RealmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665CFD52251E1CC003DDFB5 /* RealmAPI.swift */; };
 		B665CFDC225200DB003DDFB5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B629CA1622519C57004A80B3 /* Realm.framework */; };
 		B665CFDD225200DB003DDFB5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B629CA1722519C57004A80B3 /* RealmSwift.framework */; };
+		D74B4F0A22483914003D7345 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B4F0922483914003D7345 /* MainViewController.swift */; };
+		D74B4F0C22483D4D003D7345 /* AddNewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B4F0B22483D4D003D7345 /* AddNewLoginViewController.swift */; };
+		D751C8C1225130490011C08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D751C8C0225130480011C08C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +55,7 @@
 /* Begin PBXFileReference section */
 		16713736223F1D8300BFCC9D /* pass-share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pass-share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16713739223F1D8300BFCC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1671373B223F1D8300BFCC9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1671373E223F1D8300BFCC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		16713740223F1D8400BFCC9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16713743223F1D8400BFCC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16713745223F1D8400BFCC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D8659FC2244BF240060417B /* pass-share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pass-share.entitlements"; sourceTree = "<group>"; };
@@ -70,6 +69,9 @@
 		B629CA1722519C57004A80B3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		B629CA1C2251A2C5004A80B3 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		B665CFD52251E1CC003DDFB5 /* RealmAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAPI.swift; sourceTree = "<group>"; };
+		D74B4F0922483914003D7345 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D74B4F0B22483D4D003D7345 /* AddNewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLoginViewController.swift; sourceTree = "<group>"; };
+		D751C8C0225130480011C08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,13 +121,14 @@
 			isa = PBXGroup;
 			children = (
 				B629CA1E2251A3CD004A80B3 /* realm */,
+				D751C8C0225130480011C08C /* Assets.xcassets */,
 				6D8659FC2244BF240060417B /* pass-share.entitlements */,
 				16713739223F1D8300BFCC9D /* AppDelegate.swift */,
-				1671373B223F1D8300BFCC9D /* ViewController.swift */,
 				1671373D223F1D8300BFCC9D /* Main.storyboard */,
-				16713740223F1D8400BFCC9D /* Assets.xcassets */,
 				16713742223F1D8400BFCC9D /* LaunchScreen.storyboard */,
 				16713745223F1D8400BFCC9D /* Info.plist */,
+				D74B4F0B22483D4D003D7345 /* AddNewLoginViewController.swift */,
+				D74B4F0922483914003D7345 /* MainViewController.swift */,
 			);
 			path = "pass-share";
 			sourceTree = "<group>";
@@ -233,12 +236,12 @@
 					};
 					6D865A032244C77B0060417B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
 						};
-						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -267,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16713744223F1D8400BFCC9D /* LaunchScreen.storyboard in Resources */,
-				16713741223F1D8400BFCC9D /* Assets.xcassets in Resources */,
+				D751C8C1225130490011C08C /* Assets.xcassets in Resources */,
 				1671373F223F1D8300BFCC9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B665CFD62251E1CC003DDFB5 /* RealmAPI.swift in Sources */,
-				1671373C223F1D8300BFCC9D /* ViewController.swift in Sources */,
+				D74B4F0A22483914003D7345 /* MainViewController.swift in Sources */,
+				D74B4F0C22483D4D003D7345 /* AddNewLoginViewController.swift in Sources */,
 				B629CA1D2251A2C5004A80B3 /* Credential.swift in Sources */,
 				1671373A223F1D8300BFCC9D /* AppDelegate.swift in Sources */,
 			);
