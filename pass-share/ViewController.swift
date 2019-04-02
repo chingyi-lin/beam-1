@@ -15,13 +15,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        writeDemoData()
+        let credential = RealmAPI.shared.read(filterBy: "demo_identifier")
+        
         // Do any additional setup after loading the view, typically from a nib.
-        let serviceIdentifier = ASCredentialServiceIdentifier.init(identifier: "twitter.com", type: ASCredentialServiceIdentifier.IdentifierType.domain)
-        let identity = ASPasswordCredentialIdentity.init(serviceIdentifier: serviceIdentifier, user: "j_appleseed", recordIdentifier: "j_appleseed")
+        let serviceIdentifier = ASCredentialServiceIdentifier.init(identifier: credential.domain, type: ASCredentialServiceIdentifier.IdentifierType.domain)
+        let identity = ASPasswordCredentialIdentity.init(serviceIdentifier: serviceIdentifier, user: credential.username, recordIdentifier: credential.identifier)
         
         store.saveCredentialIdentities([identity]) { (bool, error) in
             print("saveCredentialIdentities done")
         }
+    }
+    
+    func writeDemoData() {
+        let credential = Credential()
+        credential.identifier = "demo_identifier"
+        credential.username = "realm_demo_user"
+        credential.domain = "twitter.com"
+        credential.password = "demo1234"
+        RealmAPI.shared.write(data: credential)
     }
 }
 

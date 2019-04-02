@@ -7,6 +7,8 @@
 //
 
 import AuthenticationServices
+import RealmSwift
+
 
 class CredentialProviderViewController: ASCredentialProviderViewController {
 
@@ -29,7 +31,8 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     override func provideCredentialWithoutUserInteraction(for credentialIdentity: ASPasswordCredentialIdentity) {
         let databaseIsUnlocked = true
         if (databaseIsUnlocked) {
-            let passwordCredential = ASPasswordCredential(user: "j_appleseed", password: "apple1234")
+            let credential = RealmAPI.shared.read(filterBy: credentialIdentity.recordIdentifier!)
+            let passwordCredential = ASPasswordCredential(user: credential.username, password: credential.password)
             self.extensionContext.completeRequest(withSelectedCredential: passwordCredential, completionHandler: nil)
         } else {
             self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code:ASExtensionError.userInteractionRequired.rawValue))

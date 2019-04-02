@@ -14,9 +14,17 @@
 		16713744223F1D8400BFCC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16713742223F1D8400BFCC9D /* LaunchScreen.storyboard */; };
 		6D8659FF2244BF240060417B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8659FE2244BF240060417B /* AuthenticationServices.framework */; };
 		6D865A052244C77B0060417B /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8659FE2244BF240060417B /* AuthenticationServices.framework */; };
-		6D865A082244C77B0060417B /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D865A072244C77B0060417B /* CredentialProviderViewController.swift */; };
 		6D865A0B2244C77B0060417B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D865A092244C77B0060417B /* MainInterface.storyboard */; };
 		6D865A102244C77B0060417B /* credential-provider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6D865A042244C77B0060417B /* credential-provider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B629CA1822519C57004A80B3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B629CA1622519C57004A80B3 /* Realm.framework */; };
+		B629CA1922519C57004A80B3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B629CA1722519C57004A80B3 /* RealmSwift.framework */; };
+		B629CA1D2251A2C5004A80B3 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = B629CA1C2251A2C5004A80B3 /* Credential.swift */; };
+		B665CFD62251E1CC003DDFB5 /* RealmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665CFD52251E1CC003DDFB5 /* RealmAPI.swift */; };
+		B665CFD922520018003DDFB5 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D865A072244C77B0060417B /* CredentialProviderViewController.swift */; };
+		B665CFDA22520068003DDFB5 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = B629CA1C2251A2C5004A80B3 /* Credential.swift */; };
+		B665CFDB22520068003DDFB5 /* RealmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665CFD52251E1CC003DDFB5 /* RealmAPI.swift */; };
+		B665CFDC225200DB003DDFB5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B629CA1622519C57004A80B3 /* Realm.framework */; };
+		B665CFDD225200DB003DDFB5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B629CA1722519C57004A80B3 /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +66,10 @@
 		6D865A0A2244C77B0060417B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		6D865A0C2244C77B0060417B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D865A0D2244C77B0060417B /* credential_provider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = credential_provider.entitlements; sourceTree = "<group>"; };
+		B629CA1622519C57004A80B3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		B629CA1722519C57004A80B3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		B629CA1C2251A2C5004A80B3 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		B665CFD52251E1CC003DDFB5 /* RealmAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D8659FF2244BF240060417B /* AuthenticationServices.framework in Frameworks */,
+				B629CA1822519C57004A80B3 /* Realm.framework in Frameworks */,
+				B629CA1922519C57004A80B3 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D865A052244C77B0060417B /* AuthenticationServices.framework in Frameworks */,
+				B665CFDC225200DB003DDFB5 /* Realm.framework in Frameworks */,
+				B665CFDD225200DB003DDFB5 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +118,7 @@
 		16713738223F1D8300BFCC9D /* pass-share */ = {
 			isa = PBXGroup;
 			children = (
+				B629CA1E2251A3CD004A80B3 /* realm */,
 				6D8659FC2244BF240060417B /* pass-share.entitlements */,
 				16713739223F1D8300BFCC9D /* AppDelegate.swift */,
 				1671373B223F1D8300BFCC9D /* ViewController.swift */,
@@ -116,6 +133,8 @@
 		6D8659FD2244BF240060417B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B629CA1622519C57004A80B3 /* Realm.framework */,
+				B629CA1722519C57004A80B3 /* RealmSwift.framework */,
 				6D8659FE2244BF240060417B /* AuthenticationServices.framework */,
 			);
 			name = Frameworks;
@@ -132,6 +151,23 @@
 			path = "credential-provider";
 			sourceTree = "<group>";
 		};
+		B629CA1B2251A270004A80B3 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				B629CA1C2251A2C5004A80B3 /* Credential.swift */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		B629CA1E2251A3CD004A80B3 /* realm */ = {
+			isa = PBXGroup;
+			children = (
+				B629CA1B2251A270004A80B3 /* objects */,
+				B665CFD52251E1CC003DDFB5 /* RealmAPI.swift */,
+			);
+			name = realm;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +179,7 @@
 				16713733223F1D8300BFCC9D /* Frameworks */,
 				16713734223F1D8300BFCC9D /* Resources */,
 				6D865A142244C77B0060417B /* Embed App Extensions */,
+				B629CA1A22519C91004A80B3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -161,6 +198,7 @@
 				6D865A002244C77B0060417B /* Sources */,
 				6D865A012244C77B0060417B /* Frameworks */,
 				6D865A022244C77B0060417B /* Resources */,
+				B665CFDE225200E1003DDFB5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -236,12 +274,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B629CA1A22519C91004A80B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		B665CFDE225200E1003DDFB5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16713732223F1D8300BFCC9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B665CFD62251E1CC003DDFB5 /* RealmAPI.swift in Sources */,
 				1671373C223F1D8300BFCC9D /* ViewController.swift in Sources */,
+				B629CA1D2251A2C5004A80B3 /* Credential.swift in Sources */,
 				1671373A223F1D8300BFCC9D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D865A082244C77B0060417B /* CredentialProviderViewController.swift in Sources */,
+				B665CFDA22520068003DDFB5 /* Credential.swift in Sources */,
+				B665CFDB22520068003DDFB5 /* RealmAPI.swift in Sources */,
+				B665CFD922520018003DDFB5 /* CredentialProviderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +500,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y6KDS2279Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "pass-share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,6 +526,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y6KDS2279Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "pass-share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +550,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y6KDS2279Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "credential-provider/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -480,6 +575,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y6KDS2279Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "credential-provider/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
