@@ -6,6 +6,10 @@ final class RealmAPI {
     let realm: Realm;
     
     private init() {
+        let fileManager = FileManager.default
+        let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.passshare.pass-share")!
+        let realmPath = directory.appendingPathComponent("db.realm")
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(fileURL: realmPath)
         realm = try! Realm()
     }
     

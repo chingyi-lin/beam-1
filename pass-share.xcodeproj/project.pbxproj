@@ -223,6 +223,9 @@
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.AutoFillCredentialProvider = {
 								enabled = 1;
 							};
@@ -230,6 +233,11 @@
 					};
 					6D865A032244C77B0060417B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 						LastSwiftMigration = 1020;
 					};
 				};
