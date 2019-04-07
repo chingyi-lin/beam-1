@@ -39,14 +39,11 @@ class AddNewLoginViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
-        let credential = Credential()
-        credential.identifier = "demo_identifier"
         if let username = usernameTextField.text, let domain = urlTextField.text,
             let password = passwordTextField.text {
-                credential.domain = domain
-                credential.username = username
-                credential.password = password
-                CloudKitAPI.shared.sync(credential)
+                let credential = Credential(domain, username, password)
+                let credentialRecord = credential.createCKRecord()
+                CloudKitAPI.shared.sync(credentialRecord)
         }
     }
     

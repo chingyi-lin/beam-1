@@ -13,10 +13,8 @@ final class CloudKitAPI {
         sharedDatabase = container.sharedCloudDatabase
     }
     
-    func sync(_ credential: Credential) {
-        let credentialRecord = credential.createCKRecord()
-       
-        privateDatabase.save(credentialRecord) {
+    func sync(_ ckRecord: CKRecord) {
+        privateDatabase.save(ckRecord) {
             (record, error) in
             if let error = error {
                 // Insert error handling
