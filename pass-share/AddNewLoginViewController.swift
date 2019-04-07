@@ -8,7 +8,6 @@
 
 import UIKit
 class AddNewLoginViewController: UIViewController {
-    
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -30,6 +29,7 @@ class AddNewLoginViewController: UIViewController {
         }
         saveButton.isEnabled = formIsValid
     }
+    
     @IBAction func close() {
         dismiss(animated: true, completion: nil)
     }
@@ -37,9 +37,19 @@ class AddNewLoginViewController: UIViewController {
     @IBAction func cancel(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func save(_ sender: UIButton) {
-        
+        let credential = Credential()
+        credential.identifier = "demo_identifier"
+        if let username = usernameTextField.text, let domain = urlTextField.text,
+            let password = passwordTextField.text {
+                credential.domain = domain
+                credential.username = username
+                credential.password = password
+                CloudKitAPI.shared.sync(credential)
+        }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

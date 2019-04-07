@@ -15,6 +15,7 @@
 		6D865A0B2244C77B0060417B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D865A092244C77B0060417B /* MainInterface.storyboard */; };
 		6D865A102244C77B0060417B /* credential-provider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6D865A042244C77B0060417B /* credential-provider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6D8A62EE225486D700329B0C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8A62ED225486D600329B0C /* CloudKit.framework */; };
+		6D8A62F22257357100329B0C /* CloudKitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8A62F12257357100329B0C /* CloudKitAPI.swift */; };
 		B629CA1822519C57004A80B3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B629CA1622519C57004A80B3 /* Realm.framework */; };
 		B629CA1922519C57004A80B3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B629CA1722519C57004A80B3 /* RealmSwift.framework */; };
 		B629CA1D2251A2C5004A80B3 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = B629CA1C2251A2C5004A80B3 /* Credential.swift */; };
@@ -67,6 +68,7 @@
 		6D865A0C2244C77B0060417B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D865A0D2244C77B0060417B /* credential_provider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = credential_provider.entitlements; sourceTree = "<group>"; };
 		6D8A62ED225486D600329B0C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		6D8A62F12257357100329B0C /* CloudKitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitAPI.swift; sourceTree = "<group>"; };
 		B629CA1622519C57004A80B3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		B629CA1722519C57004A80B3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		B629CA1C2251A2C5004A80B3 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		16713738223F1D8300BFCC9D /* pass-share */ = {
 			isa = PBXGroup;
 			children = (
+				6D8A62F0225730A900329B0C /* cloudkit */,
 				B629CA1E2251A3CD004A80B3 /* realm */,
 				D751C8C0225130480011C08C /* Assets.xcassets */,
 				6D8659FC2244BF240060417B /* pass-share.entitlements */,
@@ -156,6 +159,14 @@
 				6D865A0D2244C77B0060417B /* credential_provider.entitlements */,
 			);
 			path = "credential-provider";
+			sourceTree = "<group>";
+		};
+		6D8A62F0225730A900329B0C /* cloudkit */ = {
+			isa = PBXGroup;
+			children = (
+				6D8A62F12257357100329B0C /* CloudKitAPI.swift */,
+			);
+			path = cloudkit;
 			sourceTree = "<group>";
 		};
 		B629CA1B2251A270004A80B3 /* objects */ = {
@@ -346,6 +357,7 @@
 				D74B4F0C22483D4D003D7345 /* AddNewLoginViewController.swift in Sources */,
 				B629CA1D2251A2C5004A80B3 /* Credential.swift in Sources */,
 				1671373A223F1D8300BFCC9D /* AppDelegate.swift in Sources */,
+				6D8A62F22257357100329B0C /* CloudKitAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
