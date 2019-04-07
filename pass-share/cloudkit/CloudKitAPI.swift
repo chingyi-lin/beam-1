@@ -14,17 +14,13 @@ final class CloudKitAPI {
     }
     
     func sync(_ credential: Credential) {
-        let credentialRecord = CKRecord(recordType: "Credential")
-        credentialRecord["identifier"] = credential.identifier
-        credentialRecord["username"] = credential.username
-        credentialRecord["domain"] = credential.domain
-        credentialRecord["password"] = credential.password
+        let credentialRecord = credential.createCKRecord()
        
         privateDatabase.save(credentialRecord) {
             (record, error) in
             if let error = error {
                 // Insert error handling
-                print("Failed to sync to iCloud")
+                print("Failed to sync to iCloud: '\(error)'")
                 return
             }
             print("Successfully sync to iCloud")
