@@ -22,4 +22,8 @@ final class RealmAPI {
     func read(filterBy identifier: String) -> Credential {
         return realm.objects(Credential.self).filter("identifier = '\(identifier)'").first!
     }
+    
+    func readAll() -> Results<Credential> {
+        return realm.objects(Credential.self)
+    }
 }

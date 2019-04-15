@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  pass-share
 //
-//  Created by Dev on 2019/3/25.
+//  Created by CY on 2019/3/25.
 //  Copyright © 2019 Pass Share. All rights reserved.
 //
 
@@ -17,6 +17,13 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         provideCredentialToAutoFill()
         setupBtn()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("reloading data")
+        let data = RealmAPI.shared.readAll()
+        print(data.count)
     }
     
     func provideCredentialToAutoFill() {
@@ -49,6 +56,7 @@ class MainViewController: UITabBarController {
     func writeDemoData() {
         let credential = Credential()
         credential.identifier = "demo_identifier"
+        credential.sitename = "demo_site"
         credential.username = "realm_demo_user"
         credential.domain = "twitter.com"
         credential.password = "demo1234"
