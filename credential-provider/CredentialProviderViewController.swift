@@ -12,8 +12,6 @@ import RealmSwift
 
 class CredentialProviderViewController: ASCredentialProviderViewController {
     
-//    BeamExtTableEmbedSegue
-    
     var beamExtTableViewController: BeamExtTablveViewController?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
