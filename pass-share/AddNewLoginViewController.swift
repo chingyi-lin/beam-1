@@ -12,6 +12,8 @@ class AddNewLoginViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIButton!
     
+    var credentialID: String?
+    
     var loginFormTableViewController: LoginFormTableViewController?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -19,6 +21,10 @@ class AddNewLoginViewController: UIViewController {
         if segue.identifier == "loginFormEmbedSegue" {
             loginFormTableViewController = (segue.destination as! LoginFormTableViewController)
             loginFormTableViewController?.loginFormTableDelegate = self
+        }
+        if segue.identifier == "addNewLoginToLoginDetail" {
+            let displayVC = (segue.destination as! LoginViewController)
+            displayVC.credentialID = self.credentialID
         }
     }
     
@@ -28,7 +34,7 @@ class AddNewLoginViewController: UIViewController {
     
     @IBAction func save(_ sender: UIButton) {
         if let sitename = loginFormTableViewController?.siteNameTextField.text,
-            let domain = loginFormTableViewController?.urlTextField.text,
+            let domain = loginFormTableViewController?.urlTextField.text?.lowercased(),
             let username = loginFormTableViewController?.usernameTextField.text,
             let password = loginFormTableViewController?.passwordTextField.text {
                 let credential = Credential(sitename, domain, username, password)
@@ -36,6 +42,7 @@ class AddNewLoginViewController: UIViewController {
                 CloudKitAPI.shared.sync(credentialRecord)
                 RealmAPI.shared.write(data: credential)
                 print("Saved. Going to the detail page")
+                credentialID = credential.credentialID
                 self.performSegue(withIdentifier: "addNewLoginToLoginDetail", sender: self)
         }
     }

@@ -51,6 +51,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="sharedWithImage" destination="fU5-XJ-RhH" id="btv-XB-LJn"/>
+                                    <outlet property="siteImage" destination="I0K-Wa-mjJ" id="thj-QI-Yeg"/>
                                     <outlet property="urlLabel" destination="afe-Tg-x58" id="ZRZ-q6-po9"/>
                                     <outlet property="usernameLabel" destination="3cC-NQ-Lnc" id="UbV-6R-bbo"/>
                                 </connections>
@@ -99,7 +101,7 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-v3-M6L">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-v3-M6L">
                                 <rect key="frame" x="0.0" y="192" width="375" height="212"/>
                                 <connections>
                                     <segue destination="Zib-eZ-ltu" kind="embed" identifier="beamExtTableEmbedSegue" id="g8P-Y5-24K"/>
@@ -115,6 +117,7 @@
                             <constraint firstItem="VvI-v3-M6L" firstAttribute="leading" secondItem="3wq-kG-lGu" secondAttribute="leading" id="KM0-hM-QE4"/>
                             <constraint firstItem="wbI-uH-kmE" firstAttribute="top" secondItem="sGd-er-tQz" secondAttribute="bottom" constant="17" id="Qlb-0H-hNu"/>
                             <constraint firstItem="3wq-kG-lGu" firstAttribute="width" secondItem="BuU-Ak-iZz" secondAttribute="width" id="UkD-v4-BcH"/>
+                            <constraint firstItem="Ky8-vK-JVj" firstAttribute="bottom" secondItem="VvI-v3-M6L" secondAttribute="bottom" constant="263" id="dOD-ey-A8C"/>
                             <constraint firstItem="wbI-uH-kmE" firstAttribute="trailing" secondItem="3wq-kG-lGu" secondAttribute="trailing" id="ng3-SI-yam"/>
                             <constraint firstItem="VvI-v3-M6L" firstAttribute="trailing" secondItem="3wq-kG-lGu" secondAttribute="trailing" id="pNZ-Bw-Dra"/>
                             <constraint firstItem="3wq-kG-lGu" firstAttribute="centerX" secondItem="BuU-Ak-iZz" secondAttribute="centerX" id="rtV-5c-0bl"/>

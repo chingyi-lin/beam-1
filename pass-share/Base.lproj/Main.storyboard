@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2KX-OC-cIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="1001"/>
+            <point key="canvasLocation" x="954" y="976"/>
         </scene>
         <!--Add New Login View Controller-->
         <scene sceneID="xgf-kq-luA">
@@ -228,12 +228,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgv-Vw-Sgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2092" y="1644"/>
+            <point key="canvasLocation" x="-287" y="857"/>
         </scene>
-        <!--Login Detail View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="U45-Fe-pRv">
             <objects>
-                <viewController id="FcO-TW-6B3" customClass="LoginDetailViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FcO-TW-6B3" customClass="LoginViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Jx-FQ-1k3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -343,13 +343,14 @@
                         <outlet property="cancelBtn" destination="G7A-Us-Uix" id="vdB-2c-pnR"/>
                         <outlet property="detailView" destination="ht6-iL-n95" id="rMh-lb-08M"/>
                         <outlet property="segmentedControlBtn" destination="5Ef-Ff-fCo" id="yc1-OG-Hsx"/>
+                        <outlet property="sitenameLabel" destination="oyx-qI-Mvv" id="nEQ-fC-yNS"/>
                         <segue destination="8FS-S9-hO5" kind="show" id="BMI-UZ-Q46"/>
                         <segue destination="Y1t-d5-PVl" kind="show" identifier="cancelLoginDetailToGoBackMainView" id="YjG-tG-QBN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhY-tW-dUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1310" y="1980"/>
+            <point key="canvasLocation" x="-2351" y="1797"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XWK-PX-yyc">
@@ -388,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8A-Uy-tdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="2369"/>
+            <point key="canvasLocation" x="-986" y="1797"/>
         </scene>
         <!--Beam Table View Controller-->
         <scene sceneID="ZhS-JC-m9T">
@@ -450,7 +451,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30Z-bq-Pz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2722.4000000000001" y="1000.2998500749626"/>
+            <point key="canvasLocation" x="-3089" y="1000"/>
         </scene>
         <!--Beam-->
         <scene sceneID="L14-Gu-GuR">
@@ -524,7 +525,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1828" y="1000.7496251874064"/>
+            <point key="canvasLocation" x="-2350" y="955"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="dML-aE-CaJ">
@@ -546,10 +547,10 @@
             </objects>
             <point key="canvasLocation" x="-986" y="204"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Detail View Controller-->
         <scene sceneID="1pf-VO-Zm0">
             <objects>
-                <viewController id="ohb-OU-EBP" sceneMemberID="viewController">
+                <viewController id="ohb-OU-EBP" customClass="LoginDetailViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kxb-4F-kbw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -684,10 +685,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ba-M9-gyo"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordLabel" destination="i9R-dS-hvG" id="KBz-2d-AtA"/>
+                        <outlet property="usernameLabel" destination="12v-HD-ra4" id="BQg-Dy-hEV"/>
+                        <outlet property="websiteLabel" destination="t9m-gP-sCN" id="gIw-NA-iii"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5a-GS-dI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1495.2" y="2627.5862068965521"/>
+            <point key="canvasLocation" x="-1714" y="2564"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FDb-k6-SIc">
@@ -702,7 +708,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTQ-15-Djt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="1778"/>
+            <point key="canvasLocation" x="-2968" y="2564"/>
         </scene>
     </scenes>
     <resources>

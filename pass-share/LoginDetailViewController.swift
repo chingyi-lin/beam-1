@@ -2,7 +2,7 @@
 //  LoginDetailViewController.swift
 //  pass-share
 //
-//  Created by CY on 2019/4/14.
+//  Created by CY on 2019/4/15.
 //  Copyright © 2019 Pass Share. All rights reserved.
 //
 
@@ -10,47 +10,18 @@ import UIKit
 
 class LoginDetailViewController: UIViewController {
     
-    @IBOutlet weak var cancelBtn: UIButton!
-    @IBOutlet weak var detailView: UIView!
+    var website: String?
+    var username: String?
+    var password: String?
     
-    @IBOutlet weak var activitiyView: UIView!
+    @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
     
-    @IBOutlet weak var segmentedControlBtn: UISegmentedControl!
-    
-    @IBAction func cancel(_ sender: Any) {
-        self.performSegue(withIdentifier: "cancelLoginDetailToGoBackMainView", sender: self)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSegmentedControlBtn()
-        self.detailView.alpha = 1
-        self.activitiyView.alpha = 0
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.detailView.alpha = 1
-        self.activitiyView.alpha = 0
-    }
-    
-    @IBAction func showComponent(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            UIView.animate(withDuration: 0.5, animations: {
-                self.detailView.alpha = 1
-                self.activitiyView.alpha = 0
-            })
-        } else {
-            UIView.animate(withDuration: 0.5, animations: {
-                self.detailView.alpha = 0
-                self.activitiyView.alpha = 1
-            })
-        }
-    }
-    func setupSegmentedControlBtn() {
-//        // First segment is selected by default
-//        segmentedControlBtn.selectedSegmentIndex = 0
-        // TODO: config UI style
-//        segmentedControlBtn.backgroundColor = .clear
-//        segmentedControlBtn.tintColor = .clear
+        websiteLabel.text = website
+        usernameLabel.text = username
+        passwordLabel.text = password
     }
 }

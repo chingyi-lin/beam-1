@@ -13,5 +13,7 @@ class BeamExtTableViewCell: UITableViewCell {
     @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     
+    @IBOutlet weak var siteImage: UIImageView!
+    @IBOutlet weak var sharedWithImage: UIImageView!
     var identifier: String = "none"
 }

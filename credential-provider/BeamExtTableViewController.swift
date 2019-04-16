@@ -28,7 +28,9 @@ class BeamExtTablveViewController: UITableViewController {
         let queryResult = RealmAPI.shared.readAll()
         for data in queryResult {
             credentials.append(data)
+            print(data.domain)
         }
+        print(credentials.count)
         self.tableView.reloadData()
     }
     
@@ -50,6 +52,8 @@ class BeamExtTablveViewController: UITableViewController {
         cell.urlLabel.text = credentials[indexPath.row].domain
         cell.usernameLabel.text = credentials[indexPath.row].username
         cell.identifier = credentials[indexPath.row].credentialID
+        cell.siteImage.image = UIImage(named: "sitelogo_default")
+        cell.sharedWithImage.image = UIImage(named:"profile_pic_small_24")
         
         return cell
     }
