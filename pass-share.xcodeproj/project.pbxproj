@@ -36,6 +36,7 @@
 		D716F75C2265608F00D1F77D /* LoginDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F75B2265608F00D1F77D /* LoginDetailViewController.swift */; };
 		D716F75D2265AB7D00D1F77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D716F74E2263D5D300D1F77D /* Assets.xcassets */; };
 		D716F75E2265AB7E00D1F77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D716F74E2263D5D300D1F77D /* Assets.xcassets */; };
+		D716F7602266680900D1F77D /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F75F2266680900D1F77D /* Access.swift */; };
 		D74B4F0A22483914003D7345 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B4F0922483914003D7345 /* MainViewController.swift */; };
 		D74B4F0C22483D4D003D7345 /* AddNewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B4F0B22483D4D003D7345 /* AddNewLoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		D716F7562264F9EC00D1F77D /* BeamExtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamExtTableViewController.swift; sourceTree = "<group>"; };
 		D716F7582264FB1400D1F77D /* BeamExtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamExtTableViewCell.swift; sourceTree = "<group>"; };
 		D716F75B2265608F00D1F77D /* LoginDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDetailViewController.swift; sourceTree = "<group>"; };
+		D716F75F2266680900D1F77D /* Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
 		D74B4F0922483914003D7345 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D74B4F0B22483D4D003D7345 /* AddNewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +203,7 @@
 			children = (
 				B629CA1C2251A2C5004A80B3 /* Credential.swift */,
 				6D2194C52259932D0089924D /* Object+CKRecord.swift */,
+				D716F75F2266680900D1F77D /* Access.swift */,
 			);
 			path = objects;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				D716F747225FB95800D1F77D /* LoginFormTableViewController.swift in Sources */,
 				6D2194C62259932D0089924D /* Object+CKRecord.swift in Sources */,
 				D716F75C2265608F00D1F77D /* LoginDetailViewController.swift in Sources */,
+				D716F7602266680900D1F77D /* Access.swift in Sources */,
 				B629CA1D2251A2C5004A80B3 /* Credential.swift in Sources */,
 				D716F7512264181B00D1F77D /* LoginViewController.swift in Sources */,
 				1671373A223F1D8300BFCC9D /* AppDelegate.swift in Sources */,
