@@ -15,27 +15,35 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        provideCredentialToAutoFill()
         setupBtn()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("reloading data")
-        let data = RealmAPI.shared.readAll()
-        print(data.count)
+        print("Main view will appear")
+        // Push credentials to auto fill when user is directed to the main page.
+        provideCredentialToAutoFill()
     }
     
+    //  TODO: Incremental update (look up supportsIncrementalUpdates)
     func provideCredentialToAutoFill() {
-        writeDemoData()
-        let credential = RealmAPI.shared.read(filterBy: "demo_identifier")
         
         // Do any additional setup after loading the view, typically from a nib.
-        let serviceIdentifier = ASCredentialServiceIdentifier.init(identifier: credential.domain, type: ASCredentialServiceIdentifier.IdentifierType.domain)
-        let identity = ASPasswordCredentialIdentity.init(serviceIdentifier: serviceIdentifier, user: credential.username, recordIdentifier: credential.identifier)
         
-        store.saveCredentialIdentities([identity]) { (bool, error) in
-            print("saveCredentialIdentities done")
+        let credentials = RealmAPI.shared.readAll()
+        print(credentials.count)
+        for credential in credentials {
+            let serviceIdentifier = ASCredentialServiceIdentifier.init(identifier: credential.domain, type: ASCredentialServiceIdentifier.IdentifierType.domain)
+            let identity = ASPasswordCredentialIdentity.init(serviceIdentifier: serviceIdentifier, user: credential.username, recordIdentifier: credential.credentialID)
+            // TODO: error handling
+//            store.saveCredentialIdentities([identity]) { (bool, error) in
+//                if (!bool) {
+//                    print(error)
+//                }
+//                print("saveCredentialIdentities done")
+//            }
+            store.saveCredentialIdentities([identity])
+            print("providing \(identity.recordIdentifier!)")
         }
     }
     
@@ -53,9 +61,10 @@ class MainViewController: UITabBarController {
         btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
     }
     
+    // TODO: Delete this function. It's more demo purpose.
     func writeDemoData() {
         let credential = Credential()
-        credential.identifier = "demo_identifier"
+        credential.credentialID = "demo_identifier"
         credential.sitename = "demo_site"
         credential.username = "realm_demo_user"
         credential.domain = "twitter.com"

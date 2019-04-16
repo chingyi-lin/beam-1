@@ -11,6 +11,19 @@ import RealmSwift
 
 
 class CredentialProviderViewController: ASCredentialProviderViewController {
+    
+//    BeamExtTableEmbedSegue
+    
+    var beamExtTableViewController: BeamExtTablveViewController?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "beamExtTableEmbedSegue" {
+            beamExtTableViewController = (segue.destination as! BeamExtTablveViewController)
+            beamExtTableViewController?.beamExtTableViewControllerDelegate = self
+            print("Delegating beamexttableview")
+        }
+    }
 
     /*
      Prepare your UI to list available credentials for the user to choose from. The items in
@@ -32,6 +45,7 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         let databaseIsUnlocked = true
         if (databaseIsUnlocked) {
             let credential = RealmAPI.shared.read(filterBy: credentialIdentity.recordIdentifier!)
+            print("in provider: \(credentialIdentity.recordIdentifier!)")
             let passwordCredential = ASPasswordCredential(user: credential.username, password: credential.password)
             self.extensionContext.completeRequest(withSelectedCredential: passwordCredential, completionHandler: nil)
         } else {
@@ -54,10 +68,19 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     @IBAction func cancel(_ sender: AnyObject?) {
         self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code: ASExtensionError.userCanceled.rawValue))
     }
+}
 
-    @IBAction func passwordSelected(_ sender: AnyObject?) {
-        let passwordCredential = ASPasswordCredential(user: "j_appleseed", password: "apple1234")
+extension CredentialProviderViewController: BeamExtTableViewControllerDelegate {
+    func rowDidSelect(identifierInSelectedRow credentialId: String) {
+        print("Select the row with id as \(credentialId)")
+        let databaseIsUnlocked = true
+        if (databaseIsUnlocked) {
+            let credential = RealmAPI.shared.read(filterBy: credentialId)
+        print("serving : \(credential.username)")
+        let passwordCredential = ASPasswordCredential(user: credential.username, password: credential.password)
         self.extensionContext.completeRequest(withSelectedCredential: passwordCredential, completionHandler: nil)
+        } else {
+            self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code:ASExtensionError.userInteractionRequired.rawValue))
+        }
     }
-
 }

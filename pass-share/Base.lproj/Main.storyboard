@@ -344,6 +344,7 @@
                         <outlet property="detailView" destination="ht6-iL-n95" id="rMh-lb-08M"/>
                         <outlet property="segmentedControlBtn" destination="5Ef-Ff-fCo" id="yc1-OG-Hsx"/>
                         <segue destination="8FS-S9-hO5" kind="show" id="BMI-UZ-Q46"/>
+                        <segue destination="Y1t-d5-PVl" kind="show" identifier="cancelLoginDetailToGoBackMainView" id="YjG-tG-QBN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhY-tW-dUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -435,7 +436,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="moreBtn" destination="2n2-3V-UPb" id="5Mb-Y0-5p6"/>
+                                    <outlet property="moreBtn" destination="2n2-3V-UPb" id="ybK-6V-8x9"/>
                                     <outlet property="urlLabel" destination="Ym1-B8-CDw" id="e8H-fr-9vL"/>
                                     <outlet property="usernameLabel" destination="IrI-00-FoI" id="jpn-KR-U4W"/>
                                 </connections>
@@ -696,6 +697,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uGd-bQ-z2n"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTQ-15-Djt" userLabel="First Responder" sceneMemberID="firstResponder"/>

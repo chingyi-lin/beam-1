@@ -1,22 +1,20 @@
 //
-//  BeamTableViewController.swift
-//  pass-share
+//  BeamExtTableViewController.swift
+//  credential-provider
 //
-//  Created by CY on 2019/4/14.
+//  Created by CY on 2019/4/15.
 //  Copyright © 2019 Pass Share. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-protocol BeamTableViewControllerDelegate {
+protocol BeamExtTableViewControllerDelegate {
     func rowDidSelect(identifierInSelectedRow credentialId: String)
 }
-
-// TODO: implement deletion
-class BeamTableViewController: UITableViewController {
+class BeamExtTablveViewController: UITableViewController {
     
-    var beamTableViewControllerDelegate: BeamTableViewControllerDelegate!
+    var beamExtTableViewControllerDelegate: BeamExtTableViewControllerDelegate!
     var credentials = [Credential]()
     
     override func viewDidLoad() {
@@ -25,21 +23,18 @@ class BeamTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("reloading data: child view")
         super.viewWillAppear(animated)
-        print("credential empty")
         credentials = [Credential]()
         let queryResult = RealmAPI.shared.readAll()
         for data in queryResult {
             credentials.append(data)
         }
         self.tableView.reloadData()
-        print("crednetial fetched")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select row at index: \(indexPath.row)")
-        beamTableViewControllerDelegate.rowDidSelect(identifierInSelectedRow: self.credentials[indexPath.row].credentialID)
+        beamExtTableViewControllerDelegate.rowDidSelect(identifierInSelectedRow: self.credentials[indexPath.row].credentialID)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,13 +44,13 @@ class BeamTableViewController: UITableViewController {
         return credentials.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BeamTableViewCell", for: indexPath) as! BeamTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BeamExtTableViewCell", for: indexPath) as! BeamExtTableViewCell
         // Configure the cell
-
+        print(credentials[indexPath.row].domain)
         cell.urlLabel.text = credentials[indexPath.row].domain
         cell.usernameLabel.text = credentials[indexPath.row].username
         cell.identifier = credentials[indexPath.row].credentialID
-
+        
         return cell
     }
 }

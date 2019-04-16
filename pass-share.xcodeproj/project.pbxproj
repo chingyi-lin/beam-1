@@ -32,6 +32,9 @@
 		D716F74F2263D5D300D1F77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D716F74E2263D5D300D1F77D /* Assets.xcassets */; };
 		D716F7512264181B00D1F77D /* LoginDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F7502264181B00D1F77D /* LoginDetailViewController.swift */; };
 		D716F7532264280600D1F77D /* BeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F7522264280600D1F77D /* BeamViewController.swift */; };
+		D716F7572264F9EC00D1F77D /* BeamExtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F7562264F9EC00D1F77D /* BeamExtTableViewController.swift */; };
+		D716F7592264FB1400D1F77D /* BeamExtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F7582264FB1400D1F77D /* BeamExtTableViewCell.swift */; };
+		D716F75A22654E5B00D1F77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D716F74E2263D5D300D1F77D /* Assets.xcassets */; };
 		D74B4F0A22483914003D7345 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B4F0922483914003D7345 /* MainViewController.swift */; };
 		D74B4F0C22483D4D003D7345 /* AddNewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74B4F0B22483D4D003D7345 /* AddNewLoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +89,8 @@
 		D716F74E2263D5D300D1F77D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D716F7502264181B00D1F77D /* LoginDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDetailViewController.swift; sourceTree = "<group>"; };
 		D716F7522264280600D1F77D /* BeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamViewController.swift; sourceTree = "<group>"; };
+		D716F7562264F9EC00D1F77D /* BeamExtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamExtTableViewController.swift; sourceTree = "<group>"; };
+		D716F7582264FB1400D1F77D /* BeamExtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamExtTableViewCell.swift; sourceTree = "<group>"; };
 		D74B4F0922483914003D7345 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D74B4F0B22483D4D003D7345 /* AddNewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				6D865A072244C77B0060417B /* CredentialProviderViewController.swift */,
+				D716F7562264F9EC00D1F77D /* BeamExtTableViewController.swift */,
+				D716F7582264FB1400D1F77D /* BeamExtTableViewCell.swift */,
 				6D865A092244C77B0060417B /* MainInterface.storyboard */,
 				6D865A0C2244C77B0060417B /* Info.plist */,
 				6D865A0D2244C77B0060417B /* credential_provider.entitlements */,
@@ -318,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D716F75A22654E5B00D1F77D /* Assets.xcassets in Resources */,
 				6D865A0B2244C77B0060417B /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,9 +397,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D716F7572264F9EC00D1F77D /* BeamExtTableViewController.swift in Sources */,
 				B665CFDA22520068003DDFB5 /* Credential.swift in Sources */,
 				B665CFDB22520068003DDFB5 /* RealmAPI.swift in Sources */,
 				B665CFD922520018003DDFB5 /* CredentialProviderViewController.swift in Sources */,
+				D716F7592264FB1400D1F77D /* BeamExtTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

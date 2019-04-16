@@ -18,7 +18,7 @@ class LoginDetailViewController: UIViewController {
     @IBOutlet weak var segmentedControlBtn: UISegmentedControl!
     
     @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "cancelLoginDetailToGoBackMainView", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
