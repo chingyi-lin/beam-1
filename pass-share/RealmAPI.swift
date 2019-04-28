@@ -19,8 +19,32 @@ final class RealmAPI {
         }
     }
     
+    func update(data: Object) {
+        try! realm.write {
+            realm.add(data, update: true)
+        }
+    }
+    
+    func appendAccessToCredential(for data: Credential, with access: Access) {
+        try! realm.write {
+            data.accessArr.append(access)
+        }
+    }
+    
     func read(filterBy credentialID: String) -> Credential {
         return realm.objects(Credential.self).filter("credentialID = '\(credentialID)'").first!
+    }
+    
+    func readCredentialById(queryWith credentialID: String) -> Credential {
+        return realm.object(ofType: Credential.self, forPrimaryKey: credentialID)!
+    }
+    
+    func readAccess(filterBy accessID: String) -> Access {
+        return realm.objects(Access.self).filter("accessID = '\(accessID)'").first!
+    }
+    
+    func readContact(filterBy contactEmail: String) -> Contact {
+        return realm.objects(Contact.self).filter("email = '\(contactEmail)'").first!
     }
     
     func readAll() -> Results<Credential> {

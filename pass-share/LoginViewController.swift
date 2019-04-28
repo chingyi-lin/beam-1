@@ -40,10 +40,12 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "loginDetailShowDetail"){
             let displayVC = segue.destination as! LoginDetailViewController
-            let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
-            displayVC.website = selectedLogin.domain
-            displayVC.username = selectedLogin.username
-            displayVC.password = selectedLogin.password
+            displayVC.credentialID = self.credentialID
+            displayVC.loginDetailViewControllerDelegate = self
+        }
+        if segue.identifier == "loginDetailVCToManageShareVC" {
+            let displayVC = segue.destination as! ManageShareViewController
+            displayVC.credentialID = self.credentialID
         }
     }
     
@@ -66,5 +68,10 @@ class LoginViewController: UIViewController {
         // TODO: config UI style
 //        segmentedControlBtn.backgroundColor = .clear
 //        segmentedControlBtn.tintColor = .clear
+    }
+}
+extension LoginViewController: LoginDetailViewControllerDelegate {
+    func navigateToManageShareVC() {
+        self.performSegue(withIdentifier: "loginDetailVCToManageShareVC", sender: self)
     }
 }
