@@ -460,9 +460,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hKx-c3-Lg3">
-                                            <rect key="frame" x="270" y="9" width="100" height="33"/>
+                                            <rect key="frame" x="230" y="9" width="150" height="33"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="az6-X4-Pk7"/>
+                                                <constraint firstAttribute="width" constant="150" id="az6-X4-Pk7"/>
                                             </constraints>
                                             <state key="normal">
                                                 <attributedString key="attributedTitle">
@@ -502,7 +502,7 @@
                                         <constraint firstItem="JBt-TQ-ZLC" firstAttribute="top" secondItem="tIx-PK-AZ0" secondAttribute="bottom" constant="2" id="EoT-1a-Of6"/>
                                         <constraint firstItem="Wfw-Iw-UVK" firstAttribute="centerY" secondItem="JBt-TQ-ZLC" secondAttribute="centerY" id="QRj-0n-kfn"/>
                                         <constraint firstItem="tIx-PK-AZ0" firstAttribute="top" secondItem="11h-P8-cnY" secondAttribute="top" constant="15" id="QiS-ei-xiv"/>
-                                        <constraint firstAttribute="trailing" secondItem="hKx-c3-Lg3" secondAttribute="trailing" constant="5" id="YsA-5a-8Kd"/>
+                                        <constraint firstAttribute="trailing" secondItem="hKx-c3-Lg3" secondAttribute="trailing" constant="-5" id="YsA-5a-8Kd"/>
                                         <constraint firstItem="hKx-c3-Lg3" firstAttribute="centerY" secondItem="tIx-PK-AZ0" secondAttribute="centerY" id="oku-dh-Yqf"/>
                                         <constraint firstItem="f3T-1V-vGF" firstAttribute="centerY" secondItem="11h-P8-cnY" secondAttribute="centerY" id="u5C-xK-B0D"/>
                                         <constraint firstItem="tIx-PK-AZ0" firstAttribute="leading" secondItem="f3T-1V-vGF" secondAttribute="trailing" constant="13" id="vx4-m6-DeJ"/>

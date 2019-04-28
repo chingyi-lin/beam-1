@@ -42,7 +42,6 @@ class AddRecipientViewController: UIViewController, UITextViewDelegate {
             let nextVC = (segue.destination as! SetDurationViewController)
             nextVC.credentialID = credentialID
             nextVC.newAccess = newAccess
-            print("newAccess pass to next view")
         }
     }
     

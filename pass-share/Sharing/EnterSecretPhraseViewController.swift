@@ -18,6 +18,8 @@ class EnterSecretPhraseViewController: UIViewController {
     
     override func viewDidLoad() {
         self.title = "Secret Phrase"
+        nextBtn.isEnabled = false
+        updateBtnStyle(byStage: nextBtn.isEnabled)
         // Adjust keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(AddRecipientViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddRecipientViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -33,7 +35,6 @@ class EnterSecretPhraseViewController: UIViewController {
     }
     @IBAction func editDidChanged(_ sender: Any) {
         var formIsValid = true
-        // TODO: Validation needs to more specific
         if let isTextEmpty = secretPhraseTextField.text?.isEmpty {
             formIsValid = !isTextEmpty
         }

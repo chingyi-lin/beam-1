@@ -20,7 +20,7 @@ class ManageShareViewController: UIViewController {
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
         accessArr = Array(selectedLogin.accessArr)
         if selectedLogin.accessArr.count == 0 {
-            //set the alpha view = 1
+            //TODO: show the blank state view - set the alpha view = 1
         }
     }
     
@@ -29,8 +29,7 @@ class ManageShareViewController: UIViewController {
         if segue.identifier == "manageShareVCEmbedSegue" {
             manageShareTableVC = (segue.destination as! ManageShareTableViewController)
             manageShareTableVC?.credentialID = self.credentialID
-            manageShareTableVC?.manageShareTableViewControllerDelegate = self
-            print("Delegating managetableview")
+//            manageShareTableVC?.manageShareTableViewControllerDelegate = self
         }
         if segue.identifier == "mangeShareVCToAddRecipientNav" {
             let navController = segue.destination as! UINavigationController
@@ -40,19 +39,8 @@ class ManageShareViewController: UIViewController {
     }
     
     @IBAction func back(_ sender: Any) {
-//        dismiss(animated: true, completion: nil)
-        print("back")
-//        self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
-        print("over")
     }
     
 }
 
-extension ManageShareViewController: ManageShareTableViewControllerDelegate {
-//    func rowDidSelect(identifierInSelectedRow accessID: String) {
-//        print("Select the row with id as \(accessID)")
-//        self.accessID = accessID
-//        self.performSegue(withIdentifier: "beamTableCellToLoginDetail", sender: self)
-//    }
-}

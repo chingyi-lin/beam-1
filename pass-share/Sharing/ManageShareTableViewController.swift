@@ -8,12 +8,7 @@
 
 import UIKit
 
-protocol ManageShareTableViewControllerDelegate {
-    
-}
-
 class ManageShareTableViewController: UITableViewController {
-    var manageShareTableViewControllerDelegate: ManageShareTableViewControllerDelegate!
     var credentialID: String?
     var accessArr = [Access]()
     
@@ -46,8 +41,25 @@ class ManageShareTableViewController: UITableViewController {
         cell.receiverName.text = contact.name
         cell.receiverEmail.text = contact.email
         cell.status.text = accessArr[indexPath.row].status
-        cell.duration.setTitle(String(accessArr[indexPath.row].duration), for: UIControl.State.normal)
         cell.accessID = accessArr[indexPath.row].accessID
+        // Set up duration btn - need to adjust alignment
+        let style = NSMutableParagraphStyle()
+        var durationText = NSMutableAttributedString()
+        style.alignment = NSTextAlignment.right
+        switch accessArr[indexPath.row].duration {
+            case 0:
+                durationText = NSMutableAttributedString(string: "One-time Only", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
+            case 1:
+                durationText = NSMutableAttributedString(string: "30 Days", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
+            case 2:
+                durationText = NSMutableAttributedString(string: "No Expiration", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
+            case 3:
+                // TODO: custom date TBD
+                durationText = NSMutableAttributedString(string: "Custom Date", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
+            default:
+                durationText = NSMutableAttributedString(string: "Custom Date", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
+        }
+        cell.duration.setAttributedTitle(durationText, for: UIControl.State.normal)
         
         // TODO: implement revoke actions
         

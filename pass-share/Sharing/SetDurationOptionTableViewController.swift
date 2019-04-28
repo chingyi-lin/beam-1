@@ -18,22 +18,20 @@ class SetDurationOptionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select row at index: \(indexPath.row)")
-        var duration: Int
-        
-        switch indexPath.row {
-            case 0:
-                duration = 0
-            case 1:
-                duration = 30
-            case 2:
-                duration = -1
-            // TODO: custom date needs to be implemented
-            case 3:
-                duration = -1
-            default:
-                duration = 0
-        }
-        setDurationOptionTableViewControllerDelegate.rowDidSelect(duration)
+//        switch indexPath.row {
+//            case 0:
+//                duration = 0
+//            case 1:
+//                duration = 1
+//            case 2:
+//                duration = -1
+//            // TODO: custom date needs to be implemented
+//            case 3:
+//                duration = -1
+//            default:
+//                duration = 0
+//        }
+        setDurationOptionTableViewControllerDelegate.rowDidSelect(indexPath.row)
     }
     
 }

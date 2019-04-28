@@ -27,8 +27,6 @@ class SetDurationViewController: UIViewController {
             let nextVC = (segue.destination as! SetSeePasswordViewController)
             nextVC.newAccess = self.newAccess
             nextVC.credentialID = self.credentialID
-            print("newAccess pass to next view")
-            print(self.credentialID)
         }
     }
 }
