@@ -15,7 +15,11 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBadgeValue()
         setupBtn()
+        if RealmAPI.shared.readAllSharedInvitation().count == 0 {
+            writeDemoDataForAcceptFlow()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,15 +65,25 @@ class MainViewController: UITabBarController {
         btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
     }
     
+    func setupBadgeValue() {
+        tabBar.items![3].badgeValue = "1"
+    }
+    
     // TODO: Delete this function. It's more demo purpose.
     func writeDemoData() {
         let credential = Credential()
-        credential.credentialID = "demo_identifier"
         credential.sitename = "demo_site"
         credential.username = "realm_demo_user"
         credential.domain = "twitter.com"
         credential.password = "demo1234"
         RealmAPI.shared.write(data: credential)
+    }
+    
+    func writeDemoDataForAcceptFlow() {
+        let invite = ShareInvitation("Bank of America", "www.bankofamerica.com", "jason@gmail.com", "aH#DJ1K&**Als", 3, false, "ilovedonuts")
+        let activity = Activity("Jason wants to share Bank of America with you", true, invite.shareInvitationID)
+        RealmAPI.shared.write(data: invite)
+        RealmAPI.shared.write(data: activity)
     }
     
     @objc func btnClick() {

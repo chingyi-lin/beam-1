@@ -43,8 +43,24 @@ final class RealmAPI {
         return realm.objects(Access.self).filter("accessID = '\(accessID)'").first!
     }
     
+    func readActivity(filterBy activityID: String) -> Activity {
+        return realm.objects(Activity.self).filter("activityID = '\(activityID)'").first!
+    }
+    
+    func readSharedInvitation(filterBy shareInvitationID: String) -> ShareInvitation {
+        return realm.objects(ShareInvitation.self).filter("shareInvitationID = '\(shareInvitationID)'").first!
+    }
+    
     func readContact(filterBy contactEmail: String) -> Contact {
         return realm.objects(Contact.self).filter("email = '\(contactEmail)'").first!
+    }
+    
+    func readAllActivity() -> Results<Activity> {
+        return realm.objects(Activity.self)
+    }
+    
+    func readAllSharedInvitation() -> Results<ShareInvitation> {
+        return realm.objects(ShareInvitation.self)
     }
     
     func readAll() -> Results<Credential> {

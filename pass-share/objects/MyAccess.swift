@@ -10,7 +10,6 @@ import Foundation
 import RealmSwift
 
 class MyAccess: Object {
-    //  duration = 0 means one-time only
     @objc dynamic var isOwn = false
     @objc dynamic var grantBy = ""
     @objc dynamic var access: Access?
@@ -20,5 +19,11 @@ class MyAccess: Object {
         self.isOwn = isOwn
         self.grantBy = grantBy
         self.access = access
+    }
+    
+    convenience init(_ isOwn: Bool, _ grantBy: String) {
+        self.init()
+        self.isOwn = isOwn
+        self.grantBy = grantBy
     }
 }
