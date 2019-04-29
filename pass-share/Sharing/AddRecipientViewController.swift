@@ -19,6 +19,13 @@ class AddRecipientViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBAction func cancel(_ sender: Any) {
+        // Animation: right to left
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+        
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {

@@ -44,8 +44,9 @@ class LoginViewController: UIViewController {
             displayVC.loginDetailViewControllerDelegate = self
         }
         if segue.identifier == "loginDetailVCToManageShareVC" {
-            let displayVC = segue.destination as! ManageShareViewController
-            displayVC.credentialID = self.credentialID
+            let navController = segue.destination as! UINavigationController
+            let nextVC = navController.viewControllers.first as! ManageShareViewController
+            nextVC.credentialID = self.credentialID
         }
     }
     

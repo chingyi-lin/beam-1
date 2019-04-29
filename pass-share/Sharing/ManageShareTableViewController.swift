@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol ManageShareTableViewControllerDelegate {
+    func rowDidSelect(identifierInSelectedRow accessID: String)
+}
+
 class ManageShareTableViewController: UITableViewController {
     var credentialID: String?
     var accessArr = [Access]()
+    var manageShareTableViewControllerDelegate: ManageShareTableViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,10 @@ class ManageShareTableViewController: UITableViewController {
         accessArr = Array(selectedLogin.accessArr)
         self.tableView.reloadData()
         print("access fetched")
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("select row at index: \(indexPath.row)")
+        manageShareTableViewControllerDelegate.rowDidSelect(identifierInSelectedRow: self.accessArr[indexPath.row].accessID)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

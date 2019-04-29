@@ -55,6 +55,7 @@
 		D74A34A72276D82E0059609B /* TransitionFromLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34A62276D82E0059609B /* TransitionFromLeftToRight.swift */; };
 		D74A34A92276DCF90059609B /* LoginAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34A82276DCF90059609B /* LoginAddedViewController.swift */; };
 		D74A34AB2276EA950059609B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34AA2276EA950059609B /* UIView.swift */; };
+		D74A34AD227771030059609B /* ShareDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34AC227771030059609B /* ShareDetailViewController.swift */; };
 		D74A45EA226D37A30018DF91 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */; };
 		D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */; };
 		D74A45EE226D3BBE0018DF91 /* SetSeePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */; };
@@ -138,6 +139,7 @@
 		D74A34A62276D82E0059609B /* TransitionFromLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFromLeftToRight.swift; sourceTree = "<group>"; };
 		D74A34A82276DCF90059609B /* LoginAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAddedViewController.swift; sourceTree = "<group>"; };
 		D74A34AA2276EA950059609B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D74A34AC227771030059609B /* ShareDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDetailViewController.swift; sourceTree = "<group>"; };
 		D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 		D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationOptionTableViewController.swift; sourceTree = "<group>"; };
 		D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSeePasswordViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				D74A45F2226D924F0018DF91 /* SetSecretPhraseViewController.swift */,
 				D74A45F4226D93DF0018DF91 /* EnterSecretPhraseViewController.swift */,
 				D74A45F6226D94C30018DF91 /* ConfirmSharingViewController.swift */,
+				D74A34AC227771030059609B /* ShareDetailViewController.swift */,
 			);
 			path = Sharing;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				D74A3496227682840059609B /* ActionableActivityTableViewCell.swift in Sources */,
 				D74A45F3226D924F0018DF91 /* SetSecretPhraseViewController.swift in Sources */,
 				D74A45EA226D37A30018DF91 /* SetDurationViewController.swift in Sources */,
+				D74A34AD227771030059609B /* ShareDetailViewController.swift in Sources */,
 				D716F7682268262600D1F77D /* ManageShareTableViewController.swift in Sources */,
 				D716F7512264181B00D1F77D /* LoginViewController.swift in Sources */,
 				1671373A223F1D8300BFCC9D /* AppDelegate.swift in Sources */,
