@@ -25,6 +25,17 @@ class Credential: Object {
         self.activityArr.append(activity)
     }
     
+    convenience init(_ sitename: String, _ domain: String, _ username: String, _ password: String, _ activityText: String) {
+        self.init()
+        self.sitename = sitename
+        self.domain = domain
+        self.username = username
+        self.password = password
+        let activityText = activityText
+        let activity = Activity(activityText, false, self.credentialID)
+        self.activityArr.append(activity)
+    }
+    
     func addAccess(_ access: Access) {
         self.accessArr.append(access)
     }

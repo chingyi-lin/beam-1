@@ -19,6 +19,12 @@ final class RealmAPI {
         }
     }
     
+    func delete(data: Object) {
+        try! realm.write {
+            realm.delete(data)
+        }
+    }
+    
     func update(data: Object) {
         try! realm.write {
             realm.add(data, update: true)
@@ -47,7 +53,7 @@ final class RealmAPI {
         return realm.objects(Activity.self).filter("activityID = '\(activityID)'").first!
     }
     
-    func readSharedInvitation(filterBy shareInvitationID: String) -> ShareInvitation {
+    func readShareInvitation(filterBy shareInvitationID: String) -> ShareInvitation {
         return realm.objects(ShareInvitation.self).filter("shareInvitationID = '\(shareInvitationID)'").first!
     }
     
@@ -59,7 +65,7 @@ final class RealmAPI {
         return realm.objects(Activity.self)
     }
     
-    func readAllSharedInvitation() -> Results<ShareInvitation> {
+    func readAllShareInvitation() -> Results<ShareInvitation> {
         return realm.objects(ShareInvitation.self)
     }
     

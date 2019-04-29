@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ActionableActivityTableViewCellDelegate {
-    func acceptSharing(with shareInvitationID: String)
+    func acceptSharing(with shareInvitationID: String, _ activityID: String)
 }
 
 class ActionableActivityTableViewCell: UITableViewCell {
@@ -19,6 +19,7 @@ class ActionableActivityTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var activityLabel: UILabel!
     var shareInvitationID: String = ""
+    var activityID: String = ""
     
     
     @IBOutlet weak var declineBtn: UIButton!
@@ -26,6 +27,6 @@ class ActionableActivityTableViewCell: UITableViewCell {
     
     
     @IBAction func accept(_ sender: Any) {
-        actionableActivityTableViewCellDelegate.acceptSharing(with: self.shareInvitationID)
+        actionableActivityTableViewCellDelegate.acceptSharing(with: self.shareInvitationID, self.activityID)
     }
 }

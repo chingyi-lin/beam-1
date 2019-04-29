@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+        } else {
+            print("First launch, setting UserDefault.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            writeDemoDataForAcceptFlow()
+            print("loading demo")
+        }
         return true
     }
 
@@ -41,6 +50,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func writeDemoDataForAcceptFlow() {
+        let invite = ShareInvitation("Jason", "Bank of America", "www.bankofamerica.com", "jason@gmail.com", "aH#DJ1K&**Als", 1, false, "ilovedonuts")
+        let activity = Activity("Jason wants to share Bank of America with you.", true, invite.shareInvitationID)
+        RealmAPI.shared.write(data: invite)
+        RealmAPI.shared.write(data: activity)
+    }
+    
 }
 

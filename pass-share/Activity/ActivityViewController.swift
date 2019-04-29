@@ -11,6 +11,8 @@ import UIKit
 class ActivityViewController: UIViewController {
     
     var activityTableViewController: ActivityTableViewController?
+    var shareInvitationID: String?
+    var activityID: String?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -19,13 +21,19 @@ class ActivityViewController: UIViewController {
             activityTableViewController?.activityTableViewControllerDelegate = self
             print("Delegating activity table view")
         }
+        if segue.identifier == "activityVCToVerifySecretPhraseVC" {
+            let displayVC = (segue.destination as! VerifySecretPhraseViewController)
+            displayVC.shareInvitationID = self.shareInvitationID
+            displayVC.activityID = self.activityID
+        }
     }
     
 }
 
 extension ActivityViewController: ActivityTableViewControllerDelegate {
-    func acceptSharing(with shareInvitationID: String) {
-        print("accept!")
-        print(shareInvitationID)
+    func acceptSharing(with shareInvitationID: String, _ activityID: String) {
+        self.shareInvitationID = shareInvitationID
+        self.activityID = activityID
+        self.performSegue(withIdentifier: "activityVCToVerifySecretPhraseVC", sender: self)
     }
 }

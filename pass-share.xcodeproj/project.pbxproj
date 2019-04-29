@@ -51,6 +51,10 @@
 		D74A349C2276B1200059609B /* ShareInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A349B2276B1200059609B /* ShareInvitation.swift */; };
 		D74A349D2276B6F50059609B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A3497227685B10059609B /* Activity.swift */; };
 		D74A349E2276BBE90059609B /* ShareInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A349B2276B1200059609B /* ShareInvitation.swift */; };
+		D74A34A42276CD370059609B /* VerifySecretPhraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34A32276CD370059609B /* VerifySecretPhraseViewController.swift */; };
+		D74A34A72276D82E0059609B /* TransitionFromLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34A62276D82E0059609B /* TransitionFromLeftToRight.swift */; };
+		D74A34A92276DCF90059609B /* LoginAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34A82276DCF90059609B /* LoginAddedViewController.swift */; };
+		D74A34AB2276EA950059609B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34AA2276EA950059609B /* UIView.swift */; };
 		D74A45EA226D37A30018DF91 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */; };
 		D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */; };
 		D74A45EE226D3BBE0018DF91 /* SetSeePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */; };
@@ -130,6 +134,10 @@
 		D74A3497227685B10059609B /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		D74A349922768ABB0059609B /* ActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		D74A349B2276B1200059609B /* ShareInvitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareInvitation.swift; sourceTree = "<group>"; };
+		D74A34A32276CD370059609B /* VerifySecretPhraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifySecretPhraseViewController.swift; sourceTree = "<group>"; };
+		D74A34A62276D82E0059609B /* TransitionFromLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFromLeftToRight.swift; sourceTree = "<group>"; };
+		D74A34A82276DCF90059609B /* LoginAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAddedViewController.swift; sourceTree = "<group>"; };
+		D74A34AA2276EA950059609B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 		D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationOptionTableViewController.swift; sourceTree = "<group>"; };
 		D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSeePasswordViewController.swift; sourceTree = "<group>"; };
@@ -187,10 +195,11 @@
 		16713738223F1D8300BFCC9D /* pass-share */ = {
 			isa = PBXGroup;
 			children = (
-				D74A349022767C5F0059609B /* Activity */,
 				D716F74E2263D5D300D1F77D /* Assets.xcassets */,
 				6D8A62F0225730A900329B0C /* cloudkit */,
 				B629CA1E2251A3CD004A80B3 /* realm */,
+				D74A34A52276D8110059609B /* SegueAnimation */,
+				D74A349022767C5F0059609B /* Activity */,
 				D716F76D2268272A00D1F77D /* Sharing */,
 				6D8659FC2244BF240060417B /* pass-share.entitlements */,
 				16713745223F1D8400BFCC9D /* Info.plist */,
@@ -205,6 +214,7 @@
 				D716F74A2263CE5700D1F77D /* BeamTableViewCell.swift */,
 				D716F7502264181B00D1F77D /* LoginViewController.swift */,
 				D716F75B2265608F00D1F77D /* LoginDetailViewController.swift */,
+				D74A34AA2276EA950059609B /* UIView.swift */,
 			);
 			path = "pass-share";
 			sourceTree = "<group>";
@@ -286,10 +296,20 @@
 			children = (
 				D74A349122767C8B0059609B /* ActivityViewController.swift */,
 				D74A349922768ABB0059609B /* ActivityTableViewController.swift */,
-				D74A3493227682770059609B /* DisplayActivityTableViewCell.swift */,
 				D74A3495227682840059609B /* ActionableActivityTableViewCell.swift */,
+				D74A3493227682770059609B /* DisplayActivityTableViewCell.swift */,
+				D74A34A32276CD370059609B /* VerifySecretPhraseViewController.swift */,
+				D74A34A82276DCF90059609B /* LoginAddedViewController.swift */,
 			);
 			path = Activity;
+			sourceTree = "<group>";
+		};
+		D74A34A52276D8110059609B /* SegueAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D74A34A62276D82E0059609B /* TransitionFromLeftToRight.swift */,
+			);
+			path = SegueAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,10 +490,12 @@
 				D74B4F0A22483914003D7345 /* MainViewController.swift in Sources */,
 				D716F74B2263CE5700D1F77D /* BeamTableViewCell.swift in Sources */,
 				D74B4F0C22483D4D003D7345 /* AddNewLoginViewController.swift in Sources */,
+				D74A34A72276D82E0059609B /* TransitionFromLeftToRight.swift in Sources */,
 				D716F7662268254A00D1F77D /* ManageShareViewController.swift in Sources */,
 				D716F747225FB95800D1F77D /* LoginFormTableViewController.swift in Sources */,
 				D74A349A22768ABB0059609B /* ActivityTableViewController.swift in Sources */,
 				6D2194C62259932D0089924D /* Object+CKRecord.swift in Sources */,
+				D74A34AB2276EA950059609B /* UIView.swift in Sources */,
 				D74A45F7226D94C30018DF91 /* ConfirmSharingViewController.swift in Sources */,
 				D716F75C2265608F00D1F77D /* LoginDetailViewController.swift in Sources */,
 				D716F7602266680900D1F77D /* Access.swift in Sources */,
@@ -488,7 +510,9 @@
 				D716F7492263CD8E00D1F77D /* BeamTableViewController.swift in Sources */,
 				D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */,
 				D716F7532264280600D1F77D /* BeamViewController.swift in Sources */,
+				D74A34A42276CD370059609B /* VerifySecretPhraseViewController.swift in Sources */,
 				D74A45F5226D93DF0018DF91 /* EnterSecretPhraseViewController.swift in Sources */,
+				D74A34A92276DCF90059609B /* LoginAddedViewController.swift in Sources */,
 				D716F76F226827BA00D1F77D /* ManageShareTableCell.swift in Sources */,
 				D716F76A2268267500D1F77D /* AddRecipientViewController.swift in Sources */,
 			);

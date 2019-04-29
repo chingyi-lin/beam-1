@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ActivityTableViewControllerDelegate {
-    func acceptSharing(with shareInvitationID: String)
+    func acceptSharing(with shareInvitationID: String, _ activityID: String)
 }
 
 class ActivityTableViewController: UITableViewController {
@@ -54,7 +54,7 @@ class ActivityTableViewController: UITableViewController {
         if activities[indexPath.row].isActionable {
             let cell = tableView.dequeueReusableCell(withIdentifier: "actionableActivityTableViewCell", for: indexPath) as! ActionableActivityTableViewCell
             cell.shareInvitationID = activities[indexPath.row].shareInvitationID
-            print(cell.shareInvitationID)
+            cell.activityID = activities[indexPath.row].activityID
             cell.actionableActivityTableViewCellDelegate = self
             cell.activityLabel?.text = activities[indexPath.row].text
             cell.timeLabel?.text = formatter.string(from: activities[indexPath.row].time)
@@ -69,7 +69,7 @@ class ActivityTableViewController: UITableViewController {
 }
 
 extension ActivityTableViewController: ActionableActivityTableViewCellDelegate {
-    func acceptSharing(with shareInvitationID: String) {
-        activityTableViewControllerDelegate.acceptSharing(with: shareInvitationID)
+    func acceptSharing(with shareInvitationID: String, _ activityID: String) {
+        activityTableViewControllerDelegate.acceptSharing(with: shareInvitationID, activityID)
     }
 }

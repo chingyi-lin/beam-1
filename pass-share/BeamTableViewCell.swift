@@ -10,7 +10,7 @@ import UIKit
 
 class BeamTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var sitenameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var moreBtn: UIButton!
     
