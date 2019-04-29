@@ -1782,7 +1782,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" placeholder="Search Beam" translatesAutoresizingMaskIntoConstraints="NO" id="fFF-nl-oeS">
+                            <searchBar contentMode="redraw" placeholder="Search logins" translatesAutoresizingMaskIntoConstraints="NO" id="fFF-nl-oeS">
                                 <rect key="frame" x="0.0" y="120" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cv5-s5-iD6"/>
