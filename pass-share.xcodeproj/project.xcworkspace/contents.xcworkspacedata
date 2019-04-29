@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:pass-share.xcodeproj">
+      location = "group:/Users/dev/pass-share/pass-share/Activity/VerifySecretPhraseViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

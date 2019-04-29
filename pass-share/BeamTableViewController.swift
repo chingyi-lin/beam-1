@@ -52,7 +52,7 @@ class BeamTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BeamTableViewCell", for: indexPath) as! BeamTableViewCell
         // Configure the cell
 
-        cell.urlLabel.text = credentials[indexPath.row].domain
+        cell.sitenameLabel.text = credentials[indexPath.row].sitename
         cell.usernameLabel.text = credentials[indexPath.row].username
         cell.identifier = credentials[indexPath.row].credentialID
 

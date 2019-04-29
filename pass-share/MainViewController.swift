@@ -15,6 +15,7 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBadgeValue()
         setupBtn()
     }
     
@@ -61,10 +62,17 @@ class MainViewController: UITabBarController {
         btn.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
     }
     
+    func setupBadgeValue() {
+        if RealmAPI.shared.readAllShareInvitation().count != 0 {
+            tabBar.items![3].badgeValue = String(RealmAPI.shared.readAllShareInvitation().count)
+        } else {
+            tabBar.items![3].badgeValue = nil
+        }
+    }
+    
     // TODO: Delete this function. It's more demo purpose.
     func writeDemoData() {
         let credential = Credential()
-        credential.credentialID = "demo_identifier"
         credential.sitename = "demo_site"
         credential.username = "realm_demo_user"
         credential.domain = "twitter.com"
