@@ -592,51 +592,29 @@ Don’t know your phrase? Reach out to the sender!</string>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="t6g-l4-Kaa">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qlJ-Ef-b0u">
-                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Edit"/>
-                                            </button>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitelogo_default" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-fw-aj5">
-                                <rect key="frame" x="153" y="82" width="69" height="69"/>
+                                <rect key="frame" x="153" y="134" width="69" height="69"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyx-qI-Mvv">
-                                <rect key="frame" x="165" y="159" width="45" height="20.5"/>
+                                <rect key="frame" x="165" y="212" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2i-oQ-oj8">
-                                <rect key="frame" x="26" y="591" width="323" height="45"/>
-                                <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="MXg-wC-P76"/>
-                                </constraints>
-                                <state key="normal" title="Launch">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ht6-iL-n95">
-                                <rect key="frame" x="0.0" y="251" width="375" height="314"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="314" id="ocJ-3o-L64"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="283" width="375" height="384"/>
                                 <connections>
                                     <segue destination="ohb-OU-EBP" kind="embed" identifier="loginDetailShowDetail" id="vrk-3h-vpf"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Ef-Ff-fCo">
-                                <rect key="frame" x="0.0" y="209.5" width="375" height="32.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="14d-6j-PmH"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Details"/>
                                     <segment title="Activities"/>
@@ -646,35 +624,42 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75p-6F-BoL">
-                                <rect key="frame" x="0.0" y="251" width="375" height="314"/>
+                                <rect key="frame" x="0.0" y="283" width="375" height="384"/>
                                 <connections>
                                     <segue destination="LR4-51-LKp" kind="embed" id="4nJ-Q5-BCo"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-Uk-lMw">
+                                <rect key="frame" x="144" y="238" width="87" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="c0Q-JP-4xB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Edit Details"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rCh-0B-hj1" firstAttribute="top" secondItem="qT6-qI-gNi" secondAttribute="top" id="0bZ-Cj-kDl"/>
-                            <constraint firstItem="j2i-oQ-oj8" firstAttribute="top" secondItem="75p-6F-BoL" secondAttribute="bottom" constant="26" id="3QR-TG-64V"/>
                             <constraint firstItem="rCh-0B-hj1" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="4Ui-25-WuE"/>
                             <constraint firstItem="rCh-0B-hj1" firstAttribute="trailing" secondItem="qT6-qI-gNi" secondAttribute="trailing" id="6oK-nZ-hr4"/>
                             <constraint firstItem="ht6-iL-n95" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="8i2-58-Emi"/>
+                            <constraint firstItem="75p-6F-BoL" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="80" id="9Xk-FQ-V2v"/>
                             <constraint firstItem="75p-6F-BoL" firstAttribute="trailing" secondItem="qT6-qI-gNi" secondAttribute="trailing" id="F4Q-fH-Lw5"/>
-                            <constraint firstItem="ht6-iL-n95" firstAttribute="top" secondItem="5Ef-Ff-fCo" secondAttribute="bottom" constant="10" id="RX8-gP-3GU"/>
-                            <constraint firstItem="75p-6F-BoL" firstAttribute="top" secondItem="5Ef-Ff-fCo" secondAttribute="bottom" constant="10" id="SBC-3l-cAd"/>
+                            <constraint firstItem="qT6-qI-gNi" firstAttribute="bottom" secondItem="ht6-iL-n95" secondAttribute="bottom" id="O7f-KW-hvm"/>
+                            <constraint firstItem="qT6-qI-gNi" firstAttribute="bottom" secondItem="75p-6F-BoL" secondAttribute="bottom" id="UcB-Lk-Lbl"/>
                             <constraint firstItem="5Ef-Ff-fCo" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="UsV-yJ-ueP"/>
-                            <constraint firstItem="ytc-fw-aj5" firstAttribute="top" secondItem="rCh-0B-hj1" secondAttribute="bottom" constant="18" id="UvE-dA-CM0"/>
                             <constraint firstItem="5Ef-Ff-fCo" firstAttribute="trailing" secondItem="qT6-qI-gNi" secondAttribute="trailing" id="Y6h-7N-laP"/>
                             <constraint firstItem="75p-6F-BoL" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="Ys6-Lp-J05"/>
-                            <constraint firstItem="j2i-oQ-oj8" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" constant="26" id="aLG-pa-tmE"/>
-                            <constraint firstItem="ht6-iL-n95" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="100" id="be6-X7-sCk"/>
-                            <constraint firstItem="oyx-qI-Mvv" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="8" id="flT-zR-XET"/>
-                            <constraint firstItem="j2i-oQ-oj8" firstAttribute="centerX" secondItem="ht6-iL-n95" secondAttribute="centerX" id="h9c-1t-fmw"/>
-                            <constraint firstItem="5Ef-Ff-fCo" firstAttribute="top" secondItem="oyx-qI-Mvv" secondAttribute="bottom" constant="30" id="iLI-K6-F12"/>
+                            <constraint firstItem="ht6-iL-n95" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="80" id="be6-X7-sCk"/>
+                            <constraint firstItem="ytc-fw-aj5" firstAttribute="top" secondItem="5Ef-Ff-fCo" secondAttribute="bottom" constant="20" id="dwG-g7-mZd"/>
+                            <constraint firstItem="oyx-qI-Mvv" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="9" id="flT-zR-XET"/>
+                            <constraint firstItem="ovd-Uk-lMw" firstAttribute="centerX" secondItem="0Jx-FQ-1k3" secondAttribute="centerX" id="mI2-io-0xQ"/>
                             <constraint firstItem="ht6-iL-n95" firstAttribute="trailing" secondItem="qT6-qI-gNi" secondAttribute="trailing" id="nZH-fv-ydg"/>
+                            <constraint firstItem="ovd-Uk-lMw" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="35" id="qLN-bb-yZ6"/>
                             <constraint firstItem="ytc-fw-aj5" firstAttribute="centerX" secondItem="0Jx-FQ-1k3" secondAttribute="centerX" id="r39-rn-qCk"/>
                             <constraint firstItem="oyx-qI-Mvv" firstAttribute="centerX" secondItem="0Jx-FQ-1k3" secondAttribute="centerX" id="rzG-SV-adD"/>
-                            <constraint firstItem="j2i-oQ-oj8" firstAttribute="top" secondItem="ht6-iL-n95" secondAttribute="bottom" constant="26" id="svz-T7-s4e"/>
+                            <constraint firstItem="5Ef-Ff-fCo" firstAttribute="top" secondItem="rCh-0B-hj1" secondAttribute="bottom" id="vxx-Bc-v5t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qT6-qI-gNi"/>
                     </view>
@@ -859,10 +844,10 @@ Don’t know your phrase? Reach out to the sender!</string>
             </objects>
             <point key="canvasLocation" x="-986" y="2557"/>
         </scene>
-        <!--Share Detail ViewC Ontroller-->
+        <!--Share Detail View Controller-->
         <scene sceneID="kap-gJ-oLm">
             <objects>
-                <viewController id="YPi-QO-GLk" customClass="ShareDetailViewCOntroller" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YPi-QO-GLk" customClass="ShareDetailViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EqX-dN-HDa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -975,6 +960,9 @@ Don’t know your phrase? Reach out to the sender!</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TF9-YC-H5o">
                                 <rect key="frame" x="323" y="315.5" width="38" height="30"/>
                                 <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="revealSecretPhrase:" destination="YPi-QO-GLk" eventType="touchUpInside" id="GI0-ch-blU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-Aa-dwy" userLabel="Line">
                                 <rect key="frame" x="16" y="351" width="345" height="1"/>
@@ -1010,6 +998,9 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <state key="normal" title="Revoke Access">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="revoke:" destination="YPi-QO-GLk" eventType="touchUpInside" id="DIb-D7-l0j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1074,6 +1065,11 @@ Don’t know your phrase? Reach out to the sender!</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="im8-wx-xpP"/>
                     </view>
+                    <connections>
+                        <outlet property="durationLabel" destination="3oj-dA-HmF" id="UVo-1v-T4s"/>
+                        <outlet property="receiverEmailLabel" destination="IaH-0h-qEc" id="UHu-g9-Bd2"/>
+                        <outlet property="secretPhraseLabel" destination="Xot-EM-7LQ" id="d6D-YX-2GT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KnM-zj-6YB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1171,7 +1167,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnT-rt-b1u">
                                 <rect key="frame" x="14" y="572" width="347" height="50"/>
-                                <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.063625387850000006" green="0.10857107489999999" blue="0.27912247179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1kl-4N-swr"/>
                                 </constraints>
@@ -1252,7 +1248,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hX-A0-H3S">
                                 <rect key="frame" x="14" y="572" width="347" height="50"/>
-                                <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.063625387850000006" green="0.10857107489999999" blue="0.27912247179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bIx-jx-ZtY"/>
                                 </constraints>
@@ -1489,7 +1485,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX6-uK-qC1">
                                 <rect key="frame" x="14" y="572" width="347" height="50"/>
-                                <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.063625387850000006" green="0.10857107489999999" blue="0.27912247179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Fyl-gG-OMN"/>
                                 </constraints>
@@ -1542,7 +1538,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QId-Jy-iAT">
                                 <rect key="frame" x="14" y="572" width="347" height="50"/>
-                                <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.063625387850000006" green="0.10857107489999999" blue="0.27912247179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xwN-Wy-0bN"/>
                                 </constraints>
@@ -1765,7 +1761,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <tableViewController id="aPb-nk-2BG" customClass="SetDurationOptionTableViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fun-QG-cWj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="459"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -2161,7 +2157,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <viewController id="ohb-OU-EBP" customClass="LoginDetailViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kxb-4F-kbw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="384"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VI-me-7Zi">
@@ -2313,7 +2309,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <viewController id="LR4-51-LKp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ztu-u8-eHY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="384"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uGd-bQ-z2n"/>
@@ -2372,9 +2368,9 @@ We recommend that you communicate the secret phrase to them verbally.</string>
         <image name="sitelogo_default" width="69" height="69"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QTX-f9-NgK"/>
-        <segue reference="g8c-CH-siA"/>
-        <segue reference="a9c-fu-0GZ"/>
+        <segue reference="YjG-tG-QBN"/>
+        <segue reference="l6H-PP-2us"/>
+        <segue reference="MJS-cG-5Zy"/>
         <segue reference="xUI-EV-Jms"/>
     </inferredMetricsTieBreakers>
 </document>
