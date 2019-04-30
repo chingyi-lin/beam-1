@@ -118,7 +118,7 @@ class AddRecipientViewController: UIViewController, UITextViewDelegate {
 }
 
 extension AddRecipientViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

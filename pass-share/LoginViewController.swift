@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
         self.detailView.alpha = 1
         self.activitiyView.alpha = 0
         sitenameLabel.text = RealmAPI.shared.read(filterBy: credentialID!).sitename
+        self.title = sitenameLabel.text
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -18,7 +18,7 @@ class ConfirmSharingViewController: UIViewController {
         self.title = "Confirm Sharing Details"
         selectedLogin = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
         self.sitename.text = selectedLogin?.sitename
-        self.receiverEmail.text = newAccess?.grantToEmail
+        self.usernameLabel.text = selectedLogin?.username
         switch newAccess?.duration {
             case 0:
                 self.duration.text = "One-time Only"
@@ -35,7 +35,7 @@ class ConfirmSharingViewController: UIViewController {
     }
     
     @IBOutlet weak var sitename: UILabel!
-    @IBOutlet weak var receiverEmail: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var duration: UILabel!
     @IBOutlet weak var currentPassword: UILabel!
     @IBOutlet weak var secretPhrase: UILabel!
