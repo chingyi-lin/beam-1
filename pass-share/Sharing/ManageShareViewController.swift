@@ -23,6 +23,7 @@ class ManageShareViewController: UIViewController {
         if selectedLogin.accessArr.count == 0 {
             //TODO: show the blank state view - set the alpha view = 1
         }
+        self.title = selectedLogin.sitename
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,6 +37,11 @@ class ManageShareViewController: UIViewController {
             let navController = segue.destination as! UINavigationController
             let nextVC = navController.viewControllers.first as! AddRecipientViewController
             nextVC.credentialID = self.credentialID
+        }
+        
+        if segue.identifier == "manageShareTableCellToShareDetail" {
+            let displayVC = (segue.destination as! ShareDetailViewController)
+            displayVC.accessID = self.accessID
         }
     }
     
