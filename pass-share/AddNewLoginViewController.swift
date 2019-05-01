@@ -41,9 +41,9 @@ class AddNewLoginViewController: UIViewController {
                 let credentialRecord = credential.createCKRecord()
                 CloudKitAPI.shared.sync(credentialRecord)
                 RealmAPI.shared.write(data: credential)
-                print("Saved. Going to the detail page")
                 credentialID = credential.credentialID
-                self.performSegue(withIdentifier: "addNewLoginToLoginDetail", sender: self)
+//                self.performSegue(withIdentifier: "addNewLoginToLoginDetail", sender: self)
+                dismiss(animated: true, completion: nil)
         }
     }
     
