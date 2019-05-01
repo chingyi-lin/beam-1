@@ -27,6 +27,10 @@ class SetSeePasswordViewController: UIViewController {
             nextVC.newAccess = self.newAccess
             nextVC.credentialID = self.credentialID
         }
+        if segue.identifier == "sharingFlowToUpdatePasswordVC" {
+            let nextVC = (segue.destination as! UpdatePasswordViewController)
+            nextVC.credentialID = self.credentialID
+        }
     }
     
     @IBAction func click(_ sender: UIButton) {

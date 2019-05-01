@@ -19,6 +19,7 @@ class UpdatePasswordViewController: UIViewController {
     @IBOutlet weak var currentPasswordLabel: UILabel!
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var launchBtnBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var launchBtn: UIButton!
     
     @IBAction func generateNewPassword(_ sender: Any) {
         newPasswordTextField.text = generateRandomPassword()
@@ -29,6 +30,7 @@ class UpdatePasswordViewController: UIViewController {
         let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
         sitenameLabel.text = credential.sitename
         usernameLabel.text = credential.username
+        launchBtn.titleLabel?.text = "Launch " + credential.sitename + " to Update Password"
         
         // Adjust keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(AddRecipientViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -54,7 +56,7 @@ class UpdatePasswordViewController: UIViewController {
     }
     func generateRandomPassword() -> String {
         let passwordChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
-        let len = 8
+        let len = 16
         let randomPassword = String((0..<len).compactMap{ _ in passwordChars.randomElement() })
         return randomPassword
     }

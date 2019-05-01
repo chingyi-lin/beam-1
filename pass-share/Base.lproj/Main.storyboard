@@ -1275,6 +1275,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                     </view>
                     <connections>
                         <outlet property="currentPasswordLabel" destination="JbX-WJ-N1q" id="Okt-eN-ZiR"/>
+                        <outlet property="launchBtn" destination="XrA-vo-hpm" id="g9D-T3-UkT"/>
                         <outlet property="launchBtnBottomConstraint" destination="2Sg-RJ-cqh" id="eJY-5l-zCW"/>
                         <outlet property="newPasswordTextField" destination="I7U-U4-Ki1" id="SZD-Mu-PRR"/>
                         <outlet property="sitenameLabel" destination="53r-DW-Lhf" id="0Mq-9o-ble"/>
@@ -1524,6 +1525,9 @@ If you choose to reveal the password, we recommend using an auto generated passw
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Update Password"/>
+                                <connections>
+                                    <segue destination="coN-N4-a8p" kind="show" identifier="sharingFlowToUpdatePasswordVC" id="RyM-O8-ezd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5K-TB-66d">
                                 <rect key="frame" x="14" y="602" width="347" height="33"/>
@@ -2607,7 +2611,8 @@ We recommend that you communicate the secret phrase to them verbally.</string>
     <inferredMetricsTieBreakers>
         <segue reference="YjG-tG-QBN"/>
         <segue reference="l6H-PP-2us"/>
-        <segue reference="MJS-cG-5Zy"/>
+        <segue reference="a9c-fu-0GZ"/>
+        <segue reference="RyM-O8-ezd"/>
         <segue reference="pfg-0i-GfN"/>
     </inferredMetricsTieBreakers>
 </document>
