@@ -29,6 +29,7 @@ class LoginDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
+        self.title = selectedLogin.sitename
         websiteLabel.text = selectedLogin.domain
         usernameLabel.text = selectedLogin.username
         passwordLabel.text = "• • • • • • • • • •"
