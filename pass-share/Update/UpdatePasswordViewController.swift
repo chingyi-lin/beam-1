@@ -63,7 +63,9 @@ class UpdatePasswordViewController: UIViewController {
         let alert = UIAlertController(title: "Allow Beam to copy the new password to your clipboard?", message: "When you update your password, you can paste your new password into the fields.", preferredStyle: .alert)
         
         // TODO: implement keyboard
-        alert.addAction(UIAlertAction(title: "Allow", style: .default, handler: {action in self.performSegue(withIdentifier: "updatePasswordVCToUpdateWebVC", sender: self)}))
+        alert.addAction(UIAlertAction(title: "Allow", style: .default, handler: {action in
+            UIPasteboard.general.string = self.newPasswordTextField.text
+            self.performSegue(withIdentifier: "updatePasswordVCToUpdateWebVC", sender: self)}))
         alert.addAction(UIAlertAction(title: "Don't allow", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
