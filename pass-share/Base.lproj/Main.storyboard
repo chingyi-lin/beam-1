@@ -400,7 +400,10 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </items>
                             </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-KS-75g">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="HcN-ES-Ta4"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="QRA-W4-4Z1" kind="embed" identifier="loginFormEmbedSegue" id="X38-Z0-NeC"/>
                                 </connections>
@@ -408,7 +411,6 @@ Don’t know your phrase? Reach out to the sender!</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JvV-D4-pLN" firstAttribute="bottom" secondItem="0lD-KS-75g" secondAttribute="bottom" id="6cq-Kc-QcO"/>
                             <constraint firstItem="JvV-D4-pLN" firstAttribute="trailing" secondItem="Npf-CM-svu" secondAttribute="trailing" id="8Ih-Ui-c9z"/>
                             <constraint firstItem="Npf-CM-svu" firstAttribute="leading" secondItem="JvV-D4-pLN" secondAttribute="leading" id="KXv-Zd-Ksl"/>
                             <constraint firstItem="Npf-CM-svu" firstAttribute="top" secondItem="JvV-D4-pLN" secondAttribute="top" id="Lmj-ir-zX3"/>
@@ -434,7 +436,7 @@ Don’t know your phrase? Reach out to the sender!</string>
             <objects>
                 <tableViewController id="QRA-W4-4Z1" customClass="LoginFormTableViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Egw-x5-WhN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -587,16 +589,19 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitelogo_default" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-fw-aj5">
-                                <rect key="frame" x="153" y="134" width="69" height="69"/>
+                                <rect key="frame" x="153" y="134" width="69" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="M8X-xD-OiQ"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyx-qI-Mvv">
-                                <rect key="frame" x="165" y="212" width="45" height="20.5"/>
+                                <rect key="frame" x="165" y="213" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ht6-iL-n95">
-                                <rect key="frame" x="0.0" y="283" width="375" height="384"/>
+                                <rect key="frame" x="0.0" y="284" width="375" height="383"/>
                                 <connections>
                                     <segue destination="ohb-OU-EBP" kind="embed" identifier="loginDetailShowDetail" id="vrk-3h-vpf"/>
                                 </connections>
@@ -615,13 +620,13 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75p-6F-BoL">
-                                <rect key="frame" x="0.0" y="283" width="375" height="384"/>
+                                <rect key="frame" x="0.0" y="284" width="375" height="383"/>
                                 <connections>
                                     <segue destination="LR4-51-LKp" kind="embed" id="4nJ-Q5-BCo"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-Uk-lMw">
-                                <rect key="frame" x="144" y="238" width="87" height="22"/>
+                                <rect key="frame" x="144" y="239" width="87" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="c0Q-JP-4xB"/>
                                 </constraints>
@@ -707,9 +712,9 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="4du-YC-2FX">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oql-X2-b91">
-                                <rect key="frame" x="343" y="11" width="16" height="22"/>
+                        <barButtonItem key="rightBarButtonItem" width="100" style="plain" id="4du-YC-2FX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oql-X2-b91">
+                                <rect key="frame" x="343" y="11" width="100" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add_14"/>
                                 <connections>
@@ -1459,9 +1464,9 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBy-o5-2Ou">
-                                <rect key="frame" x="0.0" y="183" width="375" height="187"/>
+                                <rect key="frame" x="0.0" y="183" width="375" height="205"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="187" id="sCv-cE-lHb"/>
+                                    <constraint firstAttribute="height" constant="205" id="sCv-cE-lHb"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="aPb-nk-2BG" kind="embed" identifier="setDurationOptionEmbedSegue" id="l6H-PP-2us"/>
@@ -1969,7 +1974,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <tableViewController id="aPb-nk-2BG" customClass="SetDurationOptionTableViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fun-QG-cWj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -2366,7 +2371,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <viewController id="ohb-OU-EBP" customClass="LoginDetailViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kxb-4F-kbw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="384"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VI-me-7Zi">
@@ -2454,8 +2459,8 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUb-yu-v3u">
-                                <rect key="frame" x="87" y="221" width="288" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUb-yu-v3u">
+                                <rect key="frame" x="0.0" y="216" width="375" height="40"/>
                                 <state key="normal" title="ShareBtn">
                                     <color key="titleColor" red="0.23529411764705882" green="1" blue="0.33333333333333331" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -2493,11 +2498,11 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             <constraint firstItem="JzO-Vh-v6e" firstAttribute="top" secondItem="t9m-gP-sCN" secondAttribute="bottom" constant="10" id="2jZ-Yx-qjv"/>
                             <constraint firstItem="LGj-cf-Hfw" firstAttribute="top" secondItem="qhF-pu-Vtq" secondAttribute="bottom" constant="4" id="2wd-rr-stH"/>
                             <constraint firstItem="bHs-G9-jMF" firstAttribute="top" secondItem="i9R-dS-hvG" secondAttribute="bottom" constant="10" id="516-Yc-2Lj"/>
-                            <constraint firstItem="nUb-yu-v3u" firstAttribute="leading" secondItem="Yex-wV-ELP" secondAttribute="trailing" id="752-mm-9hz"/>
                             <constraint firstItem="YGK-UL-iyu" firstAttribute="leading" secondItem="Kxb-4F-kbw" secondAttribute="leading" id="7lK-Bz-QGH"/>
                             <constraint firstItem="0qk-au-WrE" firstAttribute="top" secondItem="JzO-Vh-v6e" secondAttribute="bottom" constant="10" id="9Zh-fD-x6S"/>
                             <constraint firstItem="t9m-gP-sCN" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="9c2-dx-hRk"/>
                             <constraint firstAttribute="trailing" secondItem="LGj-cf-Hfw" secondAttribute="trailing" id="B55-Xc-UlW"/>
+                            <constraint firstItem="nUb-yu-v3u" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" id="BTe-cs-Oic"/>
                             <constraint firstItem="i9R-dS-hvG" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="C5h-eS-Sg7"/>
                             <constraint firstItem="12v-HD-ra4" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="H7Z-8a-wOl"/>
                             <constraint firstItem="qhF-pu-Vtq" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="IDB-Uq-XFA"/>
@@ -2545,7 +2550,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <viewController id="LR4-51-LKp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ztu-u8-eHY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="384"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uGd-bQ-z2n"/>
