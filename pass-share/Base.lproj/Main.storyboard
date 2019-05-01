@@ -665,6 +665,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <outlet property="activitiyView" destination="75p-6F-BoL" id="631-Pi-zcJ"/>
                         <outlet property="cancelBtn" destination="G7A-Us-Uix" id="vdB-2c-pnR"/>
                         <outlet property="detailView" destination="ht6-iL-n95" id="rMh-lb-08M"/>
+                        <outlet property="navBar" destination="rCh-0B-hj1" id="GqX-v2-Qc4"/>
                         <outlet property="segmentedControlBtn" destination="5Ef-Ff-fCo" id="yc1-OG-Hsx"/>
                         <outlet property="sitenameLabel" destination="oyx-qI-Mvv" id="nEQ-fC-yNS"/>
                         <segue destination="MzY-yy-H8H" kind="show" identifier="loginDetailVCToManageShareVC" customClass="TransitionFromLeftToRight" customModule="pass_share" customModuleProvider="target" id="BMI-UZ-Q46"/>
@@ -2471,7 +2472,11 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQb-YU-ATx">
-                                <rect key="frame" x="308" y="30.5" width="51" height="30"/>
+                                <rect key="frame" x="269" y="31.5" width="90" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="ld9-CD-vsy"/>
+                                    <constraint firstAttribute="height" constant="28" id="nDA-kd-eru"/>
+                                </constraints>
                                 <state key="normal" title="Launch"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

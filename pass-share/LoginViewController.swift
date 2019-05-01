@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var activitiyView: UIView!
     
     @IBOutlet weak var segmentedControlBtn: UISegmentedControl!
+    @IBOutlet weak var navBar: UINavigationBar!
     
     @IBAction func cancel(_ sender: Any) {
         let transition = CATransition()
@@ -37,6 +38,7 @@ class LoginViewController: UIViewController {
         self.activitiyView.alpha = 0
         sitenameLabel.text = RealmAPI.shared.read(filterBy: credentialID!).sitename
         self.title = sitenameLabel.text
+        navBar.topItem?.title = sitenameLabel.text
     }
     
     override func viewWillAppear(_ animated: Bool) {
