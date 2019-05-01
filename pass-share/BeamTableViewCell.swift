@@ -13,6 +13,8 @@ class BeamTableViewCell: UITableViewCell {
     @IBOutlet weak var sitenameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var moreBtn: UIButton!
+    @IBOutlet weak var siteImage: UIImageView!
     
     var identifier: String = "none"
+    var request: AnyObject?
 }

@@ -58,6 +58,7 @@
 		D74A34AD227771030059609B /* ShareDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34AC227771030059609B /* ShareDetailViewController.swift */; };
 		D74A34B02277DC5C0059609B /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34AF2277DC5C0059609B /* UpdatePasswordViewController.swift */; };
 		D74A34B22278D2E50059609B /* UpdateWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34B12278D2E50059609B /* UpdateWebViewController.swift */; };
+		D74A34B5227975BB0059609B /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34B4227975BB0059609B /* NetworkRequest.swift */; };
 		D74A45EA226D37A30018DF91 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */; };
 		D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */; };
 		D74A45EE226D3BBE0018DF91 /* SetSeePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */; };
@@ -144,6 +145,7 @@
 		D74A34AC227771030059609B /* ShareDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDetailViewController.swift; sourceTree = "<group>"; };
 		D74A34AF2277DC5C0059609B /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
 		D74A34B12278D2E50059609B /* UpdateWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateWebViewController.swift; sourceTree = "<group>"; };
+		D74A34B4227975BB0059609B /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 		D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationOptionTableViewController.swift; sourceTree = "<group>"; };
 		D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSeePasswordViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		16713738223F1D8300BFCC9D /* pass-share */ = {
 			isa = PBXGroup;
 			children = (
+				D74A34B32279759D0059609B /* Network */,
 				D74A34AE2277DC380059609B /* Update */,
 				D716F74E2263D5D300D1F77D /* Assets.xcassets */,
 				6D8A62F0225730A900329B0C /* cloudkit */,
@@ -327,6 +330,14 @@
 				D74A34B12278D2E50059609B /* UpdateWebViewController.swift */,
 			);
 			path = Update;
+			sourceTree = "<group>";
+		};
+		D74A34B32279759D0059609B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D74A34B4227975BB0059609B /* NetworkRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74A34B5227975BB0059609B /* NetworkRequest.swift in Sources */,
 				D74A3498227685B10059609B /* Activity.swift in Sources */,
 				B665CFD62251E1CC003DDFB5 /* RealmAPI.swift in Sources */,
 				D74A45EE226D3BBE0018DF91 /* SetSeePasswordViewController.swift in Sources */,

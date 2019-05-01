@@ -18,8 +18,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var sitenameLabel: UILabel!
     @IBOutlet weak var activitiyView: UIView!
     
+    fileprivate var request: AnyObject?
+    
     @IBOutlet weak var segmentedControlBtn: UISegmentedControl!
     @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var siteLogo: UIImageView!
     
     @IBAction func cancel(_ sender: Any) {
         let transition = CATransition()
@@ -39,6 +42,7 @@ class LoginViewController: UIViewController {
         sitenameLabel.text = RealmAPI.shared.read(filterBy: credentialID!).sitename
         self.title = sitenameLabel.text
         navBar.topItem?.title = sitenameLabel.text
+        fetchSiteLogo(for: RealmAPI.shared.read(filterBy: credentialID!).domain)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,6 +83,19 @@ class LoginViewController: UIViewController {
         // TODO: config UI style
 //        segmentedControlBtn.backgroundColor = .clear
 //        segmentedControlBtn.tintColor = .clear
+    }
+    
+    func fetchSiteLogo(for domain: String){
+        let imgSource = "https://logo.clearbit.com/"
+        let targetUrl = URL(string: imgSource + domain + "?size=65")!
+        let siteLogoRequest = ImageRequest(url: targetUrl)
+        self.request = siteLogoRequest
+        siteLogoRequest.load(withCompletion: { [weak self] (siteLogo: UIImage?) in
+            guard let siteLogo = siteLogo else {
+                return
+            }
+            self?.siteLogo.image = siteLogo
+        })
     }
 }
 extension LoginViewController: LoginDetailViewControllerDelegate {

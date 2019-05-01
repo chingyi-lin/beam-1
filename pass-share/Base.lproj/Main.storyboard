@@ -399,13 +399,6 @@ Don’t know your phrase? Reach out to the sender!</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2O-Ml-pwO">
-                                <rect key="frame" x="1" y="64" width="358" height="169"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="169" id="8Fc-qr-nt6"/>
-                                </constraints>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-KS-75g">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <connections>
@@ -667,6 +660,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <outlet property="detailView" destination="ht6-iL-n95" id="rMh-lb-08M"/>
                         <outlet property="navBar" destination="rCh-0B-hj1" id="GqX-v2-Qc4"/>
                         <outlet property="segmentedControlBtn" destination="5Ef-Ff-fCo" id="yc1-OG-Hsx"/>
+                        <outlet property="siteLogo" destination="ytc-fw-aj5" id="R8F-Jq-Pm7"/>
                         <outlet property="sitenameLabel" destination="oyx-qI-Mvv" id="nEQ-fC-yNS"/>
                         <segue destination="MzY-yy-H8H" kind="show" identifier="loginDetailVCToManageShareVC" customClass="TransitionFromLeftToRight" customModule="pass_share" customModuleProvider="target" id="BMI-UZ-Q46"/>
                         <segue destination="Y1t-d5-PVl" kind="show" identifier="cancelLoginDetailToGoBackMainView" animates="NO" id="YjG-tG-QBN"/>
@@ -2223,6 +2217,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="moreBtn" destination="2n2-3V-UPb" id="ybK-6V-8x9"/>
+                                    <outlet property="siteImage" destination="pGD-2U-nnN" id="6sj-4l-7Xh"/>
                                     <outlet property="sitenameLabel" destination="Ym1-B8-CDw" id="e8H-fr-9vL"/>
                                     <outlet property="usernameLabel" destination="IrI-00-FoI" id="jpn-KR-U4W"/>
                                 </connections>
