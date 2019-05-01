@@ -31,8 +31,6 @@ class LoginDetailViewController: UIViewController {
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
         websiteLabel.text = selectedLogin.domain
         usernameLabel.text = selectedLogin.username
-        // TODO: reveal toggle
-//        passwordLabel.text = selectedLogin.password
         passwordLabel.text = "• • • • • • • • • •"
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,6 +39,15 @@ class LoginDetailViewController: UIViewController {
             let displayVC = segue.destination as! ManageShareViewController
             displayVC.credentialID = self.credentialID
         }
+    }
+    @IBAction func revealPassword(_ sender: Any) {
+        let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
+        if self.passwordLabel.text?.contains("•")  ?? false {
+            self.passwordLabel.text = selectedLogin.password
+        } else {
+            self.passwordLabel.text = "• • • • • • • • • •"
+        }
+        
     }
     
     @IBAction func clickShareWith(_ sender: Any) {

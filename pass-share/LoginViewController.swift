@@ -19,9 +19,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var activitiyView: UIView!
     
     @IBOutlet weak var segmentedControlBtn: UISegmentedControl!
+    @IBOutlet weak var navBar: UINavigationBar!
     
     @IBAction func cancel(_ sender: Any) {
-        self.performSegue(withIdentifier: "cancelLoginDetailToGoBackMainView", sender: self)
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+        
+        dismiss(animated: false, completion: nil)
+//        self.performSegue(withIdentifier: "cancelLoginDetailToGoBackMainView", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +37,8 @@ class LoginViewController: UIViewController {
         self.detailView.alpha = 1
         self.activitiyView.alpha = 0
         sitenameLabel.text = RealmAPI.shared.read(filterBy: credentialID!).sitename
+        self.title = sitenameLabel.text
+        navBar.topItem?.title = sitenameLabel.text
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -373,7 +373,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npf-CM-svu">
-                                <rect key="frame" x="1" y="42" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="New Login" id="gCC-Bj-Ol3">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="i0h-Dm-V5c">
@@ -399,31 +399,29 @@ Don’t know your phrase? Reach out to the sender!</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2O-Ml-pwO">
-                                <rect key="frame" x="1" y="86" width="375" height="169"/>
-                                <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-KS-75g">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <segue destination="QRA-W4-4Z1" kind="embed" identifier="loginFormEmbedSegue" id="X38-Z0-NeC"/>
-                                        </connections>
-                                    </containerView>
-                                </subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2O-Ml-pwO">
+                                <rect key="frame" x="1" y="64" width="358" height="169"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="169" id="8Fc-qr-nt6"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-KS-75g">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <connections>
+                                    <segue destination="QRA-W4-4Z1" kind="embed" identifier="loginFormEmbedSegue" id="X38-Z0-NeC"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Npf-CM-svu" secondAttribute="trailing" constant="-17" id="4mX-zw-x1L"/>
-                            <constraint firstItem="Npf-CM-svu" firstAttribute="top" secondItem="JvV-D4-pLN" secondAttribute="top" constant="22" id="Lmj-ir-zX3"/>
-                            <constraint firstItem="Npf-CM-svu" firstAttribute="leading" secondItem="v2O-Ml-pwO" secondAttribute="leading" id="QH4-Zr-hD2"/>
-                            <constraint firstItem="Npf-CM-svu" firstAttribute="leading" secondItem="JvV-D4-pLN" secondAttribute="leading" constant="1" id="UzT-qF-Erl"/>
-                            <constraint firstItem="v2O-Ml-pwO" firstAttribute="top" secondItem="Npf-CM-svu" secondAttribute="bottom" id="bNj-5i-GnC"/>
-                            <constraint firstItem="Npf-CM-svu" firstAttribute="trailing" secondItem="v2O-Ml-pwO" secondAttribute="trailing" id="cqt-nQ-OoO"/>
+                            <constraint firstItem="JvV-D4-pLN" firstAttribute="bottom" secondItem="0lD-KS-75g" secondAttribute="bottom" id="6cq-Kc-QcO"/>
+                            <constraint firstItem="JvV-D4-pLN" firstAttribute="trailing" secondItem="Npf-CM-svu" secondAttribute="trailing" id="8Ih-Ui-c9z"/>
+                            <constraint firstItem="Npf-CM-svu" firstAttribute="leading" secondItem="JvV-D4-pLN" secondAttribute="leading" id="KXv-Zd-Ksl"/>
+                            <constraint firstItem="Npf-CM-svu" firstAttribute="top" secondItem="JvV-D4-pLN" secondAttribute="top" id="Lmj-ir-zX3"/>
+                            <constraint firstItem="0lD-KS-75g" firstAttribute="leading" secondItem="JvV-D4-pLN" secondAttribute="leading" id="gGu-JP-eO5"/>
+                            <constraint firstAttribute="trailing" secondItem="0lD-KS-75g" secondAttribute="trailing" id="oMG-ay-woi"/>
+                            <constraint firstItem="0lD-KS-75g" firstAttribute="top" secondItem="Npf-CM-svu" secondAttribute="bottom" id="tab-qn-GCm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JvV-D4-pLN"/>
                     </view>
@@ -443,7 +441,7 @@ Don’t know your phrase? Reach out to the sender!</string>
             <objects>
                 <tableViewController id="QRA-W4-4Z1" customClass="LoginFormTableViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Egw-x5-WhN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -566,7 +564,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgv-Vw-Sgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="857"/>
+            <point key="canvasLocation" x="-194" y="999"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="U45-Fe-pRv">
@@ -667,6 +665,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <outlet property="activitiyView" destination="75p-6F-BoL" id="631-Pi-zcJ"/>
                         <outlet property="cancelBtn" destination="G7A-Us-Uix" id="vdB-2c-pnR"/>
                         <outlet property="detailView" destination="ht6-iL-n95" id="rMh-lb-08M"/>
+                        <outlet property="navBar" destination="rCh-0B-hj1" id="GqX-v2-Qc4"/>
                         <outlet property="segmentedControlBtn" destination="5Ef-Ff-fCo" id="yc1-OG-Hsx"/>
                         <outlet property="sitenameLabel" destination="oyx-qI-Mvv" id="nEQ-fC-yNS"/>
                         <segue destination="MzY-yy-H8H" kind="show" identifier="loginDetailVCToManageShareVC" customClass="TransitionFromLeftToRight" customModule="pass_share" customModuleProvider="target" id="BMI-UZ-Q46"/>
@@ -1069,6 +1068,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <outlet property="durationLabel" destination="3oj-dA-HmF" id="UVo-1v-T4s"/>
                         <outlet property="receiverEmailLabel" destination="IaH-0h-qEc" id="UHu-g9-Bd2"/>
                         <outlet property="secretPhraseLabel" destination="Xot-EM-7LQ" id="d6D-YX-2GT"/>
+                        <segue destination="coN-N4-a8p" kind="show" identifier="shareDetailVCToUpdatePasswordVC" id="LRe-gZ-6Z0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KnM-zj-6YB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1122,6 +1122,205 @@ Don’t know your phrase? Reach out to the sender!</string>
             </objects>
             <point key="canvasLocation" x="1392" y="2558"/>
         </scene>
+        <!--Update Password View Controller-->
+        <scene sceneID="4m8-xq-s4v">
+            <objects>
+                <viewController id="coN-N4-a8p" customClass="UpdatePasswordViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FvS-cg-bDm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_33" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-Dm-G8N">
+                                <rect key="frame" x="15" y="79" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Ck8-aY-gOV"/>
+                                    <constraint firstAttribute="width" constant="33" id="Zfh-Zo-5Mr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53r-DW-Lhf">
+                                <rect key="frame" x="56" y="79" width="83.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="j0yc3@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gT-2O-ie0">
+                                <rect key="frame" x="56" y="100" width="77.5" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuR-As-zNt">
+                                <rect key="frame" x="16" y="128" width="343" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Eyo-X6-keO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• • • • • • • • • • • • • • • • " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbX-WJ-N1q">
+                                <rect key="frame" x="16" y="148" width="250" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LLQ-6N-GlW"/>
+                                    <constraint firstAttribute="width" constant="250" id="eyk-TB-WEL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkX-AF-ms3" userLabel="Line">
+                                <rect key="frame" x="16" y="174" width="343" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="MaV-OJ-Gka"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajv-ay-mML">
+                                <rect key="frame" x="321" y="143.5" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="showPassword:" destination="coN-N4-a8p" eventType="touchUpInside" id="pze-Rk-skd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g21-of-602">
+                                <rect key="frame" x="16" y="190" width="343" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7U-U4-Ki1">
+                                <rect key="frame" x="16" y="211" width="343" height="16"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgy-Hp-iL8" userLabel="Line">
+                                <rect key="frame" x="16" y="232" width="343" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="HFf-JR-z1d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er8-8s-I0U">
+                                <rect key="frame" x="195" y="243" width="164" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="JFh-we-Ieb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Generate Password For Me"/>
+                                <connections>
+                                    <action selector="generateNewPassword:" destination="coN-N4-a8p" eventType="touchUpInside" id="mxh-ZR-VfN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-vo-hpm">
+                                <rect key="frame" x="14" y="572" width="347" height="50"/>
+                                <color key="backgroundColor" red="0.063625387850000006" green="0.10857107489999999" blue="0.27912247179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xoi-Eo-77F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Launch Instagram to Update Password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="launchWebView:" destination="coN-N4-a8p" eventType="touchUpInside" id="zGn-Zn-Hoe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RQb-fc-10s" firstAttribute="bottom" secondItem="XrA-vo-hpm" secondAttribute="bottom" constant="45" id="2Sg-RJ-cqh"/>
+                            <constraint firstItem="g21-of-602" firstAttribute="leading" secondItem="RQb-fc-10s" secondAttribute="leading" constant="16" id="2WK-Xv-qvg"/>
+                            <constraint firstItem="HdP-Dm-G8N" firstAttribute="leading" secondItem="RQb-fc-10s" secondAttribute="leading" constant="15" id="4Yf-yS-pTu"/>
+                            <constraint firstItem="er8-8s-I0U" firstAttribute="top" secondItem="Mgy-Hp-iL8" secondAttribute="bottom" constant="10" id="4e8-3G-vlT"/>
+                            <constraint firstAttribute="trailing" secondItem="Mgy-Hp-iL8" secondAttribute="trailing" constant="16" id="6Va-bh-u8u"/>
+                            <constraint firstItem="AuR-As-zNt" firstAttribute="leading" secondItem="RQb-fc-10s" secondAttribute="leading" constant="16" id="8wb-2J-IVL"/>
+                            <constraint firstItem="RQb-fc-10s" firstAttribute="trailing" secondItem="I7U-U4-Ki1" secondAttribute="trailing" constant="16" id="9Fo-Bd-Rue"/>
+                            <constraint firstItem="g21-of-602" firstAttribute="top" secondItem="gkX-AF-ms3" secondAttribute="bottom" constant="15" id="B8E-UH-Rtz"/>
+                            <constraint firstItem="RQb-fc-10s" firstAttribute="trailing" secondItem="Ajv-ay-mML" secondAttribute="trailing" constant="16" id="C16-07-wLD"/>
+                            <constraint firstItem="I7U-U4-Ki1" firstAttribute="leading" secondItem="RQb-fc-10s" secondAttribute="leading" constant="16" id="Dbk-KH-UBb"/>
+                            <constraint firstItem="53r-DW-Lhf" firstAttribute="top" secondItem="HdP-Dm-G8N" secondAttribute="top" id="Mya-vp-27Z"/>
+                            <constraint firstItem="gkX-AF-ms3" firstAttribute="top" secondItem="JbX-WJ-N1q" secondAttribute="bottom" constant="5" id="Oex-Ta-XAt"/>
+                            <constraint firstItem="AuR-As-zNt" firstAttribute="top" secondItem="HdP-Dm-G8N" secondAttribute="bottom" constant="16" id="Qt3-a7-ghi"/>
+                            <constraint firstItem="Mgy-Hp-iL8" firstAttribute="top" secondItem="I7U-U4-Ki1" secondAttribute="bottom" constant="5" id="TI6-NH-9mb"/>
+                            <constraint firstItem="Mgy-Hp-iL8" firstAttribute="leading" secondItem="FvS-cg-bDm" secondAttribute="leading" constant="16" id="Tz8-gd-UFk"/>
+                            <constraint firstItem="gkX-AF-ms3" firstAttribute="leading" secondItem="FvS-cg-bDm" secondAttribute="leading" constant="16" id="Z4Y-RW-MJf"/>
+                            <constraint firstItem="8gT-2O-ie0" firstAttribute="top" secondItem="53r-DW-Lhf" secondAttribute="bottom" id="buN-Mh-XKu"/>
+                            <constraint firstItem="RQb-fc-10s" firstAttribute="trailing" secondItem="AuR-As-zNt" secondAttribute="trailing" constant="16" id="g4a-F1-zHW"/>
+                            <constraint firstItem="JbX-WJ-N1q" firstAttribute="top" secondItem="AuR-As-zNt" secondAttribute="bottom" constant="4" id="geo-u0-f40"/>
+                            <constraint firstItem="HdP-Dm-G8N" firstAttribute="top" secondItem="RQb-fc-10s" secondAttribute="top" constant="15" id="iem-od-Hit"/>
+                            <constraint firstItem="JbX-WJ-N1q" firstAttribute="leading" secondItem="RQb-fc-10s" secondAttribute="leading" constant="16" id="jcD-vS-ton"/>
+                            <constraint firstAttribute="trailing" secondItem="gkX-AF-ms3" secondAttribute="trailing" constant="16" id="k0e-67-iag"/>
+                            <constraint firstAttribute="trailing" secondItem="er8-8s-I0U" secondAttribute="trailing" constant="16" id="kf3-9L-Zxm"/>
+                            <constraint firstItem="RQb-fc-10s" firstAttribute="trailing" secondItem="g21-of-602" secondAttribute="trailing" constant="16" id="phG-xL-O9a"/>
+                            <constraint firstItem="I7U-U4-Ki1" firstAttribute="top" secondItem="g21-of-602" secondAttribute="bottom" constant="5" id="rnV-FC-EDn"/>
+                            <constraint firstItem="53r-DW-Lhf" firstAttribute="leading" secondItem="HdP-Dm-G8N" secondAttribute="trailing" constant="8" id="sZR-03-hYx"/>
+                            <constraint firstItem="Ajv-ay-mML" firstAttribute="centerY" secondItem="JbX-WJ-N1q" secondAttribute="centerY" id="vrh-YN-WYM"/>
+                            <constraint firstItem="8gT-2O-ie0" firstAttribute="leading" secondItem="HdP-Dm-G8N" secondAttribute="trailing" constant="8" id="y7J-Ia-R9f"/>
+                            <constraint firstItem="RQb-fc-10s" firstAttribute="trailing" secondItem="XrA-vo-hpm" secondAttribute="trailing" constant="14" id="z4d-bu-49L"/>
+                            <constraint firstItem="XrA-vo-hpm" firstAttribute="leading" secondItem="RQb-fc-10s" secondAttribute="leading" constant="14" id="zVr-hV-F4d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RQb-fc-10s"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentPasswordLabel" destination="JbX-WJ-N1q" id="Okt-eN-ZiR"/>
+                        <outlet property="launchBtn" destination="XrA-vo-hpm" id="g9D-T3-UkT"/>
+                        <outlet property="launchBtnBottomConstraint" destination="2Sg-RJ-cqh" id="eJY-5l-zCW"/>
+                        <outlet property="newPasswordTextField" destination="I7U-U4-Ki1" id="SZD-Mu-PRR"/>
+                        <outlet property="sitenameLabel" destination="53r-DW-Lhf" id="0Mq-9o-ble"/>
+                        <outlet property="usernameLabel" destination="8gT-2O-ie0" id="3cO-mm-bg3"/>
+                        <segue destination="Bki-rx-1vt" kind="show" identifier="updatePasswordVCToUpdateWebVC" id="Lqa-YP-eXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0l-Dp-jjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="3306.2968515742132"/>
+        </scene>
+        <!--Update Web View Controller-->
+        <scene sceneID="Y4q-Fd-Kb6">
+            <objects>
+                <viewController id="Bki-rx-1vt" customClass="UpdateWebViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pRf-60-kLf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rta-hr-32L">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rta-hr-32L" firstAttribute="top" secondItem="wMo-cC-4Ap" secondAttribute="top" id="3xD-Q2-MVA"/>
+                            <constraint firstItem="wMo-cC-4Ap" firstAttribute="trailing" secondItem="rta-hr-32L" secondAttribute="trailing" id="DE1-Md-qn2"/>
+                            <constraint firstItem="wMo-cC-4Ap" firstAttribute="bottom" secondItem="rta-hr-32L" secondAttribute="bottom" id="Egk-hC-Uo1"/>
+                            <constraint firstItem="rta-hr-32L" firstAttribute="leading" secondItem="wMo-cC-4Ap" secondAttribute="leading" id="TIH-es-NgE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wMo-cC-4Ap"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="rta-hr-32L" id="zJc-Wc-8r9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AAK-G8-m3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2242" y="3305"/>
+        </scene>
         <!--Add Recipient-->
         <scene sceneID="wMP-TI-hPC">
             <objects>
@@ -1140,7 +1339,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <rect key="frame" x="16" y="97" width="343" height="21"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                 <connections>
                                     <action selector="editDidChanged:" destination="Bg2-Xz-DkD" eventType="editingChanged" id="O5Q-ZR-BZE"/>
                                 </connections>
@@ -1326,6 +1525,9 @@ If you choose to reveal the password, we recommend using an auto generated passw
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Update Password"/>
+                                <connections>
+                                    <segue destination="coN-N4-a8p" kind="show" identifier="sharingFlowToUpdatePasswordVC" id="RyM-O8-ezd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5K-TB-66d">
                                 <rect key="frame" x="14" y="602" width="347" height="33"/>
@@ -1335,6 +1537,9 @@ If you choose to reveal the password, we recommend using an auto generated passw
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1348,6 +1553,9 @@ If you choose to reveal the password, we recommend using an auto generated passw
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1415,6 +1623,9 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Yh0-gv-wcG" kind="show" identifier="setSecretPhraseVCToEnterSecretPhraseVC" id="t8i-vS-2nu"/>
@@ -1427,6 +1638,9 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1746,10 +1960,10 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                     <connections>
                         <outlet property="currentPassword" destination="FNG-uh-vj5" id="kgB-5M-FbF"/>
                         <outlet property="duration" destination="HsS-14-Lkc" id="Q23-7e-UeA"/>
-                        <outlet property="receiverEmail" destination="qEc-Yt-g9a" id="xBs-MI-iOr"/>
                         <outlet property="secretPhrase" destination="5S2-av-cZT" id="r0h-Zn-fNO"/>
                         <outlet property="shareBtn" destination="QId-Jy-iAT" id="Y2z-tp-aog"/>
                         <outlet property="sitename" destination="iks-W1-me5" id="546-Hi-v9Y"/>
+                        <outlet property="usernameLabel" destination="qEc-Yt-g9a" id="xBs-MI-iOr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZ8-bI-JkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2082,7 +2296,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                     <tabBarItem key="tabBarItem" title="Logins" id="9Cu-QG-Sd9" userLabel="Logins"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="vgZ-Bk-pNh" id="noN-BY-0gQ"/>
-                        <segue destination="FcO-TW-6B3" kind="show" identifier="beamTableCellToLoginDetail" id="xUI-EV-Jms"/>
+                        <segue destination="FcO-TW-6B3" kind="show" identifier="beamTableCellToLoginDetail" customClass="TransitionFromLeftToRight" customModule="pass_share" customModuleProvider="target" id="xUI-EV-Jms"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9CS-RG-tXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2254,6 +2468,29 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                     <action selector="clickShareWith:" destination="ohb-OU-EBP" eventType="touchUpInside" id="bWg-EG-Bdv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2Z-jk-uMs">
+                                <rect key="frame" x="321" y="152.5" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="revealPassword:" destination="ohb-OU-EBP" eventType="touchUpInside" id="YBC-fG-Asc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQb-YU-ATx">
+                                <rect key="frame" x="269" y="31.5" width="90" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="ld9-CD-vsy"/>
+                                    <constraint firstAttribute="height" constant="28" id="nDA-kd-eru"/>
+                                </constraints>
+                                <state key="normal" title="Launch"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -2274,13 +2511,17 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             <constraint firstItem="nUb-yu-v3u" firstAttribute="trailing" secondItem="LGj-cf-Hfw" secondAttribute="trailing" id="Kjz-1c-Kwm"/>
                             <constraint firstItem="bHs-G9-jMF" firstAttribute="top" secondItem="YGK-UL-iyu" secondAttribute="bottom" constant="60" id="LZo-NM-AvR"/>
                             <constraint firstItem="9VI-me-7Zi" firstAttribute="top" secondItem="Kxb-4F-kbw" secondAttribute="top" constant="20" symbolic="YES" id="ORM-zH-a6O"/>
+                            <constraint firstItem="oQb-YU-ATx" firstAttribute="centerY" secondItem="t9m-gP-sCN" secondAttribute="centerY" id="Ohf-9X-ZFi"/>
                             <constraint firstItem="YGK-UL-iyu" firstAttribute="top" secondItem="JzO-Vh-v6e" secondAttribute="bottom" constant="60" id="Osv-kx-ua4"/>
                             <constraint firstItem="t9m-gP-sCN" firstAttribute="top" secondItem="9ba-M9-gyo" secondAttribute="top" constant="35" id="Pyt-SL-NHu"/>
                             <constraint firstAttribute="trailing" secondItem="bHs-G9-jMF" secondAttribute="trailing" id="QYx-4V-eZn"/>
+                            <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="oQb-YU-ATx" secondAttribute="trailing" constant="16" id="SUL-vo-pmj"/>
                             <constraint firstItem="0qk-au-WrE" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="T7I-Zg-noW"/>
                             <constraint firstItem="LGj-cf-Hfw" firstAttribute="top" secondItem="bHs-G9-jMF" secondAttribute="bottom" constant="76" id="YeT-EG-n8J"/>
                             <constraint firstItem="YGK-UL-iyu" firstAttribute="top" secondItem="12v-HD-ra4" secondAttribute="bottom" constant="10" id="cbl-YE-cR9"/>
                             <constraint firstAttribute="trailing" secondItem="YGK-UL-iyu" secondAttribute="trailing" id="dMm-PR-dmA"/>
+                            <constraint firstItem="w2Z-jk-uMs" firstAttribute="centerY" secondItem="i9R-dS-hvG" secondAttribute="centerY" id="ddh-OP-KWl"/>
+                            <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="w2Z-jk-uMs" secondAttribute="trailing" constant="16" id="g1q-FG-cnS"/>
                             <constraint firstItem="bHs-G9-jMF" firstAttribute="leading" secondItem="Kxb-4F-kbw" secondAttribute="leading" id="pd0-Dk-NyR"/>
                             <constraint firstItem="qhF-pu-Vtq" firstAttribute="top" secondItem="bHs-G9-jMF" secondAttribute="bottom" constant="22" id="sXI-s3-kcD"/>
                             <constraint firstItem="EUd-dA-iOa" firstAttribute="top" secondItem="YGK-UL-iyu" secondAttribute="bottom" constant="10" id="tcR-mM-FQc"/>
@@ -2370,7 +2611,8 @@ We recommend that you communicate the secret phrase to them verbally.</string>
     <inferredMetricsTieBreakers>
         <segue reference="YjG-tG-QBN"/>
         <segue reference="l6H-PP-2us"/>
-        <segue reference="MJS-cG-5Zy"/>
-        <segue reference="xUI-EV-Jms"/>
+        <segue reference="a9c-fu-0GZ"/>
+        <segue reference="RyM-O8-ezd"/>
+        <segue reference="pfg-0i-GfN"/>
     </inferredMetricsTieBreakers>
 </document>

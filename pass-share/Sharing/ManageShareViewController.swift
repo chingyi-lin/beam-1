@@ -42,6 +42,7 @@ class ManageShareViewController: UIViewController {
         if segue.identifier == "manageShareTableCellToShareDetail" {
             let displayVC = (segue.destination as! ShareDetailViewController)
             displayVC.accessID = self.accessID
+            displayVC.credentialID = self.credentialID
         }
     }
     

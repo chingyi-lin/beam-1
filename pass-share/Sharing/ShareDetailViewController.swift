@@ -10,6 +10,7 @@ import UIKit
 
 class ShareDetailViewController: UIViewController {
     
+    var credentialID: String?
     var accessID: String?
     var access: Access?
 
@@ -37,10 +38,18 @@ class ShareDetailViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "shareDetailVCToUpdatePasswordVC" {
+            let displayVC = segue.destination as! UpdatePasswordViewController
+            displayVC.credentialID = self.credentialID
+        }
+    }
+    
     @IBAction func revoke(_ sender: Any) {
         let alert = UIAlertController(title: "Update Password?", message: "You’ve allowed the recipient to view the password, so we recommend updating your password after revoking their access.\n\nAll other sharers will automatically be synced with the new password.", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Update", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Update", style: .default, handler: {action in self.performSegue(withIdentifier: "shareDetailVCToUpdatePasswordVC", sender: self)}))
         alert.addAction(UIAlertAction(title: "Not Now", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
@@ -48,7 +57,6 @@ class ShareDetailViewController: UIViewController {
     @IBAction func revealSecretPhrase(_ sender: Any) {
         if self.secretPhraseLabel.text?.contains("•") ?? false {
             self.secretPhraseLabel.text = access?.secretPhrase
-            
         } else {
             self.secretPhraseLabel.text = "• • • • • • • • • • • • • • • •"
         }
