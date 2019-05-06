@@ -714,7 +714,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" width="100" style="plain" id="4du-YC-2FX">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oql-X2-b91">
-                                <rect key="frame" x="343" y="11" width="100" height="22"/>
+                                <rect key="frame" x="259" y="11" width="100" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add_14"/>
                                 <connections>
@@ -1279,46 +1279,11 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <outlet property="newPasswordTextField" destination="I7U-U4-Ki1" id="SZD-Mu-PRR"/>
                         <outlet property="sitenameLabel" destination="53r-DW-Lhf" id="0Mq-9o-ble"/>
                         <outlet property="usernameLabel" destination="8gT-2O-ie0" id="3cO-mm-bg3"/>
-                        <segue destination="Bki-rx-1vt" kind="show" identifier="updatePasswordVCToUpdateWebVC" id="Lqa-YP-eXY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0l-Dp-jjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1396" y="3306.2968515742132"/>
-        </scene>
-        <!--Update Web View Controller-->
-        <scene sceneID="Y4q-Fd-Kb6">
-            <objects>
-                <viewController id="Bki-rx-1vt" customClass="UpdateWebViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pRf-60-kLf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rta-hr-32L">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rta-hr-32L" firstAttribute="top" secondItem="wMo-cC-4Ap" secondAttribute="top" id="3xD-Q2-MVA"/>
-                            <constraint firstItem="wMo-cC-4Ap" firstAttribute="trailing" secondItem="rta-hr-32L" secondAttribute="trailing" id="DE1-Md-qn2"/>
-                            <constraint firstItem="wMo-cC-4Ap" firstAttribute="bottom" secondItem="rta-hr-32L" secondAttribute="bottom" id="Egk-hC-Uo1"/>
-                            <constraint firstItem="rta-hr-32L" firstAttribute="leading" secondItem="wMo-cC-4Ap" secondAttribute="leading" id="TIH-es-NgE"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="wMo-cC-4Ap"/>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="rta-hr-32L" id="zJc-Wc-8r9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AAK-G8-m3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2242" y="3305"/>
         </scene>
         <!--Add Recipient-->
         <scene sceneID="wMP-TI-hPC">

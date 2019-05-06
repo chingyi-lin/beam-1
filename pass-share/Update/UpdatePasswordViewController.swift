@@ -9,6 +9,7 @@
 
 
 import UIKit
+import SafariServices
 
 class UpdatePasswordViewController: UIViewController {
     
@@ -30,20 +31,12 @@ class UpdatePasswordViewController: UIViewController {
         let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
         sitenameLabel.text = credential.sitename
         usernameLabel.text = credential.username
-        launchBtn.titleLabel?.text = "Launch " + credential.sitename + " to Update Password"
         
+        let titleStr = "Launch " + credential.sitename + " to Update Password"
+        launchBtn.setTitle(titleStr, for: .normal)
         // Adjust keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(AddRecipientViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddRecipientViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
-        if segue.identifier == "updatePasswordVCToUpdateWebVC" {
-            let displayVC = segue.destination as! UpdateWebViewController
-            displayVC.domain = credential.domain
-        }
     }
     
     @IBAction func showPassword(_ sender: Any) {
@@ -67,10 +60,30 @@ class UpdatePasswordViewController: UIViewController {
         // TODO: implement keyboard
         alert.addAction(UIAlertAction(title: "Allow", style: .default, handler: {action in
             UIPasteboard.general.string = self.newPasswordTextField.text
-            self.performSegue(withIdentifier: "updatePasswordVCToUpdateWebVC", sender: self)}))
-        alert.addAction(UIAlertAction(title: "Don't allow", style: .cancel, handler: nil))
+            self.presentSafariWebView()
+        }))
+        alert.addAction(UIAlertAction(title: "Don't allow", style: .cancel, handler: {action in
+            self.presentSafariWebView()
+        }))
         
         self.present(alert, animated: true)
+    }
+    
+    func presentSafariWebView(){
+        let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
+        let config = SFSafariViewController.Configuration()
+        config.entersReaderIfAvailable = true
+        var urlString = ""
+        switch credential.domain {
+            case "instagram.com":
+                urlString = "https://www.instagram.com/accounts/password/change/"
+            default:
+                urlString = "https://" + credential.domain
+        }
+        
+        let url = URL(string: urlString)!
+        let vc = SFSafariViewController(url: url, configuration: config)
+        self.present(vc, animated: true)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
