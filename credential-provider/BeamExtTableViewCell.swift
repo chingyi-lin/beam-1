@@ -16,4 +16,6 @@ class BeamExtTableViewCell: UITableViewCell {
     @IBOutlet weak var siteImage: UIImageView!
     @IBOutlet weak var sharedWithImage: UIImageView!
     var identifier: String = "none"
+    
+    var request: AnyObject?
 }

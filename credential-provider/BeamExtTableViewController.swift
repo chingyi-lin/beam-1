@@ -16,6 +16,7 @@ class BeamExtTablveViewController: UITableViewController {
     
     var beamExtTableViewControllerDelegate: BeamExtTableViewControllerDelegate!
     var credentials = [Credential]()
+    var siteImagesCache = NSCache<NSString, UIImage>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,30 @@ class BeamExtTablveViewController: UITableViewController {
         cell.siteImage.image = UIImage(named: "sitelogo_default")
         cell.sharedWithImage.image = UIImage(named:"profile_pic_small_24")
         
+        // Fetch image
+        let domain = credentials[indexPath.row].domain
+        if let cachedImage = siteImagesCache.object(forKey: NSString(string: domain)) {
+            cell.siteImage.image = cachedImage
+        }  else {
+            DispatchQueue.global(qos: .background).async {
+                self.fetchSiteLogo(for: domain, at: cell)
+            }
+        }
+        
         return cell
+    }
+    
+    func fetchSiteLogo(for domain: String, at cell: BeamExtTableViewCell){
+        let imgSource = "https://logo.clearbit.com/"
+        let targetUrl = URL(string: imgSource + domain + "?size=65")!
+        let siteLogoRequest = ImageRequest(url: targetUrl)
+        cell.request = siteLogoRequest
+        siteLogoRequest.load(withCompletion: { [weak self] (siteLogo: UIImage?) in
+            guard let siteLogo = siteLogo else {
+                return
+            }
+            self!.siteImagesCache.setObject(siteLogo, forKey: NSString(string: domain))
+            cell.siteImage.image = siteLogo
+        })
     }
 }
