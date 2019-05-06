@@ -2457,6 +2457,13 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sharedwith" translatesAutoresizingMaskIntoConstraints="NO" id="kxt-eK-OMi">
+                                <rect key="frame" x="23.5" y="226" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="IBO-um-NYV"/>
+                                    <constraint firstAttribute="height" constant="22" id="IBv-E2-aVk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -2470,6 +2477,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             <constraint firstAttribute="trailing" secondItem="LGj-cf-Hfw" secondAttribute="trailing" id="B55-Xc-UlW"/>
                             <constraint firstItem="nUb-yu-v3u" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" id="BTe-cs-Oic"/>
                             <constraint firstItem="i9R-dS-hvG" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="C5h-eS-Sg7"/>
+                            <constraint firstItem="kxt-eK-OMi" firstAttribute="centerY" secondItem="qhF-pu-Vtq" secondAttribute="centerY" constant="1" id="FuQ-2W-fVM"/>
                             <constraint firstItem="12v-HD-ra4" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="H7Z-8a-wOl"/>
                             <constraint firstItem="qhF-pu-Vtq" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="IDB-Uq-XFA"/>
                             <constraint firstItem="JzO-Vh-v6e" firstAttribute="leading" secondItem="Kxb-4F-kbw" secondAttribute="leading" id="IHP-V9-H3j"/>
@@ -2488,6 +2496,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             <constraint firstAttribute="trailing" secondItem="YGK-UL-iyu" secondAttribute="trailing" id="dMm-PR-dmA"/>
                             <constraint firstItem="w2Z-jk-uMs" firstAttribute="centerY" secondItem="i9R-dS-hvG" secondAttribute="centerY" id="ddh-OP-KWl"/>
                             <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="w2Z-jk-uMs" secondAttribute="trailing" constant="16" id="g1q-FG-cnS"/>
+                            <constraint firstItem="kxt-eK-OMi" firstAttribute="centerX" secondItem="qhF-pu-Vtq" secondAttribute="centerX" constant="2" id="gh8-kr-hQ0"/>
                             <constraint firstItem="bHs-G9-jMF" firstAttribute="leading" secondItem="Kxb-4F-kbw" secondAttribute="leading" id="pd0-Dk-NyR"/>
                             <constraint firstItem="qhF-pu-Vtq" firstAttribute="top" secondItem="bHs-G9-jMF" secondAttribute="bottom" constant="22" id="sXI-s3-kcD"/>
                             <constraint firstItem="EUd-dA-iOa" firstAttribute="top" secondItem="YGK-UL-iyu" secondAttribute="bottom" constant="10" id="tcR-mM-FQc"/>
@@ -2575,6 +2584,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
         <image name="profile_pic_small_35" width="35" height="35"/>
         <image name="right_arrow_32" width="32" height="32"/>
         <image name="settings" width="24" height="24"/>
+        <image name="sharedwith" width="22" height="23"/>
         <image name="sitelogo_default" width="69" height="69"/>
         <image name="sitelogo_default_33" width="33" height="33"/>
     </resources>
