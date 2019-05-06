@@ -14,14 +14,34 @@ class ManageShareViewController: UIViewController {
     var accessArr: [Access]?
     var manageShareTableVC: ManageShareTableViewController?
     
+    
+    @IBOutlet weak var containerView: UIView!
+    
     @IBOutlet weak var backBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
         accessArr = Array(selectedLogin.accessArr)
+        
+        // add blank state subview to container
         if selectedLogin.accessArr.count == 0 {
             //TODO: show the blank state view - set the alpha view = 1
+            let controller = storyboard!.instantiateViewController(withIdentifier: "shareBlankState") as! ShareBlankStateViewController
+            addChild(controller)
+            
+            controller.shareBlankStateViewControllerDelegate = self
+            controller.view.translatesAutoresizingMaskIntoConstraints = false
+            containerView.addSubview(controller.view)
+            
+            NSLayoutConstraint.activate([
+                controller.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+                controller.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+                controller.view.topAnchor.constraint(equalTo: containerView.topAnchor),
+                controller.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+                ])
+            
+            controller.didMove(toParent: self)
         }
         self.title = selectedLogin.sitename
     }
@@ -64,5 +84,13 @@ extension ManageShareViewController: ManageShareTableViewControllerDelegate {
         print("Select the row with id as \(accessID)")
         self.accessID = accessID
         self.performSegue(withIdentifier: "manageShareTableCellToShareDetail", sender: self)
+    }
+}
+
+extension ManageShareViewController:ShareBlankStateViewControllerDelegate {
+    func shareBtnClicked() {
+        self.performSegue(withIdentifier: "mangeShareVCToAddRecipientNav", sender: self)
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewLogin")
+//        present(vc!, animated: true, completion: nil)
     }
 }

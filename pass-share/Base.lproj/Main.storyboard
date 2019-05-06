@@ -561,6 +561,53 @@ Don’t know your phrase? Reach out to the sender!</string>
             </objects>
             <point key="canvasLocation" x="-194" y="999"/>
         </scene>
+        <!--Share Blank State View Controller-->
+        <scene sceneID="sTU-pC-bVn">
+            <objects>
+                <viewController storyboardIdentifier="shareBlankState" id="Pa7-hw-q4H" customClass="ShareBlankStateViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DFp-ZO-mYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="iSe-Ju-p1A">
+                                <rect key="frame" x="143" y="145" width="89" height="111"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven’t shared this login with anyone yet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7g-PE-myJ">
+                                <rect key="frame" x="14" y="286" width="347" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-XE-fSO" customClass="PrimaryButtonSmall" customModule="pass_share" customModuleProvider="target">
+                                <rect key="frame" x="107.5" y="354" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fd9-Zy-pmW"/>
+                                    <constraint firstAttribute="width" constant="160" id="jM3-7y-Iuh"/>
+                                </constraints>
+                                <state key="normal" title="SHARE"/>
+                                <connections>
+                                    <action selector="shareBtnClicked:" destination="Pa7-hw-q4H" eventType="touchUpInside" id="cDF-ad-VZg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T7g-PE-myJ" firstAttribute="top" secondItem="iSe-Ju-p1A" secondAttribute="bottom" constant="30" id="4rh-87-N7M"/>
+                            <constraint firstAttribute="trailing" secondItem="T7g-PE-myJ" secondAttribute="trailing" constant="14" id="7yH-WV-HyC"/>
+                            <constraint firstItem="HRF-XE-fSO" firstAttribute="centerX" secondItem="DFp-ZO-mYJ" secondAttribute="centerX" id="D7Y-Q6-AvE"/>
+                            <constraint firstItem="T7g-PE-myJ" firstAttribute="centerX" secondItem="DFp-ZO-mYJ" secondAttribute="centerX" id="N66-OJ-Tk2"/>
+                            <constraint firstItem="iSe-Ju-p1A" firstAttribute="centerX" secondItem="DFp-ZO-mYJ" secondAttribute="centerX" id="ORi-do-gBJ"/>
+                            <constraint firstItem="HRF-XE-fSO" firstAttribute="top" secondItem="T7g-PE-myJ" secondAttribute="bottom" constant="50" id="Rlg-4N-XNx"/>
+                            <constraint firstItem="iSe-Ju-p1A" firstAttribute="top" secondItem="sqr-Zo-HIl" secondAttribute="top" constant="125" id="Uwc-lw-1xv"/>
+                            <constraint firstItem="T7g-PE-myJ" firstAttribute="leading" secondItem="sqr-Zo-HIl" secondAttribute="leading" constant="14" id="lNF-Kh-huz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sqr-Zo-HIl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7b-l3-Uwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4210.3999999999996" y="1796.8515742128936"/>
+        </scene>
         <!--Login Blank State View Controller-->
         <scene sceneID="xks-WY-xqB">
             <objects>
@@ -778,13 +825,14 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add_14"/>
                                 <connections>
-                                    <segue destination="JxY-CQ-I8f" kind="custom" identifier="mangeShareVCToAddRecipientNav" customClass="TransitionFromLeftToRight" customModule="pass_share" customModuleProvider="target" id="ysL-By-eYL"/>
+                                    <segue destination="JxY-CQ-I8f" kind="show" identifier="mangeShareVCToAddRecipientNav" id="ysL-By-eYL"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backBtn" destination="g9Y-LN-dFe" id="9um-zN-qyZ"/>
+                        <outlet property="containerView" destination="0PP-UR-gc1" id="avC-iR-Oiq"/>
                         <segue destination="YPi-QO-GLk" kind="show" identifier="manageShareTableCellToShareDetail" id="WuX-qq-SNb"/>
                     </connections>
                 </viewController>
@@ -2651,6 +2699,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
         <image name="add_14" width="14" height="14"/>
         <image name="add_20" width="20" height="20"/>
         <image name="astronaut" width="96" height="81"/>
+        <image name="earth" width="89" height="111"/>
         <image name="friends" width="30" height="28"/>
         <image name="lock" width="28" height="28"/>
         <image name="more_btn" width="16" height="4"/>
