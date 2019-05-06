@@ -59,6 +59,7 @@
 		D74A34B02277DC5C0059609B /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34AF2277DC5C0059609B /* UpdatePasswordViewController.swift */; };
 		D74A34B5227975BB0059609B /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34B4227975BB0059609B /* NetworkRequest.swift */; };
 		D74A34BB227FE4E50059609B /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34B4227975BB0059609B /* NetworkRequest.swift */; };
+		D74A34BE228020BA0059609B /* LoginBlankStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34BD228020BA0059609B /* LoginBlankStateViewController.swift */; };
 		D74A45EA226D37A30018DF91 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */; };
 		D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */; };
 		D74A45EE226D3BBE0018DF91 /* SetSeePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */; };
@@ -145,6 +146,7 @@
 		D74A34AC227771030059609B /* ShareDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDetailViewController.swift; sourceTree = "<group>"; };
 		D74A34AF2277DC5C0059609B /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
 		D74A34B4227975BB0059609B /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		D74A34BD228020BA0059609B /* LoginBlankStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBlankStateViewController.swift; sourceTree = "<group>"; };
 		D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 		D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationOptionTableViewController.swift; sourceTree = "<group>"; };
 		D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSeePasswordViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		16713738223F1D8300BFCC9D /* pass-share */ = {
 			isa = PBXGroup;
 			children = (
+				D74A34BC228020910059609B /* BlankState */,
 				D74A34B32279759D0059609B /* Network */,
 				D74A34AE2277DC380059609B /* Update */,
 				D716F74E2263D5D300D1F77D /* Assets.xcassets */,
@@ -336,6 +339,14 @@
 				D74A34B4227975BB0059609B /* NetworkRequest.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D74A34BC228020910059609B /* BlankState */ = {
+			isa = PBXGroup;
+			children = (
+				D74A34BD228020BA0059609B /* LoginBlankStateViewController.swift */,
+			);
+			path = BlankState;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +547,7 @@
 				D716F7512264181B00D1F77D /* LoginViewController.swift in Sources */,
 				1671373A223F1D8300BFCC9D /* AppDelegate.swift in Sources */,
 				6D8A62F22257357100329B0C /* CloudKitAPI.swift in Sources */,
+				D74A34BE228020BA0059609B /* LoginBlankStateViewController.swift in Sources */,
 				D716F7492263CD8E00D1F77D /* BeamTableViewController.swift in Sources */,
 				D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */,
 				D716F7532264280600D1F77D /* BeamViewController.swift in Sources */,

@@ -561,6 +561,60 @@ Don’t know your phrase? Reach out to the sender!</string>
             </objects>
             <point key="canvasLocation" x="-194" y="999"/>
         </scene>
+        <!--Login Blank State View Controller-->
+        <scene sceneID="xks-WY-xqB">
+            <objects>
+                <viewController storyboardIdentifier="loginBlankState" id="lSJ-lx-CGq" customClass="LoginBlankStateViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lOS-Cb-KH1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astronaut" translatesAutoresizingMaskIntoConstraints="NO" id="riu-ne-25O">
+                                <rect key="frame" x="139.5" y="145" width="96" height="81"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing saved here yet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8D-Od-U3Q">
+                                <rect key="frame" x="14" y="239" width="347" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-la-SVA">
+                                <rect key="frame" x="107.5" y="285" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.063625387850000006" green="0.10857107489999999" blue="0.27912247179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="20d-P1-il8"/>
+                                    <constraint firstAttribute="height" constant="40" id="vb9-yq-6Xe"/>
+                                </constraints>
+                                <state key="normal" title="ADD NEW LOGIN">
+                                    <color key="titleColor" red="0.49803921568627452" green="0.87058823529411766" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewLoginClicked:" destination="lSJ-lx-CGq" eventType="touchUpInside" id="yzV-MT-jsu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f2A-la-SVA" firstAttribute="centerX" secondItem="lOS-Cb-KH1" secondAttribute="centerX" id="Dtp-C2-lCs"/>
+                            <constraint firstItem="riu-ne-25O" firstAttribute="top" secondItem="D1r-DY-myM" secondAttribute="top" constant="125" id="NpI-qS-m9m"/>
+                            <constraint firstItem="riu-ne-25O" firstAttribute="centerX" secondItem="lOS-Cb-KH1" secondAttribute="centerX" id="Pxi-Bh-MY4"/>
+                            <constraint firstItem="t8D-Od-U3Q" firstAttribute="top" secondItem="riu-ne-25O" secondAttribute="bottom" constant="13" id="Pz1-01-Kz4"/>
+                            <constraint firstItem="D1r-DY-myM" firstAttribute="trailing" secondItem="t8D-Od-U3Q" secondAttribute="trailing" constant="14" id="XaI-LE-7Ks"/>
+                            <constraint firstItem="t8D-Od-U3Q" firstAttribute="leading" secondItem="D1r-DY-myM" secondAttribute="leading" constant="14" id="vtd-7B-k8a"/>
+                            <constraint firstItem="f2A-la-SVA" firstAttribute="top" secondItem="t8D-Od-U3Q" secondAttribute="bottom" constant="25" id="wTp-ML-Tix"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D1r-DY-myM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0w-Zj-rhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3402.4000000000001" y="1797.7511244377813"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="U45-Fe-pRv">
             <objects>
@@ -2262,6 +2316,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Logins" image="lock" id="9Cu-QG-Sd9" userLabel="Logins"/>
                     <connections>
+                        <outlet property="containerView" destination="pPv-es-TbA" id="pVO-uq-omW"/>
                         <outlet property="searchDisplayController" destination="vgZ-Bk-pNh" id="noN-BY-0gQ"/>
                         <segue destination="FcO-TW-6B3" kind="show" identifier="beamTableCellToLoginDetail" customClass="TransitionFromLeftToRight" customModule="pass_share" customModuleProvider="target" id="xUI-EV-Jms"/>
                     </connections>
@@ -2571,11 +2626,25 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             </objects>
             <point key="canvasLocation" x="-986.39999999999998" y="1796.8515742128936"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="y5r-ZP-m5K">
+            <objects>
+                <viewController id="PsW-0n-WHt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QoL-Gi-p8w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWC-Am-3hl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="activity" width="30" height="28"/>
         <image name="add_14" width="14" height="14"/>
         <image name="add_20" width="20" height="20"/>
+        <image name="astronaut" width="96" height="81"/>
         <image name="friends" width="30" height="28"/>
         <image name="lock" width="28" height="28"/>
         <image name="more_btn" width="16" height="4"/>
