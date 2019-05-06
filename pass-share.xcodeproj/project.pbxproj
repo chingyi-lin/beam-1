@@ -62,6 +62,8 @@
 		D74A34BE228020BA0059609B /* LoginBlankStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34BD228020BA0059609B /* LoginBlankStateViewController.swift */; };
 		D74A34C12280BCF40059609B /* PrimaryButtonSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34C02280BCF40059609B /* PrimaryButtonSmall.swift */; };
 		D74A34C32280BF680059609B /* ShareBlankStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34C22280BF680059609B /* ShareBlankStateViewController.swift */; };
+		D74A34C52280C5F90059609B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34C42280C5F90059609B /* PrimaryButton.swift */; };
+		D74A34C72280C6DD0059609B /* InlinePrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34C62280C6DD0059609B /* InlinePrimaryButton.swift */; };
 		D74A45EA226D37A30018DF91 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */; };
 		D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */; };
 		D74A45EE226D3BBE0018DF91 /* SetSeePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */; };
@@ -151,6 +153,8 @@
 		D74A34BD228020BA0059609B /* LoginBlankStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBlankStateViewController.swift; sourceTree = "<group>"; };
 		D74A34C02280BCF40059609B /* PrimaryButtonSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonSmall.swift; sourceTree = "<group>"; };
 		D74A34C22280BF680059609B /* ShareBlankStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBlankStateViewController.swift; sourceTree = "<group>"; };
+		D74A34C42280C5F90059609B /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		D74A34C62280C6DD0059609B /* InlinePrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlinePrimaryButton.swift; sourceTree = "<group>"; };
 		D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationViewController.swift; sourceTree = "<group>"; };
 		D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDurationOptionTableViewController.swift; sourceTree = "<group>"; };
 		D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSeePasswordViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				D74A34C02280BCF40059609B /* PrimaryButtonSmall.swift */,
+				D74A34C42280C5F90059609B /* PrimaryButton.swift */,
+				D74A34C62280C6DD0059609B /* InlinePrimaryButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 				D74A3494227682770059609B /* DisplayActivityTableViewCell.swift in Sources */,
 				D716F76222666C1000D1F77D /* Contact.swift in Sources */,
 				D74A349222767C8B0059609B /* ActivityViewController.swift in Sources */,
+				D74A34C52280C5F90059609B /* PrimaryButton.swift in Sources */,
 				D74B4F0A22483914003D7345 /* MainViewController.swift in Sources */,
 				D716F74B2263CE5700D1F77D /* BeamTableViewCell.swift in Sources */,
 				D74B4F0C22483D4D003D7345 /* AddNewLoginViewController.swift in Sources */,
@@ -568,6 +575,7 @@
 				D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */,
 				D716F7532264280600D1F77D /* BeamViewController.swift in Sources */,
 				D74A34A42276CD370059609B /* VerifySecretPhraseViewController.swift in Sources */,
+				D74A34C72280C6DD0059609B /* InlinePrimaryButton.swift in Sources */,
 				D74A45F5226D93DF0018DF91 /* EnterSecretPhraseViewController.swift in Sources */,
 				D74A34A92276DCF90059609B /* LoginAddedViewController.swift in Sources */,
 				D716F76F226827BA00D1F77D /* ManageShareTableCell.swift in Sources */,
