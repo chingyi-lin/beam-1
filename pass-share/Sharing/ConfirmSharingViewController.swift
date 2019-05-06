@@ -12,10 +12,14 @@ class ConfirmSharingViewController: UIViewController {
     var credentialID: String?
     var newAccess: Access?
     var selectedLogin: Credential?
+    fileprivate var request: AnyObject?
+    
+    @IBOutlet weak var siteLogo: UIImageView!
     @IBOutlet weak var shareBtn: UIButton!
     
     override func viewDidLoad() {
         self.title = "Confirm Sharing Details"
+        fetchSiteLogo(for: RealmAPI.shared.read(filterBy: credentialID!).domain)
         selectedLogin = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
         self.sitename.text = selectedLogin?.sitename
         self.usernameLabel.text = selectedLogin?.username
@@ -32,6 +36,7 @@ class ConfirmSharingViewController: UIViewController {
             default:
                 self.duration.text = "Custom Date"
         }
+        
     }
     
     @IBOutlet weak var sitename: UILabel!
@@ -69,5 +74,18 @@ class ConfirmSharingViewController: UIViewController {
 //        self.navigationController?.popToRootViewController(animated: true)
 //        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
         dismiss(animated: true, completion: nil)
+    }
+    
+    func fetchSiteLogo(for domain: String){
+        let imgSource = "https://logo.clearbit.com/"
+        let targetUrl = URL(string: imgSource + domain + "?size=33")!
+        let siteLogoRequest = ImageRequest(url: targetUrl)
+        self.request = siteLogoRequest
+        siteLogoRequest.load(withCompletion: { [weak self] (siteLogo: UIImage?) in
+            guard let siteLogo = siteLogo else {
+                return
+            }
+            self?.siteLogo.image = siteLogo
+        })
     }
 }
