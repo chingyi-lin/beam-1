@@ -642,29 +642,20 @@ Don’t know your phrase? Reach out to the sender!</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitelogo_default" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-fw-aj5">
-                                <rect key="frame" x="153" y="134" width="69" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="M8X-xD-OiQ"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyx-qI-Mvv">
-                                <rect key="frame" x="165" y="213" width="45" height="20.5"/>
+                                <rect key="frame" x="165" y="192" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ht6-iL-n95">
-                                <rect key="frame" x="0.0" y="284" width="375" height="383"/>
+                                <rect key="frame" x="0.0" y="261" width="375" height="406"/>
                                 <connections>
                                     <segue destination="ohb-OU-EBP" kind="embed" identifier="loginDetailShowDetail" id="vrk-3h-vpf"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Ef-Ff-fCo">
-                                <rect key="frame" x="0.0" y="64" width="375" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="14d-6j-PmH"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
                                 <segments>
                                     <segment title="Details"/>
                                     <segment title="Activities"/>
@@ -674,42 +665,57 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75p-6F-BoL">
-                                <rect key="frame" x="0.0" y="284" width="375" height="383"/>
+                                <rect key="frame" x="0.0" y="261" width="375" height="406"/>
                                 <connections>
                                     <segue destination="LR4-51-LKp" kind="embed" id="4nJ-Q5-BCo"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-Uk-lMw">
-                                <rect key="frame" x="144" y="239" width="87" height="22"/>
+                                <rect key="frame" x="144" y="216" width="87" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="c0Q-JP-4xB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Edit Details"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ic-Jd-hax">
+                                <rect key="frame" x="0.0" y="136" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitelogo_default" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-fw-aj5">
+                                <rect key="frame" x="153" y="112" width="69" height="69"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rCh-0B-hj1" firstAttribute="top" secondItem="qT6-qI-gNi" secondAttribute="top" id="0bZ-Cj-kDl"/>
                             <constraint firstItem="rCh-0B-hj1" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="4Ui-25-WuE"/>
+                            <constraint firstItem="oyx-qI-Mvv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="11" id="6Nc-re-qMU"/>
                             <constraint firstItem="rCh-0B-hj1" firstAttribute="trailing" secondItem="qT6-qI-gNi" secondAttribute="trailing" id="6oK-nZ-hr4"/>
+                            <constraint firstItem="oyx-qI-Mvv" firstAttribute="top" secondItem="2ic-Jd-hax" secondAttribute="bottom" constant="35" id="7Nq-7o-7XB"/>
                             <constraint firstItem="ht6-iL-n95" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="8i2-58-Emi"/>
-                            <constraint firstItem="75p-6F-BoL" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="80" id="9Xk-FQ-V2v"/>
+                            <constraint firstItem="2ic-Jd-hax" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="DWw-dT-vED"/>
                             <constraint firstItem="75p-6F-BoL" firstAttribute="trailing" secondItem="qT6-qI-gNi" secondAttribute="trailing" id="F4Q-fH-Lw5"/>
+                            <constraint firstItem="oyx-qI-Mvv" firstAttribute="top" secondItem="5Ef-Ff-fCo" secondAttribute="bottom" constant="100" id="GvS-T8-Dpe"/>
                             <constraint firstItem="qT6-qI-gNi" firstAttribute="bottom" secondItem="ht6-iL-n95" secondAttribute="bottom" id="O7f-KW-hvm"/>
+                            <constraint firstItem="ht6-iL-n95" firstAttribute="top" secondItem="ovd-Uk-lMw" secondAttribute="bottom" constant="23" id="OFX-mH-Pyx"/>
+                            <constraint firstItem="ovd-Uk-lMw" firstAttribute="top" secondItem="oyx-qI-Mvv" secondAttribute="bottom" constant="3.5" id="Pjc-re-DPi"/>
                             <constraint firstItem="qT6-qI-gNi" firstAttribute="bottom" secondItem="75p-6F-BoL" secondAttribute="bottom" id="UcB-Lk-Lbl"/>
                             <constraint firstItem="5Ef-Ff-fCo" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="UsV-yJ-ueP"/>
                             <constraint firstItem="5Ef-Ff-fCo" firstAttribute="trailing" secondItem="qT6-qI-gNi" secondAttribute="trailing" id="Y6h-7N-laP"/>
                             <constraint firstItem="75p-6F-BoL" firstAttribute="leading" secondItem="qT6-qI-gNi" secondAttribute="leading" id="Ys6-Lp-J05"/>
-                            <constraint firstItem="ht6-iL-n95" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="80" id="be6-X7-sCk"/>
-                            <constraint firstItem="ytc-fw-aj5" firstAttribute="top" secondItem="5Ef-Ff-fCo" secondAttribute="bottom" constant="20" id="dwG-g7-mZd"/>
-                            <constraint firstItem="oyx-qI-Mvv" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="9" id="flT-zR-XET"/>
+                            <constraint firstItem="qT6-qI-gNi" firstAttribute="trailing" secondItem="2ic-Jd-hax" secondAttribute="trailing" id="hgY-cW-5Pi"/>
                             <constraint firstItem="ovd-Uk-lMw" firstAttribute="centerX" secondItem="0Jx-FQ-1k3" secondAttribute="centerX" id="mI2-io-0xQ"/>
                             <constraint firstItem="ht6-iL-n95" firstAttribute="trailing" secondItem="qT6-qI-gNi" secondAttribute="trailing" id="nZH-fv-ydg"/>
-                            <constraint firstItem="ovd-Uk-lMw" firstAttribute="top" secondItem="ytc-fw-aj5" secondAttribute="bottom" constant="35" id="qLN-bb-yZ6"/>
                             <constraint firstItem="ytc-fw-aj5" firstAttribute="centerX" secondItem="0Jx-FQ-1k3" secondAttribute="centerX" id="r39-rn-qCk"/>
                             <constraint firstItem="oyx-qI-Mvv" firstAttribute="centerX" secondItem="0Jx-FQ-1k3" secondAttribute="centerX" id="rzG-SV-adD"/>
                             <constraint firstItem="5Ef-Ff-fCo" firstAttribute="top" secondItem="rCh-0B-hj1" secondAttribute="bottom" id="vxx-Bc-v5t"/>
+                            <constraint firstItem="75p-6F-BoL" firstAttribute="top" secondItem="ovd-Uk-lMw" secondAttribute="bottom" constant="23" id="y4q-pG-XlL"/>
+                            <constraint firstItem="ytc-fw-aj5" firstAttribute="centerY" secondItem="2ic-Jd-hax" secondAttribute="centerY" id="yNk-1o-jt1"/>
+                            <constraint firstItem="2ic-Jd-hax" firstAttribute="top" secondItem="5Ef-Ff-fCo" secondAttribute="bottom" constant="44" id="yVY-dk-AEW"/>
+                            <constraint firstItem="ytc-fw-aj5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5Ef-Ff-fCo" secondAttribute="bottom" constant="20" id="zsC-Bq-Ntz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qT6-qI-gNi"/>
                     </view>
@@ -727,7 +733,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhY-tW-dUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2446" y="1821"/>
+            <point key="canvasLocation" x="-2447.1999999999998" y="1820.2398800599701"/>
         </scene>
         <!--Shared With-->
         <scene sceneID="XWK-PX-yyc">
@@ -2392,7 +2398,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <viewController id="ohb-OU-EBP" customClass="LoginDetailViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kxb-4F-kbw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VI-me-7Zi">
@@ -2580,7 +2586,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <viewController id="LR4-51-LKp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ztu-u8-eHY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uGd-bQ-z2n"/>
