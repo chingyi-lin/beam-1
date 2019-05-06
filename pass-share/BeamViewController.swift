@@ -15,7 +15,7 @@ class BeamViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         // add child view controller view to container
-        if (RealmAPI.shared.readAll().count > 0) {
+        if (RealmAPI.shared.readAll().count == 0) {
             
             let controller = storyboard!.instantiateViewController(withIdentifier: "loginBlankState") as! LoginBlankStateViewController
             addChild(controller)
