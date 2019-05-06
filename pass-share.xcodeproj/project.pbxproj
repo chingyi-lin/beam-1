@@ -58,6 +58,7 @@
 		D74A34AD227771030059609B /* ShareDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34AC227771030059609B /* ShareDetailViewController.swift */; };
 		D74A34B02277DC5C0059609B /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34AF2277DC5C0059609B /* UpdatePasswordViewController.swift */; };
 		D74A34B5227975BB0059609B /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34B4227975BB0059609B /* NetworkRequest.swift */; };
+		D74A34BB227FE4E50059609B /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A34B4227975BB0059609B /* NetworkRequest.swift */; };
 		D74A45EA226D37A30018DF91 /* SetDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45E9226D37A30018DF91 /* SetDurationViewController.swift */; };
 		D74A45EC226D37DE0018DF91 /* SetDurationOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45EB226D37DE0018DF91 /* SetDurationOptionTableViewController.swift */; };
 		D74A45EE226D3BBE0018DF91 /* SetSeePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A45ED226D3BBE0018DF91 /* SetSeePasswordViewController.swift */; };
@@ -558,6 +559,7 @@
 				D74A45F1226D40070018DF91 /* Contact.swift in Sources */,
 				B665CFD922520018003DDFB5 /* CredentialProviderViewController.swift in Sources */,
 				D74A349D2276B6F50059609B /* Activity.swift in Sources */,
+				D74A34BB227FE4E50059609B /* NetworkRequest.swift in Sources */,
 				D74A45F0226D40040018DF91 /* MyAccess.swift in Sources */,
 				D716F7592264FB1400D1F77D /* BeamExtTableViewCell.swift in Sources */,
 			);

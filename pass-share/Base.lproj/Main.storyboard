@@ -330,7 +330,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" placeholder="Search Activity" translatesAutoresizingMaskIntoConstraints="NO" id="nWe-v1-ezB">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Activity" translatesAutoresizingMaskIntoConstraints="NO" id="nWe-v1-ezB">
                                 <rect key="frame" x="0.0" y="116" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -355,7 +355,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8QF-MG-I9J"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Activity" id="Vme-ug-nnb" userLabel="Activity"/>
+                    <tabBarItem key="tabBarItem" title="Activity" image="activity" id="Vme-ug-nnb" userLabel="Activity"/>
                     <connections>
                         <segue destination="jSZ-xi-cLC" kind="custom" identifier="activityVCToVerifySecretPhraseVC" customClass="TransitionFromLeftToRight" customModule="pass_share" customModuleProvider="target" id="udr-a9-bCt"/>
                     </connections>
@@ -1129,7 +1129,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_33" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-Dm-G8N">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitelogo_default_33" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-Dm-G8N">
                                 <rect key="frame" x="15" y="79" width="33" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Ck8-aY-gOV"/>
@@ -1277,6 +1277,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <outlet property="launchBtn" destination="XrA-vo-hpm" id="g9D-T3-UkT"/>
                         <outlet property="launchBtnBottomConstraint" destination="2Sg-RJ-cqh" id="eJY-5l-zCW"/>
                         <outlet property="newPasswordTextField" destination="I7U-U4-Ki1" id="SZD-Mu-PRR"/>
+                        <outlet property="siteLogo" destination="HdP-Dm-G8N" id="cj2-Tl-Mwp"/>
                         <outlet property="sitenameLabel" destination="53r-DW-Lhf" id="0Mq-9o-ble"/>
                         <outlet property="usernameLabel" destination="8gT-2O-ie0" id="3cO-mm-bg3"/>
                     </connections>
@@ -1733,7 +1734,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                     <action selector="confirmSharing:" destination="7bv-Fe-I4s" eventType="touchUpInside" id="t5A-UE-4Ie"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_33" translatesAutoresizingMaskIntoConstraints="NO" id="9aA-Bg-nRd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitelogo_default_33" translatesAutoresizingMaskIntoConstraints="NO" id="9aA-Bg-nRd">
                                 <rect key="frame" x="14" y="79" width="33" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="Rck-sQ-rVW"/>
@@ -1926,6 +1927,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                         <outlet property="duration" destination="HsS-14-Lkc" id="Q23-7e-UeA"/>
                         <outlet property="secretPhrase" destination="5S2-av-cZT" id="r0h-Zn-fNO"/>
                         <outlet property="shareBtn" destination="QId-Jy-iAT" id="Y2z-tp-aog"/>
+                        <outlet property="siteLogo" destination="9aA-Bg-nRd" id="uEI-aE-v6T"/>
                         <outlet property="sitename" destination="iks-W1-me5" id="546-Hi-v9Y"/>
                         <outlet property="usernameLabel" destination="qEc-Yt-g9a" id="xBs-MI-iOr"/>
                     </connections>
@@ -2217,7 +2219,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" placeholder="Search logins" translatesAutoresizingMaskIntoConstraints="NO" id="fFF-nl-oeS">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search logins" translatesAutoresizingMaskIntoConstraints="NO" id="fFF-nl-oeS">
                                 <rect key="frame" x="0.0" y="120" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cv5-s5-iD6"/>
@@ -2258,7 +2260,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hrO-zM-WYc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Logins" id="9Cu-QG-Sd9" userLabel="Logins"/>
+                    <tabBarItem key="tabBarItem" title="Logins" image="lock" id="9Cu-QG-Sd9" userLabel="Logins"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="vgZ-Bk-pNh" id="noN-BY-0gQ"/>
                         <segue destination="FcO-TW-6B3" kind="show" identifier="beamTableCellToLoginDetail" customClass="TransitionFromLeftToRight" customModule="pass_share" customModuleProvider="target" id="xUI-EV-Jms"/>
@@ -2268,7 +2270,6 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                 <searchDisplayController id="vgZ-Bk-pNh">
                     <connections>
                         <outlet property="delegate" destination="H9t-74-s7o" id="H5P-uX-gnO"/>
-                        <outlet property="searchBar" destination="fFF-nl-oeS" id="L7T-NS-1rr"/>
                         <outlet property="searchContentsController" destination="H9t-74-s7o" id="htM-LG-7Av"/>
                         <outlet property="searchResultsDataSource" destination="H9t-74-s7o" id="c0S-dT-DaZ"/>
                         <outlet property="searchResultsDelegate" destination="H9t-74-s7o" id="Nsr-SB-m8M"/>
@@ -2287,7 +2288,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0wo-sZ-ffL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Friends" id="pun-uK-98L"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="friends" id="pun-uK-98L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaW-UU-d4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2325,7 +2326,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="K21-gV-lsf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="hbN-I4-yhZ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="hbN-I4-yhZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Deg-WP-N8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2563,21 +2564,25 @@ We recommend that you communicate the secret phrase to them verbally.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="activity" width="30" height="28"/>
         <image name="add_14" width="14" height="14"/>
         <image name="add_20" width="20" height="20"/>
-        <image name="instagram_33" width="33" height="33"/>
+        <image name="friends" width="30" height="28"/>
+        <image name="lock" width="28" height="28"/>
         <image name="more_btn" width="16" height="4"/>
         <image name="profile_pic_55" width="55" height="55"/>
         <image name="profile_pic_small_24" width="24" height="24"/>
         <image name="profile_pic_small_35" width="35" height="35"/>
         <image name="right_arrow_32" width="32" height="32"/>
+        <image name="settings" width="24" height="24"/>
         <image name="sitelogo_default" width="69" height="69"/>
+        <image name="sitelogo_default_33" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YjG-tG-QBN"/>
         <segue reference="l6H-PP-2us"/>
         <segue reference="a9c-fu-0GZ"/>
         <segue reference="RyM-O8-ezd"/>
-        <segue reference="pfg-0i-GfN"/>
+        <segue reference="xUI-EV-Jms"/>
     </inferredMetricsTieBreakers>
 </document>
