@@ -73,7 +73,6 @@ class LoginViewController: UIViewController {
         transition.type = CATransitionType.push
         transition.subtype = CATransitionSubtype.fromLeft
         self.view.window!.layer.add(transition, forKey: kCATransition)
-        
         self.dismiss(animated: true, completion: nil)
     }
     

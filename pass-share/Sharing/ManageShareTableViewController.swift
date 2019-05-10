@@ -21,17 +21,17 @@ class ManageShareTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 70.0
-        let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
-        if (selectedLogin.accessArr.count == 0) {
-            renderBlankState()
-        }
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         print("reloading data: access child view")
         super.viewWillAppear(animated)
-        accessArr = [Access]()
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
+        if (selectedLogin.accessArr.count == 0) {
+            renderBlankState()
+        }
+        accessArr = [Access]()
         accessArr = Array(selectedLogin.accessArr)
         if (accessArr.count != 0 ) {
             removeBlankState()

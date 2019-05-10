@@ -8,13 +8,19 @@
 
 import UIKit
 
+protocol ShareDetailViewControllerDelegate {
+    func revoke()
+}
+
 class ShareDetailViewController: UIViewController {
     
     var credentialID: String?
     var accessID: String?
     var access: Access?
+    var shareDetailViewControllerDelegate: ShareDetailViewControllerDelegate?
 
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var receiverEmailLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var secretPhraseLabel: UILabel!
@@ -25,6 +31,7 @@ class ShareDetailViewController: UIViewController {
         access = RealmAPI.shared.readAccess(filterBy: accessID!)
         let contact = RealmAPI.shared.readContact(filterBy: access!.grantToEmail)
         profilePic.image = UIImage(named: contact.imgFileName + "_large_50")
+        nameLabel.text = contact.name
         receiverEmailLabel.text = access?.grantToEmail
         switch access?.duration {
             case 0:
@@ -50,12 +57,8 @@ class ShareDetailViewController: UIViewController {
     }
     
     @IBAction func revoke(_ sender: Any) {
-        let alert = UIAlertController(title: "Update Password?", message: "You’ve allowed the recipient to view the password, so we recommend updating your password after revoking their access.\n\nAll other sharers will automatically be synced with the new password.", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Update", style: .default, handler: {action in self.performSegue(withIdentifier: "shareDetailVCToUpdatePasswordVC", sender: self)}))
-        alert.addAction(UIAlertAction(title: "Not Now", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true)
+        RealmAPI.shared.delete(data: access!)
+        shareDetailViewControllerDelegate?.revoke()
     }
     @IBAction func revealSecretPhrase(_ sender: Any) {
         if self.secretPhraseLabel.text?.contains("•") ?? false {
