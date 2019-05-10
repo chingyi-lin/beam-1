@@ -8,16 +8,6 @@
 
 import UIKit
 
-protocol ShareBlankStateViewControllerDelegate {
-    func shareBtnClicked()
-}
-
 class ShareBlankStateViewController: UIViewController {
-    var shareBlankStateViewControllerDelegate: ShareBlankStateViewControllerDelegate!
-    
-    
-    @IBAction func shareBtnClicked(_ sender: Any) {
-        self.shareBlankStateViewControllerDelegate.shareBtnClicked()
-    }
     
 }

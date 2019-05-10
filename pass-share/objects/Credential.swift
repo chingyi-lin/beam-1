@@ -10,6 +10,8 @@ class Credential: Object {
     @objc dynamic var password = ""
     let accessArr = List<Access>()
     let activityArr = List<Activity>()
+    // default is mine
+    var myAccess = MyAccess(true, "")
     
     override static func primaryKey() -> String? {
         return "credentialID"
@@ -42,5 +44,9 @@ class Credential: Object {
     
     func addActivity(_ activity: Activity) {
         self.activityArr.append(activity)
+    }
+    
+    func setMyAccess(_ isOwn: Bool, _ grantBy: String, _ access: Access) {
+        self.myAccess = MyAccess(isOwn, grantBy, access)
     }
 }

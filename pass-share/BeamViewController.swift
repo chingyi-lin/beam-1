@@ -11,29 +11,17 @@ class BeamViewController: UIViewController {
     var beamTableViewController: BeamTableViewController?
     
     var credentialID: String?
+    var controller: LoginBlankStateViewController?
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
-        // add child view controller view to container
-        if (RealmAPI.shared.readAll().count == 0) {
-            
-            let controller = storyboard!.instantiateViewController(withIdentifier: "loginBlankState") as! LoginBlankStateViewController
-            addChild(controller)
-            
-            controller.loginBlankStateViewControllerDelegate = self
-            controller.view.translatesAutoresizingMaskIntoConstraints = false
-            containerView.addSubview(controller.view)
-            
-            NSLayoutConstraint.activate([
-                controller.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-                controller.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-                controller.view.topAnchor.constraint(equalTo: containerView.topAnchor),
-                controller.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
-                ])
-            
-            controller.didMove(toParent: self)
-        }
-        
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,8 +32,11 @@ class BeamViewController: UIViewController {
             print("Delegating beamtableview")
         }
         if segue.identifier == "beamTableCellToLoginDetail" {
-            let displayVC = segue.destination as! LoginViewController
-            displayVC.credentialID = self.credentialID
+            let navController = segue.destination as! UINavigationController
+            let nextVC = navController.viewControllers.first as! LoginViewController
+            nextVC.credentialID = self.credentialID
+//            let displayVC = segue.destination as! LoginViewController
+//            displayVC.credentialID = self.credentialID
         }
     }
 }
@@ -55,12 +46,11 @@ extension BeamViewController: BeamTableViewControllerDelegate {
         print("Select the row with id as \(credentialID)")
         self.credentialID = credentialID
         self.performSegue(withIdentifier: "beamTableCellToLoginDetail", sender: self)
+        
     }
-}
-
-extension BeamViewController:LoginBlankStateViewControllerDelegate {
+    
     func addBtnClicked() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewLogin")
-        present(vc!, animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewLogin") as! AddNewLoginViewController
+        present(vc, animated: true, completion: nil)
     }
 }

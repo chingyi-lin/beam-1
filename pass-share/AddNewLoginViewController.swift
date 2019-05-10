@@ -7,14 +7,29 @@
 //
 
 import UIKit
+
 class AddNewLoginViewController: UIViewController {
     
-    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var saveButtonBottomConstraint: NSLayoutConstraint!
     
     var credentialID: String?
     
     var loginFormTableViewController: LoginFormTableViewController?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Configure Save Button
+        saveButton.isEnabled = false
+        
+        // Configure  Button
+        updateBtnStyle(byStage: saveButton.isEnabled)
+        // Adjust keyboard
+        NotificationCenter.default.addObserver(self, selector: #selector(AddNewLoginViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AddNewLoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -43,15 +58,40 @@ class AddNewLoginViewController: UIViewController {
                 RealmAPI.shared.write(data: credential)
                 credentialID = credential.credentialID
 //                self.performSegue(withIdentifier: "addNewLoginToLoginDetail", sender: self)
+            
                 dismiss(animated: true, completion: nil)
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Configure Save Button
-        saveButton.isEnabled = false
+    func updateBtnStyle(byStage isEnabled: Bool) {
+        if (isEnabled) {
+            print(isEnabled)
+            saveButton.alpha = 1
+        } else {
+            saveButton.alpha = 0.5
+        }
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else {return}
+        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
+        let keyboardFrame = keyboardSize.cgRectValue
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: [],
+                       animations: {
+                        self.saveButtonBottomConstraint.constant = keyboardFrame.height + 12.00
+                        self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: [],
+                       animations: {
+                        self.saveButtonBottomConstraint.constant = 45.00
+                        self.view.layoutIfNeeded()
+        }, completion: nil)
     }
 }
 
@@ -67,7 +107,6 @@ extension AddNewLoginViewController: LoginFormTableDelegate {
             }
         }
         saveButton.isEnabled = formIsValid
+        updateBtnStyle(byStage: saveButton.isEnabled)
     }
 }
-
-

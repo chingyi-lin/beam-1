@@ -26,6 +26,7 @@ class PrimaryButtonSmall: UIButton {
         self.layer.shadowOpacity = 0.25
         self.layer.shadowOffset = CGSize(width: 4, height: 4)
         self.backgroundColor = UIColor(red:0.06, green:0.11, blue:0.28, alpha:1.0)
-        self.setTitleColor(UIColor(red:0.58, green:0.86, blue:0.98, alpha:1.0), for: .normal)
+//        self.setTitleColor(UIColor(red:0.58, green:0.86, blue:0.98, alpha:1.0), for: .normal)
+        self.setTitleColor(UIColor.white, for: .normal)
     }
 }

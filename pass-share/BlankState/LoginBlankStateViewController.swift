@@ -8,17 +8,6 @@
 
 import UIKit
 
-protocol LoginBlankStateViewControllerDelegate {
-    func addBtnClicked()
-}
-
 class LoginBlankStateViewController: UIViewController {
-    
-    var loginBlankStateViewControllerDelegate: LoginBlankStateViewControllerDelegate!
-    
-    
-    @IBAction func addNewLoginClicked(_ sender: Any) {
-        loginBlankStateViewControllerDelegate.addBtnClicked()
-    }
     
 }

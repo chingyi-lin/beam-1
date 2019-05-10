@@ -14,6 +14,11 @@ class ActivityViewController: UIViewController {
     var shareInvitationID: String?
     var activityID: String?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if segue.identifier == "activityTableViewEmbedSegue" {

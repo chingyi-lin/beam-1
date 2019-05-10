@@ -78,7 +78,7 @@ class ConfirmSharingViewController: UIViewController {
     
     func fetchSiteLogo(for domain: String){
         let imgSource = "https://logo.clearbit.com/"
-        let targetUrl = URL(string: imgSource + domain + "?size=33")!
+        let targetUrl = URL(string: imgSource + domain + "?size=40")!
         let siteLogoRequest = ImageRequest(url: targetUrl)
         self.request = siteLogoRequest
         siteLogoRequest.load(withCompletion: { [weak self] (siteLogo: UIImage?) in
@@ -86,6 +86,7 @@ class ConfirmSharingViewController: UIViewController {
                 return
             }
             self?.siteLogo.image = siteLogo
+            print(siteLogo)
         })
     }
 }
