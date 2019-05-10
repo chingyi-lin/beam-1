@@ -16,15 +16,17 @@ class Contact: Object {
     @objc dynamic var initial = ""
     @objc dynamic var name = ""
     @objc dynamic var email = ""
+    @objc dynamic var imgFileName = ""
 
     override static func primaryKey() -> String? {
         return "contactID"
     }
-    convenience init(_ initial: String, _ name: String, _ email: String) {
+    convenience init(_ initial: String, _ name: String, _ email: String, _ imgFileName: String) {
         self.init()
         self.initial = initial
         self.name = name
         self.email = email
+        self.imgFileName = imgFileName
     }
 }
 

@@ -14,6 +14,7 @@ class ShareDetailViewController: UIViewController {
     var accessID: String?
     var access: Access?
 
+    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var receiverEmailLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var secretPhraseLabel: UILabel!
@@ -22,6 +23,8 @@ class ShareDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Share Details"
         access = RealmAPI.shared.readAccess(filterBy: accessID!)
+        let contact = RealmAPI.shared.readContact(filterBy: access!.grantToEmail)
+        profilePic.image = UIImage(named: contact.imgFileName + "_large_50")
         receiverEmailLabel.text = access?.grantToEmail
         switch access?.duration {
             case 0:

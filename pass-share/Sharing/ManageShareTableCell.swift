@@ -15,8 +15,8 @@ class ManageShareTableCell: UITableViewCell {
     @IBOutlet weak var receiverEmail: UILabel!
     @IBOutlet weak var duration: UIButton!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
     var accessID = ""
-    
     
     // TODO: implement it
     @IBAction func clickDuration(_ sender: Any) {

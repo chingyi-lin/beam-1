@@ -47,8 +47,21 @@ class AddRecipientViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func saveAndNext(_ sender: Any) {
         newContact.email = emailTextField.text!
-        newContact.name = "Jenny Z"
+        // TODO: should lookup email and find below info
+        newContact.name = String(emailTextField.text!.split(separator: "@")[0])
         newContact.initial = "JZ"
+        switch newContact.email {
+        case let str where str.contains("chingyi"):
+            newContact.imgFileName = "profile_pic_user1"
+        case let str where str.contains("ayo"):
+            newContact.imgFileName = "profile_pic_user2"
+        case let str where str.contains("amy"):
+            newContact.imgFileName = "profile_pic_user3"
+        case let str where str.contains("jing"):
+            newContact.imgFileName = "profile_pic_user4"
+        default:
+            newContact.imgFileName = "profile_pic_default"
+        }
         RealmAPI.shared.write(data: newContact)
         newAccess.grantToEmail = emailTextField.text!
         print("new contact stored")

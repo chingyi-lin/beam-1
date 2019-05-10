@@ -54,11 +54,17 @@ class ManageShareTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ManageShareTableCell", for: indexPath) as! ManageShareTableCell
         // Configure the cell
         let contact = RealmAPI.shared.readContact(filterBy: accessArr[indexPath.row].grantToEmail)
-        cell.receiverInitial.text = contact.initial
+        
         cell.receiverName.text = contact.name
         cell.receiverEmail.text = contact.email
         cell.status.text = accessArr[indexPath.row].status
         cell.accessID = accessArr[indexPath.row].accessID
+        cell.profilePic.image = UIImage(named: contact.imgFileName + "_large_50")
+        if (contact.imgFileName.contains("blank")) {
+            cell.receiverInitial.text = contact.initial
+        } else {
+            cell.receiverInitial.text = ""
+        }
         // Set up duration btn - need to adjust alignment
         let style = NSMutableParagraphStyle()
         var durationText = NSMutableAttributedString()
