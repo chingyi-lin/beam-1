@@ -65,26 +65,21 @@ class ManageShareTableViewController: UITableViewController {
         } else {
             cell.receiverInitial.text = ""
         }
-        // Set up duration btn - need to adjust alignment
-        let style = NSMutableParagraphStyle()
-        var durationText = NSMutableAttributedString()
-        style.alignment = NSTextAlignment.right
+        var durationText = ""
         switch accessArr[indexPath.row].duration {
-            case 0:
-                durationText = NSMutableAttributedString(string: "One-time Only", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
-            case 1:
-                durationText = NSMutableAttributedString(string: "30 Days", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
-            case 2:
-                durationText = NSMutableAttributedString(string: "No Expiration", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
-            case 3:
-                // TODO: custom date TBD
-                durationText = NSMutableAttributedString(string: "Custom Date", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
-            default:
-                durationText = NSMutableAttributedString(string: "Custom Date", attributes: [ NSAttributedString.Key.paragraphStyle: style ])
+        case 0:
+            durationText = "One-time Only"
+        case 1:
+            durationText = "30 Days"
+        case 2:
+            durationText = "No Expiration"
+        case 3:
+            // TODO: custom date TBD
+            durationText = "Custom Date"
+        default:
+            durationText = "Custom Date"
         }
-        cell.duration.setAttributedTitle(durationText, for: UIControl.State.normal)
-        
-        // TODO: implement revoke actions
+        cell.duration.text = durationText
         
         return cell
     }

@@ -947,6 +947,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="duration" destination="hFF-2p-lf2" id="991-wG-KxR"/>
                                     <outlet property="profilePic" destination="f3T-1V-vGF" id="6te-LB-ghC"/>
                                     <outlet property="receiverEmail" destination="JBt-TQ-ZLC" id="t2o-DI-2l4"/>
                                     <outlet property="receiverInitial" destination="eCT-cp-cKJ" id="JLV-fm-uCt"/>

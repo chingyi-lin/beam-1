@@ -48,7 +48,7 @@ class AddRecipientViewController: UIViewController, UITextViewDelegate {
     @IBAction func saveAndNext(_ sender: Any) {
         newContact.email = emailTextField.text!
         // TODO: should lookup email and find below info
-        newContact.name = String(emailTextField.text!.split(separator: "@")[0])
+        newContact.name = String(emailTextField.text!.split(separator: "@")[0]).capitalizingFirstLetter()
         newContact.initial = "JZ"
         switch newContact.email {
         case let str where str.contains("chingyi"):
@@ -130,4 +130,12 @@ extension AddRecipientViewController: UITextFieldDelegate {
     }
 }
 
-
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
