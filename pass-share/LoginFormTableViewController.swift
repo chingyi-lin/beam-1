@@ -23,18 +23,53 @@ class LoginFormTableViewController : UITableViewController {
     
     @IBOutlet var textFields: [UITextField]!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
     
-    @IBAction func textFieldEditDidBegin(_ sender: Any) {
+    var sitenameIsEmtpyBefore = true
+    var urlIsEmtpyBefore = true
+    var usernameIsEmtpyBefore = true
+    var passwordIsEmtpyBefore = true
+    
+    @IBAction func textFieldsEditDidChange(_ sender: Any) {
         loginFormTableDelegate.formEditDidBegin(textFields: textFields)
+    }
+    
+    @IBAction func textFieldEditDidChange(_ sender: UITextField) {
+        switch sender {
+        case siteNameTextField:
+            sitenameIsEmtpyBefore = triggerAnimationAndUpdateEmptyStatus(byCurrentStatus: sitenameIsEmtpyBefore, with: nameLabel, sender)
+        case urlTextField:
+            urlIsEmtpyBefore = triggerAnimationAndUpdateEmptyStatus(byCurrentStatus: urlIsEmtpyBefore, with: websiteLabel, sender)
+        case usernameTextField:
+            usernameIsEmtpyBefore = triggerAnimationAndUpdateEmptyStatus(byCurrentStatus: usernameIsEmtpyBefore, with: usernameLabel, sender)
+        case passwordTextField:
+            passwordIsEmtpyBefore = triggerAnimationAndUpdateEmptyStatus(byCurrentStatus: passwordIsEmtpyBefore, with: passwordLabel, sender)
+        default:
+            print("no match")
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         siteNameTextField.delegate = self
         urlTextField.delegate = self
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        
+    }
+    
+    func triggerAnimationAndUpdateEmptyStatus(byCurrentStatus isEmptyBefore: Bool, with label: UILabel, _ sender: UITextField) -> Bool{
+        if (isEmptyBefore && !sender.text!.isEmpty) {
+            label.floatIn(dy: -18)
+            return false
+        }
+        else if (!isEmptyBefore && sender.text!.isEmpty){
+            label.floatOut()
+            return true
+        } else {
+            return isEmptyBefore
+        }
     }
 }
 

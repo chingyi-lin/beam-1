@@ -10,6 +10,7 @@ import UIKit
 
 protocol ManageShareTableViewControllerDelegate {
     func rowDidSelect(identifierInSelectedRow accessID: String)
+    func shareBtnClicked()
 }
 
 class ManageShareTableViewController: UITableViewController {
@@ -20,6 +21,10 @@ class ManageShareTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 70.0
+        let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
+        if (selectedLogin.accessArr.count == 0) {
+            renderBlankState()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +33,9 @@ class ManageShareTableViewController: UITableViewController {
         accessArr = [Access]()
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
         accessArr = Array(selectedLogin.accessArr)
+        if (accessArr.count != 0 ) {
+            removeBlankState()
+        }
         self.tableView.reloadData()
         print("access fetched")
     }
@@ -74,5 +82,33 @@ class ManageShareTableViewController: UITableViewController {
         
         return cell
     }
+    func renderBlankState() {
+        let controller = storyboard!.instantiateViewController(withIdentifier: "shareBlankState") as! ShareBlankStateViewController
+        tableView.separatorColor = UIColor.clear // will hide standard separators
+        tableView.backgroundView = controller.view
+        let button = PrimaryButton(frame: CGRect(x: 110, y: 300, width: 160, height: 40))
+        button.addTarget(self, action: #selector(shareBtnClicked), for: .touchUpInside)
+        let btnAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 15, weight: .semibold),
+            .foregroundColor: UIColor.white
+        ]
+        let attributedTitle = NSMutableAttributedString(string: "SHARE", attributes: btnAttributes)
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.center.x = self.view.center.x // for vertical
+        self.view.addSubview(button)
+    }
     
+    func removeBlankState() {
+        tableView.separatorColor = UIColor.gray // set separators back
+        tableView.backgroundView = nil
+        for subview in self.view.subviews {
+            if subview is PrimaryButton {
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    @objc func shareBtnClicked() {
+        manageShareTableViewControllerDelegate.shareBtnClicked()
+    }
 }

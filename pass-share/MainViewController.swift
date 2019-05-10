@@ -81,7 +81,20 @@ class MainViewController: UITabBarController {
     }
     
     @objc func btnClick() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewLogin")
-        present(vc!, animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddNewLogin") as! AddNewLoginViewController
+//        vc.addNewLoginViewControllerDelegate = self
+        present(vc, animated: true, completion: nil)
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

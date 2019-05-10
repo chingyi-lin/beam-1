@@ -14,6 +14,8 @@ class VerifySecretPhraseViewController: UIViewController, UITextFieldDelegate {
     var activityID: String?
     var shareInvitation: ShareInvitation?
     
+    var isSecretPhraseEmptyBefore = true
+    
     @IBOutlet weak var verifyBtnBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var verifyBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIBarButtonItem!
@@ -52,9 +54,6 @@ class VerifySecretPhraseViewController: UIViewController, UITextFieldDelegate {
         // Adjust keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(VerifySecretPhraseViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(VerifySecretPhraseViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
-        // Hide the label when the placeholder exists
-        self.textFieldLabel.alpha = 0
         
         // CY: The line below breaks the animation. Temporarily removed.
         // secretPhraseTextField.becomeFirstResponder()
@@ -73,7 +72,8 @@ class VerifySecretPhraseViewController: UIViewController, UITextFieldDelegate {
         if let isTextEmpty = secretPhraseTextField.text?.isEmpty {
             verifyBtn.isEnabled = !isTextEmpty
             updateBtnStyle(byStage: verifyBtn.isEnabled)
-            updateTextFieldLabel(isTextEmpty)
+            updateTextFieldLabel(isTextEmpty, isSecretPhraseEmptyBefore)
+            isSecretPhraseEmptyBefore = isTextEmpty
         }
     }
     
@@ -88,11 +88,11 @@ class VerifySecretPhraseViewController: UIViewController, UITextFieldDelegate {
             verifyBtn.alpha = 0.5
         }
     }
-    func updateTextFieldLabel(_ isTextEmpty: Bool) {
-        if isTextEmpty {
-            self.textFieldLabel.fadeOut()
-        } else {
-            self.textFieldLabel.fadeIn()
+    func updateTextFieldLabel(_ isTextEmpty: Bool, _ isSecretPhraseEmptyBefore: Bool) {
+        if (isSecretPhraseEmptyBefore && !isTextEmpty) {
+            self.textFieldLabel.floatIn(dy: -18)
+        } else if (!isSecretPhraseEmptyBefore && isTextEmpty){
+            self.textFieldLabel.floatOut()
         }
     }
     @objc func keyboardWillShow(notification: NSNotification) {

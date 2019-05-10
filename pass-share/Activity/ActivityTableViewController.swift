@@ -41,16 +41,18 @@ class ActivityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if activities[indexPath.row].isActionable {
-            return 120.0
+            return 140.0
         } else {
-            return 55.0
+            return 60.0
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone.current
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        formatter.doesRelativeDateFormatting = true
         if activities[indexPath.row].isActionable {
             let cell = tableView.dequeueReusableCell(withIdentifier: "actionableActivityTableViewCell", for: indexPath) as! ActionableActivityTableViewCell
             cell.shareInvitationID = activities[indexPath.row].shareInvitationID

@@ -14,7 +14,9 @@ import SafariServices
 class UpdatePasswordViewController: UIViewController {
     
     var credentialID: String?
+    fileprivate var request: AnyObject?
     
+    @IBOutlet weak var siteLogo: UIImageView!
     @IBOutlet weak var sitenameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var currentPasswordLabel: UILabel!
@@ -29,6 +31,7 @@ class UpdatePasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
+        fetchSiteLogo(for: RealmAPI.shared.read(filterBy: credentialID!).domain)
         sitenameLabel.text = credential.sitename
         usernameLabel.text = credential.username
         
@@ -106,6 +109,19 @@ class UpdatePasswordViewController: UIViewController {
                         self.launchBtnBottomConstraint.constant = 45.00
                         self.view.layoutIfNeeded()
         }, completion: nil)
+    }
+    
+    func fetchSiteLogo(for domain: String){
+        let imgSource = "https://logo.clearbit.com/"
+        let targetUrl = URL(string: imgSource + domain + "?size=65")!
+        let siteLogoRequest = ImageRequest(url: targetUrl)
+        self.request = siteLogoRequest
+        siteLogoRequest.load(withCompletion: { [weak self] (siteLogo: UIImage?) in
+            guard let siteLogo = siteLogo else {
+                return
+            }
+            self?.siteLogo.image = siteLogo
+        })
     }
 }
 

@@ -20,4 +20,14 @@ extension UIView {
             self.alpha = 0.0
         }, completion: nil)
     }
+    func floatIn(dy: CGFloat, duration: TimeInterval = 0.4, delay: TimeInterval = 0.0) {
+        UIView.animate(withDuration: duration, delay: delay, animations: {
+            self.transform = CGAffineTransform(translationX: 0, y: dy)
+        }, completion: nil)  }
+    
+    func floatOut(duration: TimeInterval = 0.4, delay: TimeInterval = 0.0) {
+        UIView.animate(withDuration: duration, delay: delay, animations: {
+            self.transform = CGAffineTransform(translationX: 0, y: 0)
+        }, completion: nil)
+    }
 }

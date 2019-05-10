@@ -17,18 +17,18 @@ class Access: Object {
     @objc dynamic var canSee = false
     @objc dynamic var secretPhrase = ""
     @objc dynamic var status = "Pending Receipt"
-    @objc dynamic var expirationDate = ""
+    @objc dynamic var acceptedDate = Date()
     
     override static func primaryKey() -> String? {
         return "accessID"
     }
-    convenience init(_ grantToEmail: String, _ duration: Int, _ canSee: Bool, _ secretPhrase: String, _ status: String, _ expirationDate: String) {
+    convenience init(_ grantToEmail: String, _ duration: Int, _ canSee: Bool, _ secretPhrase: String, _ status: String, _ expirationDate: Date) {
         self.init()
         self.grantToEmail = grantToEmail
         self.duration = duration
         self.canSee = canSee
         self.secretPhrase = secretPhrase
         self.status = status
-        self.expirationDate = expirationDate
+        self.acceptedDate = acceptedDate
     }
 }

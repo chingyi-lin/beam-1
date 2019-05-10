@@ -43,10 +43,15 @@ class ShareInvitation: Object {
             // let activityText = "You accepted the " + sitename + " login shared from " + senderName + "."
             let activityText = "You accepted " + senderName + "'s " + sitename + " login."
             let credential = Credential(sitename, domain, username, password, activityText)
+            credential.setMyAccess(false, senderName, self.generateAccess())
+            print("set the access")
             RealmAPI.shared.write(data: credential)
             return true
         } else {
             return false
         }
+    }
+    func generateAccess() -> Access {
+        return Access("current_user_email", self.duration, self.canSee, self.secretPhrase, "Received", Date())
     }
 }
