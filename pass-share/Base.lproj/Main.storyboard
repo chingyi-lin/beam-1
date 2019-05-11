@@ -342,7 +342,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-x3-DlM">
-                                <rect key="frame" x="16" y="58" width="117" height="41"/>
+                                <rect key="frame" x="16" y="58" width="345" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -366,6 +366,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                             <constraint firstItem="h4C-pS-xel" firstAttribute="leading" secondItem="8QF-MG-I9J" secondAttribute="leading" id="VbG-WC-A9k"/>
                             <constraint firstItem="kyy-x3-DlM" firstAttribute="leading" secondItem="8QF-MG-I9J" secondAttribute="leading" constant="16" id="X18-5R-JWF"/>
                             <constraint firstItem="nWe-v1-ezB" firstAttribute="leading" secondItem="8QF-MG-I9J" secondAttribute="leading" id="dlp-4t-eEJ"/>
+                            <constraint firstItem="8QF-MG-I9J" firstAttribute="trailing" secondItem="kyy-x3-DlM" secondAttribute="trailing" constant="14" id="feH-Kt-8f0"/>
                             <constraint firstItem="kyy-x3-DlM" firstAttribute="top" secondItem="8QF-MG-I9J" secondAttribute="top" constant="38" id="gi2-JT-rU0"/>
                             <constraint firstItem="h4C-pS-xel" firstAttribute="trailing" secondItem="8QF-MG-I9J" secondAttribute="trailing" id="gxH-b5-8LK"/>
                             <constraint firstItem="h4C-pS-xel" firstAttribute="top" secondItem="nWe-v1-ezB" secondAttribute="bottom" id="jbt-en-q7L"/>
@@ -654,7 +655,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <rect key="frame" x="112.5" y="110" width="150" height="154"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven’t shared this login with anyone yet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7g-PE-myJ">
-                                <rect key="frame" x="14" y="279" width="347" height="18"/>
+                                <rect key="frame" x="31.5" y="279" width="312.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -663,11 +664,9 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="T7g-PE-myJ" firstAttribute="top" secondItem="iSe-Ju-p1A" secondAttribute="bottom" constant="15" id="4rh-87-N7M"/>
-                            <constraint firstAttribute="trailing" secondItem="T7g-PE-myJ" secondAttribute="trailing" constant="14" id="7yH-WV-HyC"/>
                             <constraint firstItem="T7g-PE-myJ" firstAttribute="centerX" secondItem="DFp-ZO-mYJ" secondAttribute="centerX" id="N66-OJ-Tk2"/>
                             <constraint firstItem="iSe-Ju-p1A" firstAttribute="centerX" secondItem="DFp-ZO-mYJ" secondAttribute="centerX" id="ORi-do-gBJ"/>
                             <constraint firstItem="iSe-Ju-p1A" firstAttribute="top" secondItem="sqr-Zo-HIl" secondAttribute="top" constant="90" id="Uwc-lw-1xv"/>
-                            <constraint firstItem="T7g-PE-myJ" firstAttribute="leading" secondItem="sqr-Zo-HIl" secondAttribute="leading" constant="14" id="lNF-Kh-huz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sqr-Zo-HIl"/>
                     </view>
@@ -918,8 +917,8 @@ Don’t know your phrase? Reach out to the sender!</string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFF-2p-lf2">
-                                            <rect key="frame" x="269" y="15" width="64" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 days" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFF-2p-lf2">
+                                            <rect key="frame" x="247" y="15" width="86" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -944,6 +943,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                         <constraint firstItem="Hwj-DT-fKc" firstAttribute="leading" secondItem="Wfw-Iw-UVK" secondAttribute="trailing" constant="6" id="muh-iy-ENf"/>
                                         <constraint firstItem="f3T-1V-vGF" firstAttribute="centerY" secondItem="11h-P8-cnY" secondAttribute="centerY" id="u5C-xK-B0D"/>
                                         <constraint firstItem="tIx-PK-AZ0" firstAttribute="leading" secondItem="f3T-1V-vGF" secondAttribute="trailing" constant="13" id="vx4-m6-DeJ"/>
+                                        <constraint firstItem="hFF-2p-lf2" firstAttribute="leading" secondItem="tIx-PK-AZ0" secondAttribute="trailing" constant="14" id="xM2-W1-BDm"/>
                                         <constraint firstItem="JBt-TQ-ZLC" firstAttribute="leading" secondItem="f3T-1V-vGF" secondAttribute="trailing" constant="13" id="xua-ao-Ndy"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -1016,8 +1016,8 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 days remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-R1-Vd9">
-                                <rect key="frame" x="84" y="179" width="109.5" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="18 days remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-R1-Vd9">
+                                <rect key="frame" x="84" y="179" width="235" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1146,6 +1146,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                             <constraint firstItem="3MX-Iv-iOe" firstAttribute="top" secondItem="ghX-bv-erV" secondAttribute="bottom" constant="5" id="Vxv-jz-xAC"/>
                             <constraint firstItem="wIk-It-IVN" firstAttribute="leading" secondItem="EqX-dN-HDa" secondAttribute="leading" constant="16" id="WaG-2d-Bne"/>
                             <constraint firstItem="oAr-Wz-k97" firstAttribute="top" secondItem="Zn8-tM-aGx" secondAttribute="bottom" constant="10" id="X3r-ob-DkY"/>
+                            <constraint firstItem="Qja-TQ-lDL" firstAttribute="leading" secondItem="Wol-R1-Vd9" secondAttribute="trailing" constant="14" id="YCb-b0-MRA"/>
                             <constraint firstItem="DVn-oP-xic" firstAttribute="leading" secondItem="im8-wx-xpP" secondAttribute="leading" constant="16" id="Zbs-9y-oAq"/>
                             <constraint firstItem="d62-Zr-Gmy" firstAttribute="top" secondItem="zd1-RB-mBQ" secondAttribute="bottom" constant="15" id="Znt-LM-Sfu"/>
                             <constraint firstItem="OTe-iS-yDg" firstAttribute="top" secondItem="oAr-Wz-k97" secondAttribute="bottom" constant="10" id="bjm-f0-TJm"/>
@@ -1249,13 +1250,13 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53r-DW-Lhf">
-                                <rect key="frame" x="70" y="15" width="79" height="21"/>
+                                <rect key="frame" x="70" y="15" width="291" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="j0yc3@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gT-2O-ie0">
-                                <rect key="frame" x="70" y="36" width="93" height="13.5"/>
+                                <rect key="frame" x="70" y="36" width="291" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1379,7 +1380,9 @@ Don’t know your phrase? Reach out to the sender!</string>
                             <constraint firstItem="Mgy-Hp-iL8" firstAttribute="top" secondItem="I7U-U4-Ki1" secondAttribute="bottom" constant="5" id="TI6-NH-9mb"/>
                             <constraint firstItem="Mgy-Hp-iL8" firstAttribute="leading" secondItem="FvS-cg-bDm" secondAttribute="leading" constant="16" id="Tz8-gd-UFk"/>
                             <constraint firstItem="gkX-AF-ms3" firstAttribute="leading" secondItem="FvS-cg-bDm" secondAttribute="leading" constant="16" id="Z4Y-RW-MJf"/>
+                            <constraint firstItem="RQb-fc-10s" firstAttribute="trailing" secondItem="8gT-2O-ie0" secondAttribute="trailing" constant="14" id="Zbv-Aa-x9F"/>
                             <constraint firstItem="8gT-2O-ie0" firstAttribute="top" secondItem="53r-DW-Lhf" secondAttribute="bottom" id="buN-Mh-XKu"/>
+                            <constraint firstItem="RQb-fc-10s" firstAttribute="trailing" secondItem="53r-DW-Lhf" secondAttribute="trailing" constant="14" id="cmC-5T-ct0"/>
                             <constraint firstItem="RQb-fc-10s" firstAttribute="trailing" secondItem="AuR-As-zNt" secondAttribute="trailing" constant="16" id="g4a-F1-zHW"/>
                             <constraint firstItem="JbX-WJ-N1q" firstAttribute="top" secondItem="AuR-As-zNt" secondAttribute="bottom" constant="4" id="geo-u0-f40"/>
                             <constraint firstItem="HdP-Dm-G8N" firstAttribute="top" secondItem="RQb-fc-10s" secondAttribute="top" constant="15" id="iem-od-Hit"/>
@@ -1419,7 +1422,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utu-cr-UMi">
-                                <rect key="frame" x="16" y="12" width="76.5" height="18"/>
+                                <rect key="frame" x="16" y="12" width="345" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.52549019610000003" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1486,6 +1489,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                             <constraint firstItem="iY4-Gc-zn7" firstAttribute="leading" secondItem="qLi-qs-Xt5" secondAttribute="leading" constant="16" id="Dz3-M8-GWR"/>
                             <constraint firstItem="IKN-xU-qen" firstAttribute="leading" secondItem="EJj-Rx-Sid" secondAttribute="leading" constant="16" id="EGg-re-FhA"/>
                             <constraint firstItem="Utu-cr-UMi" firstAttribute="leading" secondItem="iY4-Gc-zn7" secondAttribute="leading" id="H2r-Yj-3y5"/>
+                            <constraint firstItem="qLi-qs-Xt5" firstAttribute="trailing" secondItem="Utu-cr-UMi" secondAttribute="trailing" constant="14" id="Hx2-ps-iGO"/>
                             <constraint firstItem="iY4-Gc-zn7" firstAttribute="top" secondItem="Utu-cr-UMi" secondAttribute="bottom" constant="10" id="Ok4-9Q-WiM"/>
                             <constraint firstItem="Jmu-ZL-NZR" firstAttribute="leading" secondItem="qLi-qs-Xt5" secondAttribute="leading" constant="11" id="ShY-D0-23H"/>
                             <constraint firstItem="qLi-qs-Xt5" firstAttribute="trailing" secondItem="iY4-Gc-zn7" secondAttribute="trailing" constant="16" id="ViM-HV-OFp"/>
@@ -1530,7 +1534,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-BD-z2o">
-                                <rect key="frame" x="17" y="98" width="110.5" height="18"/>
+                                <rect key="frame" x="17" y="98" width="344" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.52549019610000003" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1570,6 +1574,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                             <constraint firstItem="TBy-o5-2Ou" firstAttribute="leading" secondItem="caa-QD-CZv" secondAttribute="leading" id="Lpz-0n-Rkd"/>
                             <constraint firstItem="Sfe-BD-z2o" firstAttribute="leading" secondItem="caa-QD-CZv" secondAttribute="leading" constant="17" id="MC3-TV-tR4"/>
                             <constraint firstItem="8hX-A0-H3S" firstAttribute="leading" secondItem="caa-QD-CZv" secondAttribute="leading" constant="14" id="RX7-eJ-e5N"/>
+                            <constraint firstItem="caa-QD-CZv" firstAttribute="trailing" secondItem="Sfe-BD-z2o" secondAttribute="trailing" constant="14" id="Rrm-bq-auK"/>
                             <constraint firstItem="TBy-o5-2Ou" firstAttribute="trailing" secondItem="caa-QD-CZv" secondAttribute="trailing" id="S6n-Xx-dBH"/>
                             <constraint firstItem="lxf-Aj-7tz" firstAttribute="top" secondItem="caa-QD-CZv" secondAttribute="top" constant="22" id="TS3-uE-IPE"/>
                             <constraint firstItem="caa-QD-CZv" firstAttribute="trailing" secondItem="8hX-A0-H3S" secondAttribute="trailing" constant="14" id="UH0-oV-D0h"/>
@@ -2111,7 +2116,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One-time Only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCl-j0-w3f">
-                                                    <rect key="frame" x="17" y="11.5" width="112" height="21"/>
+                                                    <rect key="frame" x="17" y="11.5" width="344" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2120,6 +2125,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             <constraints>
                                                 <constraint firstItem="qCl-j0-w3f" firstAttribute="leading" secondItem="ZQp-FM-d4H" secondAttribute="leading" constant="17" id="e5l-TS-lGe"/>
                                                 <constraint firstItem="qCl-j0-w3f" firstAttribute="centerY" secondItem="ZQp-FM-d4H" secondAttribute="centerY" id="fTe-OJ-GE5"/>
+                                                <constraint firstAttribute="trailing" secondItem="qCl-j0-w3f" secondAttribute="trailing" constant="14" id="tVe-VW-onh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2131,13 +2137,14 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires in 30 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNb-xk-GzC">
-                                                    <rect key="frame" x="17" y="11.5" width="139" height="21"/>
+                                                    <rect key="frame" x="17" y="11.5" width="344" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="vNb-xk-GzC" secondAttribute="trailing" constant="14" id="5Oe-Kd-L3d"/>
                                                 <constraint firstItem="vNb-xk-GzC" firstAttribute="leading" secondItem="lG8-uw-2Nr" secondAttribute="leading" constant="17" id="6sI-kp-HHR"/>
                                                 <constraint firstItem="vNb-xk-GzC" firstAttribute="centerY" secondItem="lG8-uw-2Nr" secondAttribute="centerY" id="lf2-1n-qYV"/>
                                             </constraints>
@@ -2151,7 +2158,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Expiration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HP-3H-RvL">
-                                                    <rect key="frame" x="17" y="11.5" width="103" height="21"/>
+                                                    <rect key="frame" x="17" y="11.5" width="328" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2159,6 +2166,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="0HP-3H-RvL" firstAttribute="centerY" secondItem="Eek-tS-8bd" secondAttribute="centerY" id="28U-QE-zHT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0HP-3H-RvL" secondAttribute="trailing" constant="14" id="W37-m3-3sK"/>
                                                 <constraint firstItem="0HP-3H-RvL" firstAttribute="leading" secondItem="Eek-tS-8bd" secondAttribute="leading" constant="17" id="dDP-ER-Cbb"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2171,7 +2179,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WO-i8-CaQ">
-                                                    <rect key="frame" x="17" y="11.5" width="100" height="21"/>
+                                                    <rect key="frame" x="17" y="11.5" width="344" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2179,6 +2187,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7WO-i8-CaQ" firstAttribute="centerY" secondItem="VQJ-DJ-PLJ" secondAttribute="centerY" id="C9i-2T-UAH"/>
+                                                <constraint firstAttribute="trailing" secondItem="7WO-i8-CaQ" secondAttribute="trailing" constant="14" id="EbV-LH-1Cy"/>
                                                 <constraint firstItem="7WO-i8-CaQ" firstAttribute="leading" secondItem="VQJ-DJ-PLJ" secondAttribute="leading" constant="17" id="dje-7B-Sm9"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2196,10 +2205,10 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             </objects>
             <point key="canvasLocation" x="2786" y="2431"/>
         </scene>
-        <!--Share Config View Controller-->
+        <!--View Controller-->
         <scene sceneID="pEl-2r-hiu">
             <objects>
-                <viewController id="Y9W-1N-gtk" customClass="ShareConfigViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y9W-1N-gtk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ux7-pw-oUK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2317,14 +2326,14 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitelogo_default" translatesAutoresizingMaskIntoConstraints="NO" id="pGD-2U-nnN">
                                             <rect key="frame" x="16" y="10.5" width="69" height="69"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym1-B8-CDw">
-                                            <rect key="frame" x="93" y="10.5" width="43.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym1-B8-CDw">
+                                            <rect key="frame" x="93" y="10.5" width="268" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrI-00-FoI">
-                                            <rect key="frame" x="93" y="33.5" width="37.5" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrI-00-FoI">
+                                            <rect key="frame" x="93" y="33.5" width="268" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -2337,9 +2346,11 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                         <constraint firstItem="pGD-2U-nnN" firstAttribute="leading" secondItem="qVz-IU-jY3" secondAttribute="leading" constant="16" id="9cc-D2-AGG"/>
                                         <constraint firstItem="HD6-KD-hMQ" firstAttribute="top" secondItem="IrI-00-FoI" secondAttribute="bottom" constant="4.5" id="Dah-Ma-wNF"/>
                                         <constraint firstItem="Ym1-B8-CDw" firstAttribute="top" secondItem="qVz-IU-jY3" secondAttribute="top" constant="10.5" id="GfQ-Ou-DLu"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ym1-B8-CDw" secondAttribute="trailing" constant="14" id="QQV-H8-zBu"/>
                                         <constraint firstItem="IrI-00-FoI" firstAttribute="top" secondItem="Ym1-B8-CDw" secondAttribute="bottom" constant="2" id="ZOK-32-zK6"/>
                                         <constraint firstItem="HD6-KD-hMQ" firstAttribute="leading" secondItem="IrI-00-FoI" secondAttribute="leading" id="Zgq-DZ-RkQ"/>
                                         <constraint firstItem="Ym1-B8-CDw" firstAttribute="leading" secondItem="pGD-2U-nnN" secondAttribute="trailing" constant="8" id="bvj-TC-1Ia"/>
+                                        <constraint firstAttribute="trailing" secondItem="IrI-00-FoI" secondAttribute="trailing" constant="14" id="jeE-K7-oeu"/>
                                         <constraint firstItem="IrI-00-FoI" firstAttribute="leading" secondItem="Ym1-B8-CDw" secondAttribute="leading" id="nbb-4c-Ocj"/>
                                         <constraint firstItem="pGD-2U-nnN" firstAttribute="centerY" secondItem="qVz-IU-jY3" secondAttribute="centerY" id="td1-Rn-3Sb"/>
                                     </constraints>
@@ -2371,7 +2382,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiH-Iz-bfH">
-                                <rect key="frame" x="16" y="58" width="102.5" height="41"/>
+                                <rect key="frame" x="16" y="58" width="345" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2430,6 +2441,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             <constraint firstItem="wEl-Oe-xWV" firstAttribute="trailing" secondItem="fFF-nl-oeS" secondAttribute="trailing" id="ebf-Ru-hdr"/>
                             <constraint firstItem="hrO-zM-WYc" firstAttribute="trailing" secondItem="faz-hr-M3j" secondAttribute="trailing" constant="7" id="jt4-VN-8Xy"/>
                             <constraint firstItem="fFF-nl-oeS" firstAttribute="leading" secondItem="hrO-zM-WYc" secondAttribute="leading" id="lgY-HL-mww"/>
+                            <constraint firstItem="hrO-zM-WYc" firstAttribute="trailing" secondItem="DiH-Iz-bfH" secondAttribute="trailing" constant="14" id="vNi-uz-DUt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hrO-zM-WYc"/>
                     </view>
@@ -2518,43 +2530,43 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VI-me-7Zi">
-                                <rect key="frame" x="15" y="11" width="58" height="18"/>
+                                <rect key="frame" x="15" y="11" width="346" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxx.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9m-gP-sCN">
-                                <rect key="frame" x="15" y="34" width="72" height="21"/>
+                                <rect key="frame" x="15" y="34" width="240" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email/Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qk-au-WrE">
-                                <rect key="frame" x="15" y="79" width="117" height="18"/>
+                                <rect key="frame" x="15" y="79" width="346" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="j0yc3@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12v-HD-ra4">
-                                <rect key="frame" x="15" y="102" width="136" height="21"/>
+                                <rect key="frame" x="15" y="102" width="346" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-dA-iOa">
-                                <rect key="frame" x="15" y="147" width="69.5" height="18"/>
+                                <rect key="frame" x="15" y="147" width="346" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9R-dS-hvG">
-                                <rect key="frame" x="15" y="170" width="74" height="23"/>
+                                <rect key="frame" x="15" y="170" width="240" height="23"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Shared with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yex-wV-ELP">
-                                <rect key="frame" x="15" y="212" width="85.5" height="17"/>
+                                <rect key="frame" x="15" y="212" width="346" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2649,15 +2661,18 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             <constraint firstItem="JzO-Vh-v6e" firstAttribute="top" secondItem="9ba-M9-gyo" secondAttribute="top" constant="67" id="47C-cA-kk7"/>
                             <constraint firstItem="bHs-G9-jMF" firstAttribute="top" secondItem="i9R-dS-hvG" secondAttribute="bottom" constant="10" id="516-Yc-2Lj"/>
                             <constraint firstItem="YGK-UL-iyu" firstAttribute="leading" secondItem="Kxb-4F-kbw" secondAttribute="leading" id="7lK-Bz-QGH"/>
+                            <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="9VI-me-7Zi" secondAttribute="trailing" constant="14" id="83h-EV-hI5"/>
                             <constraint firstItem="t9m-gP-sCN" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="9c2-dx-hRk"/>
                             <constraint firstAttribute="trailing" secondItem="LGj-cf-Hfw" secondAttribute="trailing" id="B55-Xc-UlW"/>
                             <constraint firstItem="nUb-yu-v3u" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" id="BTe-cs-Oic"/>
                             <constraint firstItem="i9R-dS-hvG" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="C5h-eS-Sg7"/>
+                            <constraint firstItem="JzO-Vh-v6e" firstAttribute="top" secondItem="t9m-gP-sCN" secondAttribute="bottom" constant="12" id="EJz-8X-02G"/>
                             <constraint firstItem="Q12-Ly-he5" firstAttribute="centerY" secondItem="nUb-yu-v3u" secondAttribute="centerY" id="EdL-PU-Kb8"/>
                             <constraint firstItem="12v-HD-ra4" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="H7Z-8a-wOl"/>
                             <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="Q12-Ly-he5" secondAttribute="trailing" constant="16" id="HtR-Al-VfK"/>
                             <constraint firstItem="qhF-pu-Vtq" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="IDB-Uq-XFA"/>
                             <constraint firstItem="JzO-Vh-v6e" firstAttribute="leading" secondItem="Kxb-4F-kbw" secondAttribute="leading" id="IHP-V9-H3j"/>
+                            <constraint firstItem="oQb-YU-ATx" firstAttribute="leading" secondItem="t9m-gP-sCN" secondAttribute="trailing" constant="14" id="JOd-H6-Oyx"/>
                             <constraint firstItem="Yex-wV-ELP" firstAttribute="top" secondItem="bHs-G9-jMF" secondAttribute="bottom" constant="8" id="KX5-qm-k99"/>
                             <constraint firstItem="nUb-yu-v3u" firstAttribute="trailing" secondItem="LGj-cf-Hfw" secondAttribute="trailing" id="Kjz-1c-Kwm"/>
                             <constraint firstItem="bHs-G9-jMF" firstAttribute="top" secondItem="YGK-UL-iyu" secondAttribute="bottom" constant="67" id="LZo-NM-AvR"/>
@@ -2666,9 +2681,11 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             <constraint firstAttribute="trailing" secondItem="bHs-G9-jMF" secondAttribute="trailing" id="QYx-4V-eZn"/>
                             <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="oQb-YU-ATx" secondAttribute="trailing" constant="16" id="SUL-vo-pmj"/>
                             <constraint firstItem="0qk-au-WrE" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="T7I-Zg-noW"/>
+                            <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="EUd-dA-iOa" secondAttribute="trailing" constant="14" id="UBk-wU-acp"/>
                             <constraint firstItem="EUd-dA-iOa" firstAttribute="leading" secondItem="i9R-dS-hvG" secondAttribute="leading" id="UNF-A6-u62"/>
                             <constraint firstItem="LGj-cf-Hfw" firstAttribute="top" secondItem="bHs-G9-jMF" secondAttribute="bottom" constant="67" id="YeT-EG-n8J"/>
                             <constraint firstItem="EUd-dA-iOa" firstAttribute="top" secondItem="YGK-UL-iyu" secondAttribute="bottom" constant="11" id="Z0t-Z1-nOJ"/>
+                            <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="0qk-au-WrE" secondAttribute="trailing" constant="14" id="cp3-lk-sjy"/>
                             <constraint firstAttribute="trailing" secondItem="YGK-UL-iyu" secondAttribute="trailing" id="dMm-PR-dmA"/>
                             <constraint firstItem="w2Z-jk-uMs" firstAttribute="centerY" secondItem="i9R-dS-hvG" secondAttribute="centerY" id="ddh-OP-KWl"/>
                             <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="w2Z-jk-uMs" secondAttribute="trailing" constant="16" id="g1q-FG-cnS"/>
@@ -2677,11 +2694,14 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                             <constraint firstItem="12v-HD-ra4" firstAttribute="top" secondItem="0qk-au-WrE" secondAttribute="bottom" constant="5" id="oWY-NN-Xgi"/>
                             <constraint firstItem="0qk-au-WrE" firstAttribute="top" secondItem="JzO-Vh-v6e" secondAttribute="bottom" constant="11" id="p00-6S-QT3"/>
                             <constraint firstItem="bHs-G9-jMF" firstAttribute="leading" secondItem="Kxb-4F-kbw" secondAttribute="leading" id="pd0-Dk-NyR"/>
+                            <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="12v-HD-ra4" secondAttribute="trailing" constant="14" id="tUV-Z9-rcy"/>
                             <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="nUb-yu-v3u" secondAttribute="trailing" id="ten-p1-bQS"/>
+                            <constraint firstItem="9ba-M9-gyo" firstAttribute="trailing" secondItem="Yex-wV-ELP" secondAttribute="trailing" constant="14" id="tt3-fd-bNk"/>
                             <constraint firstAttribute="trailing" secondItem="JzO-Vh-v6e" secondAttribute="trailing" id="u6O-Lo-3Dl"/>
                             <constraint firstItem="i9R-dS-hvG" firstAttribute="top" secondItem="EUd-dA-iOa" secondAttribute="bottom" constant="5" id="vB1-XE-zqL"/>
                             <constraint firstItem="qhF-pu-Vtq" firstAttribute="top" secondItem="Yex-wV-ELP" secondAttribute="bottom" constant="4" id="vbV-xU-PGc"/>
                             <constraint firstItem="LGj-cf-Hfw" firstAttribute="leading" secondItem="Kxb-4F-kbw" secondAttribute="leading" id="vvl-6n-oy5"/>
+                            <constraint firstItem="w2Z-jk-uMs" firstAttribute="leading" secondItem="i9R-dS-hvG" secondAttribute="trailing" constant="14" id="xj1-i2-O8r"/>
                             <constraint firstItem="9VI-me-7Zi" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="yHS-qH-diJ"/>
                             <constraint firstItem="Yex-wV-ELP" firstAttribute="leading" secondItem="9ba-M9-gyo" secondAttribute="leading" constant="15" id="yhZ-nP-CND"/>
                         </constraints>

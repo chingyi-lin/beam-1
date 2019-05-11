@@ -66,8 +66,8 @@ extension ManageShareViewController: ShareDetailViewControllerDelegate {
         self.navigationController?.popViewController(animated: true)
         let alert = UIAlertController(title: "Update Password?", message: "You’ve allowed the recipient to view the password, so we recommend updating your password after revoking their access.\n\nAll other sharers will automatically be synced with the new password.", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "NOT NOW", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "UPDATE", style: .default, handler: {action in self.performSegue(withIdentifier: "manageShareVCToUpdateVC", sender: self)}))
+        alert.addAction(UIAlertAction(title: "Not Now", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Update", style: .default, handler: {action in self.performSegue(withIdentifier: "manageShareVCToUpdateVC", sender: self)}))
         
         self.present(alert, animated: true)
     }
