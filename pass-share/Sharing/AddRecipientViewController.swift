@@ -23,6 +23,7 @@ class AddRecipientViewController: UIViewController, UITextViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Add Recipient"
         nextBtn.isEnabled = false
         emailTextField.delegate = self
         messageTextView.delegate = self

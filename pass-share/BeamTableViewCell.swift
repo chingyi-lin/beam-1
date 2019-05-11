@@ -14,6 +14,7 @@ class BeamTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var siteImage: UIImageView!
     @IBOutlet weak var shareWithPic: UIImageView!
+    @IBOutlet weak var barMark: UILabel!
     
     var identifier: String = "none"
     var request: AnyObject?

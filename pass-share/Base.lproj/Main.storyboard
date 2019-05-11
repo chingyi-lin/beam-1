@@ -155,7 +155,7 @@
                                 <items>
                                     <navigationItem title="Secret Phrase" id="cS8-LK-mh5">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Vlu-OI-sAF">
-                                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="cancel:" destination="jSZ-xi-cLC" id="faU-0b-gzt"/>
                                             </connections>
@@ -276,7 +276,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <items>
                                     <navigationItem title="Login Added" id="o1J-ch-Nqt">
                                         <barButtonItem key="leftBarButtonItem" title="Done" id="2kc-7Z-DWW" customClass="loginAddedVCToBeamVC">
-                                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="done:" destination="bog-oY-f30" id="Zm3-ZX-buw"/>
                                             </connections>
@@ -1077,7 +1077,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TF9-YC-H5o">
                                 <rect key="frame" x="315" y="306" width="46" height="30"/>
                                 <state key="normal" title="SHOW">
-                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="revealSecretPhrase:" destination="YPi-QO-GLk" eventType="touchUpInside" id="GI0-ch-blU"/>
@@ -1294,7 +1294,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <rect key="frame" x="318" y="87.5" width="41" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <state key="normal" title="SHOW">
-                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showPassword:" destination="coN-N4-a8p" eventType="touchUpInside" id="pze-Rk-skd"/>
@@ -1413,7 +1413,7 @@ Don’t know your phrase? Reach out to the sender!</string>
             </objects>
             <point key="canvasLocation" x="1396" y="3306.2968515742132"/>
         </scene>
-        <!--Add Recipient-->
+        <!--Add Recipient View Controller-->
         <scene sceneID="wMP-TI-hPC">
             <objects>
                 <viewController id="Bg2-Xz-DkD" customClass="AddRecipientViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
@@ -1500,9 +1500,9 @@ Don’t know your phrase? Reach out to the sender!</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qLi-qs-Xt5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Recipient" id="tfm-h0-f7q">
+                    <navigationItem key="navigationItem" id="tfm-h0-f7q">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="muv-Na-zYD">
-                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancel:" destination="Bg2-Xz-DkD" id="oQ7-dt-QZz"/>
                             </connections>
@@ -2001,7 +2001,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 <rect key="frame" x="309" y="195.5" width="40" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="SHOW">
-                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="revealPassword:" destination="7bv-Fe-I4s" eventType="touchUpInside" id="DuN-3T-VpJ"/>
@@ -2011,7 +2011,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 <rect key="frame" x="308" y="286.5" width="41" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <state key="normal" title="SHOW">
-                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="revealSecretPhrase:" destination="7bv-Fe-I4s" eventType="touchUpInside" id="l7S-cL-qeb"/>
@@ -2341,12 +2341,25 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_pic_blank_small_22" translatesAutoresizingMaskIntoConstraints="NO" id="HD6-KD-hMQ">
                                             <rect key="frame" x="93" y="56" width="22" height="22"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkK-wb-J7F">
+                                            <rect key="frame" x="0.0" y="5" width="5" height="79.5"/>
+                                            <color key="backgroundColor" red="0.15294117647058825" green="0.44705882352941173" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="5" id="jM9-0p-fpz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="TkK-wb-J7F" secondAttribute="bottom" constant="5" id="9BM-c0-fr1"/>
                                         <constraint firstItem="pGD-2U-nnN" firstAttribute="leading" secondItem="qVz-IU-jY3" secondAttribute="leading" constant="16" id="9cc-D2-AGG"/>
                                         <constraint firstItem="HD6-KD-hMQ" firstAttribute="top" secondItem="IrI-00-FoI" secondAttribute="bottom" constant="4.5" id="Dah-Ma-wNF"/>
                                         <constraint firstItem="Ym1-B8-CDw" firstAttribute="top" secondItem="qVz-IU-jY3" secondAttribute="top" constant="10.5" id="GfQ-Ou-DLu"/>
                                         <constraint firstAttribute="trailing" secondItem="Ym1-B8-CDw" secondAttribute="trailing" constant="14" id="QQV-H8-zBu"/>
+                                        <constraint firstItem="TkK-wb-J7F" firstAttribute="top" secondItem="qVz-IU-jY3" secondAttribute="top" constant="5" id="Qa4-Kn-APV"/>
+                                        <constraint firstItem="TkK-wb-J7F" firstAttribute="leading" secondItem="qVz-IU-jY3" secondAttribute="leading" id="X0e-bw-vDB"/>
                                         <constraint firstItem="IrI-00-FoI" firstAttribute="top" secondItem="Ym1-B8-CDw" secondAttribute="bottom" constant="2" id="ZOK-32-zK6"/>
                                         <constraint firstItem="HD6-KD-hMQ" firstAttribute="leading" secondItem="IrI-00-FoI" secondAttribute="leading" id="Zgq-DZ-RkQ"/>
                                         <constraint firstItem="Ym1-B8-CDw" firstAttribute="leading" secondItem="pGD-2U-nnN" secondAttribute="trailing" constant="8" id="bvj-TC-1Ia"/>
@@ -2356,6 +2369,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="barMark" destination="TkK-wb-J7F" id="9AU-av-UeR"/>
                                     <outlet property="shareWithPic" destination="HD6-KD-hMQ" id="lle-wG-b8W"/>
                                     <outlet property="siteImage" destination="pGD-2U-nnN" id="6sj-4l-7Xh"/>
                                     <outlet property="sitenameLabel" destination="Ym1-B8-CDw" id="e8H-fr-9vL"/>
@@ -2634,7 +2648,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 <rect key="frame" x="269" y="167.5" width="90" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <state key="normal" title="SHOW">
-                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="revealPassword:" destination="ohb-OU-EBP" eventType="touchUpInside" id="YBC-fG-Asc"/>
@@ -2782,7 +2796,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="zq7-ve-ptp">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -2801,7 +2815,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yWP-GD-WYQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -2831,7 +2845,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="l6H-PP-2us"/>
-        <segue reference="MJS-cG-5Zy"/>
+        <segue reference="a9c-fu-0GZ"/>
         <segue reference="RyM-O8-ezd"/>
     </inferredMetricsTieBreakers>
 </document>

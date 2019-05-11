@@ -80,9 +80,9 @@ class BeamTableViewController: UITableViewController {
                 prevImageOrigin = imageView.frame.origin
             }
         }
-        print(credentials[indexPath.row].myAccess!.grantByEmail)
-        print(credentials[indexPath.row].myAccess!.grantByEmail.isEmpty)
+
         if (!credentials[indexPath.row].myAccess!.grantByEmail.isEmpty) {
+            cell.barMark.backgroundColor = UIColor.black
             let contact = RealmAPI.shared.readContactByEmail(filterBy: credentials[indexPath.row].myAccess!.grantByEmail)
             cell.shareWithPic.image = UIImage(named: contact.imgFileName + "_small_22")
         }
