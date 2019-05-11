@@ -59,17 +59,38 @@ class BeamTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BeamTableViewCell", for: indexPath) as! BeamTableViewCell
+        let accessArr = credentials[indexPath.row].accessArr
+        if (accessArr.count == 0) {
+            cell.shareWithPic.image = UIImage()
+        }
+        if (accessArr.count == 1){
+            let contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[0].grantToEmail)
+            cell.shareWithPic.image = UIImage(named: contact.imgFileName + "_small_22")
+        }
+        if (accessArr.count > 1) {
+            var contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[0].grantToEmail)
+            cell.shareWithPic.image = UIImage(named: contact.imgFileName + "_small_22")
+            var prevImageOrigin = cell.shareWithPic.frame.origin
+            for i in 1..<accessArr.count {
+                let imageView = UIImageView()
+                imageView.frame = CGRect(x: prevImageOrigin.x+25, y: prevImageOrigin.y, width: 22, height: 22)
+                view.addSubview(imageView)
+                contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[i].grantToEmail)
+                imageView.image = UIImage(named: contact.imgFileName + "_small_22")
+                prevImageOrigin = imageView.frame.origin
+            }
+        }
+        print(credentials[indexPath.row].myAccess!.grantByEmail)
+        print(credentials[indexPath.row].myAccess!.grantByEmail.isEmpty)
+        if (!credentials[indexPath.row].myAccess!.grantByEmail.isEmpty) {
+            let contact = RealmAPI.shared.readContactByEmail(filterBy: credentials[indexPath.row].myAccess!.grantByEmail)
+            cell.shareWithPic.image = UIImage(named: contact.imgFileName + "_small_22")
+        }
         
         // Configure the cell
         cell.sitenameLabel.text = credentials[indexPath.row].sitename
         cell.usernameLabel.text = credentials[indexPath.row].username
         cell.identifier = credentials[indexPath.row].credentialID
-        if (credentials[indexPath.row].myAccess.isOwn && credentials[indexPath.row].accessArr.count == 0) {
-            print(credentials[indexPath.row].myAccess.isOwn)
-            print(credentials[indexPath.row].accessArr.count)
-            
-            cell.shareWithPic.image = UIImage()
-        }
         // Fetch image
         let domain = credentials[indexPath.row].domain
         if let cachedImage = siteImagesCache.object(forKey: NSString(string: domain)) {

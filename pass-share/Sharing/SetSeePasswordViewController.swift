@@ -38,7 +38,6 @@ class SetSeePasswordViewController: UIViewController {
         if (sender.currentTitle == "Yes") {
             newAccess?.canSee = true
         } else {
-            print("set can see to false")
             newAccess?.canSee = false
         }
         self.performSegue(withIdentifier: "setSeePasswordVCToSetSecretPhraseVC", sender: self)

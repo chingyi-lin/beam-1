@@ -29,7 +29,7 @@ class ShareDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Share Details"
         access = RealmAPI.shared.readAccess(filterBy: accessID!)
-        let contact = RealmAPI.shared.readContact(filterBy: access!.grantToEmail)
+        let contact = RealmAPI.shared.readContactByEmail(filterBy: access!.grantToEmail)
         profilePic.image = UIImage(named: contact.imgFileName + "_large_50")
         nameLabel.text = contact.name
         receiverEmailLabel.text = access?.grantToEmail

@@ -43,7 +43,6 @@ class EnterSecretPhraseViewController: UIViewController {
     }
     @IBAction func clickNext(_ sender: Any) {
         newAccess!.secretPhrase = self.secretPhraseTextField.text!
-        print("secretPhrase stored")
     }
     func updateBtnStyle(byStage isEnabled: Bool) {
         if (isEnabled) {

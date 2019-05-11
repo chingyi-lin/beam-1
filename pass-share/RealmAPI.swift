@@ -57,7 +57,7 @@ final class RealmAPI {
         return realm.objects(ShareInvitation.self).filter("shareInvitationID = '\(shareInvitationID)'").first!
     }
     
-    func readContact(filterBy contactEmail: String) -> Contact {
+    func readContactByEmail(filterBy contactEmail: String) -> Contact {
         return realm.objects(Contact.self).filter("email = '\(contactEmail)'").first!
     }
     

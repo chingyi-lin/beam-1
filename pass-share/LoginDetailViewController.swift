@@ -18,13 +18,15 @@ class LoginDetailViewController: UIViewController {
     var username: String?
     var password: String?
     var credentialID: String?
-    
+
     var loginDetailViewControllerDelegate: LoginDetailViewControllerDelegate?
     
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var shareBtn: UIButton!
+    @IBOutlet weak var sharedWithPic: UIImageView!
+    @IBOutlet weak var sharedWithPicLeadingConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,22 @@ class LoginDetailViewController: UIViewController {
         websiteLabel.text = selectedLogin.domain
         usernameLabel.text = selectedLogin.username
         passwordLabel.text = "• • • • • • • • • •"
+        
+        let accessArr = selectedLogin.accessArr
+        var prevImage = sharedWithPic!
+        if (accessArr.count >= 1) {
+            for i in 0..<accessArr.count {
+                sharedWithPicLeadingConstraint.constant += 34
+                moveImageView(&prevImage, offsetBy: 34)
+                let contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[i].grantToEmail)
+                prevImage = renderContactPic(nextTo: prevImage, offsetBy: -34, for: contact)
+            }
+        }
+        if (selectedLogin.myAccess!.grantByEmail != "") {
+            let contact = RealmAPI.shared.readContactByEmail(filterBy: selectedLogin.myAccess!.grantByEmail)
+            sharedWithPic.image = UIImage(named: contact.imgFileName + "_medium_31")
+            shareBtn.isEnabled = false
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -53,5 +71,20 @@ class LoginDetailViewController: UIViewController {
     @IBAction func clickShareWith(_ sender: Any) {
         loginDetailViewControllerDelegate!.navigateToManageShareVC()
     }
+    func moveImageView(_ imageView: inout UIImageView, offsetBy offsetX: CGFloat) {
+        let imageOrigin = imageView.frame.origin
+        let imageSize = imageView.frame.size
+        imageView.frame = CGRect(x: imageOrigin.x + offsetX, y: imageOrigin.y, width: imageSize.width, height: imageSize.height)
+    }
     
+    func renderContactPic(nextTo prevImage: UIImageView, offsetBy offsetX: CGFloat, for contact: Contact) -> UIImageView{
+        let prevImageOrigin = prevImage.frame.origin
+        let imageView = UIImageView()
+        
+        imageView.frame = CGRect(x: prevImageOrigin.x + offsetX, y: prevImageOrigin.y, width: 31, height: 31)
+        view.addSubview(imageView)
+        imageView.image = UIImage(named: contact.imgFileName + "_medium_31")
+        
+        return imageView
+    }
 }

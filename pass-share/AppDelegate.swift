@@ -51,10 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func writeDemoDataForAcceptFlow() {
-        let invite = ShareInvitation("Jason", "Bank of America", "www.bankofamerica.com", "jason@gmail.com", "aH#DJ1K&**Als", 1, false, "ilovedonuts")
-        let activity = Activity("Jason wants to share Bank of America with you.", true, invite.shareInvitationID)
+        let invite = ShareInvitation("Amy", "amy@gmail.com","Bank of America", "www.bankofamerica.com", "amyh@gmail.com", "aH#DJ1K&**Als", 1, false, "ilovedonuts")
+        let activity = Activity("Amy wants to share Bank of America with you.", true, invite.shareInvitationID)
+        let contact = Contact("AH", "Amy", "amy@gmail.com", "profile_pic_user3")
         RealmAPI.shared.write(data: invite)
         RealmAPI.shared.write(data: activity)
+        RealmAPI.shared.write(data: contact)
     }
     
 }

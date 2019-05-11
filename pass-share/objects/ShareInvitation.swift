@@ -13,6 +13,7 @@ class ShareInvitation: Object {
     // TODO: need a way to know who owns this credential
     @objc dynamic var shareInvitationID = UUID().uuidString
     @objc dynamic var senderName = ""
+    @objc dynamic var senderEmail = ""
     @objc dynamic var sitename = ""
     @objc dynamic var domain = ""
     @objc dynamic var username = ""
@@ -24,9 +25,10 @@ class ShareInvitation: Object {
     override static func primaryKey() -> String? {
         return "shareInvitationID"
     }
-    convenience init(_ senderName: String, _ sitename: String, _ domain: String, _ username: String, _ password: String, _ duration: Int, _ canSee: Bool, _ secretPhrase: String) {
+    convenience init(_ senderName: String, _ senderEmail: String, _ sitename: String, _ domain: String, _ username: String, _ password: String, _ duration: Int, _ canSee: Bool, _ secretPhrase: String) {
         self.init()
         self.senderName = senderName
+        self.senderEmail = senderEmail
         self.sitename = sitename
         self.domain = domain
         self.username = username
@@ -42,9 +44,8 @@ class ShareInvitation: Object {
             // TODO: The text is too long and the row height needs to auto sizing to fit it.
             // let activityText = "You accepted the " + sitename + " login shared from " + senderName + "."
             let activityText = "You accepted " + senderName + "'s " + sitename + " login."
-            let credential = Credential(sitename, domain, username, password, activityText)
-            credential.setMyAccess(false, senderName, self.generateAccess())
-            print("set the access")
+            let myAccess = MyAccess(false, senderEmail, self.generateAccess())
+            let credential = Credential(sitename, domain, username, password, activityText, myAccess)
             RealmAPI.shared.write(data: credential)
             return true
         } else {
