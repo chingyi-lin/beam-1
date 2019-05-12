@@ -64,4 +64,8 @@ class Credential: Object {
     func setMyAccess(_ isOwn: Bool, _ grantByEmail: String, _ access: Access) {
         self.myAccess = MyAccess(isOwn, grantByEmail, access)
     }
+    
+    func setPassword(_ password: String) {
+        self.password = password
+    }
 }

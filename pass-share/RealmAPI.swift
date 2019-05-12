@@ -37,6 +37,12 @@ final class RealmAPI {
         }
     }
     
+    func updateCredentialPassword(for data: Credential, with password: String) {
+        try! realm.write {
+            data.setPassword(password)
+        }
+    }
+    
     func read(filterBy credentialID: String) -> Credential {
         return realm.objects(Credential.self).filter("credentialID = '\(credentialID)'").first!
     }

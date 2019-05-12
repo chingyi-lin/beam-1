@@ -1252,30 +1252,30 @@ Don’t know your phrase? Reach out to the sender!</string>
             <objects>
                 <viewController id="coN-N4-a8p" customClass="UpdatePasswordViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FvS-cg-bDm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sitelogo_default_33" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-Dm-G8N">
-                                <rect key="frame" x="15" y="15" width="40" height="40"/>
+                                <rect key="frame" x="15" y="79" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ck8-aY-gOV"/>
                                     <constraint firstAttribute="width" constant="40" id="Zfh-Zo-5Mr"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53r-DW-Lhf">
-                                <rect key="frame" x="70" y="15" width="291" height="21"/>
+                                <rect key="frame" x="70" y="79" width="291" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="j0yc3@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gT-2O-ie0">
-                                <rect key="frame" x="70" y="36" width="291" height="13.5"/>
+                                <rect key="frame" x="70" y="100" width="291" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuR-As-zNt">
-                                <rect key="frame" x="16" y="71" width="343" height="16"/>
+                                <rect key="frame" x="16" y="135" width="343" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Eyo-X6-keO"/>
                                 </constraints>
@@ -1284,7 +1284,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• • • • • • • • • • • • • • • • " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbX-WJ-N1q">
-                                <rect key="frame" x="16" y="91" width="250" height="21"/>
+                                <rect key="frame" x="16" y="155" width="250" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LLQ-6N-GlW"/>
                                     <constraint firstAttribute="width" constant="250" id="eyk-TB-WEL"/>
@@ -1294,7 +1294,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkX-AF-ms3" userLabel="Line">
-                                <rect key="frame" x="16" y="117" width="343" height="1"/>
+                                <rect key="frame" x="16" y="181" width="343" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="MaV-OJ-Gka"/>
@@ -1304,7 +1304,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajv-ay-mML">
-                                <rect key="frame" x="318" y="87.5" width="41" height="28"/>
+                                <rect key="frame" x="318" y="151.5" width="41" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <state key="normal" title="SHOW">
                                     <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1314,19 +1314,19 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g21-of-602">
-                                <rect key="frame" x="16" y="133" width="343" height="16"/>
+                                <rect key="frame" x="16" y="197" width="343" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7U-U4-Ki1">
-                                <rect key="frame" x="16" y="159" width="343" height="21"/>
+                                <rect key="frame" x="16" y="223" width="343" height="21"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgy-Hp-iL8" userLabel="Line">
-                                <rect key="frame" x="16" y="185" width="343" height="1"/>
+                                <rect key="frame" x="16" y="249" width="343" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="HFf-JR-z1d"/>
@@ -1336,7 +1336,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="er8-8s-I0U">
-                                <rect key="frame" x="195" y="196" width="164" height="20"/>
+                                <rect key="frame" x="195" y="260" width="164" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="JFh-we-Ieb"/>
                                 </constraints>
@@ -1356,7 +1356,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-vo-hpm">
-                                <rect key="frame" x="14" y="498" width="347" height="60"/>
+                                <rect key="frame" x="14" y="562" width="347" height="60"/>
                                 <color key="backgroundColor" red="0.063625387850000006" green="0.10857107489999999" blue="0.27912247179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Xoi-Eo-77F"/>
@@ -1412,8 +1412,17 @@ Don’t know your phrase? Reach out to the sender!</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RQb-fc-10s"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uQG-7F-rhX">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="pBV-jS-mRc">
+                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="doneClicked:" destination="coN-N4-a8p" id="8yp-zY-AD2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="currentPasswordLabel" destination="JbX-WJ-N1q" id="Okt-eN-ZiR"/>
+                        <outlet property="doneBtn" destination="pBV-jS-mRc" id="y49-fW-E76"/>
                         <outlet property="launchBtn" destination="XrA-vo-hpm" id="g9D-T3-UkT"/>
                         <outlet property="launchBtnBottomConstraint" destination="2Sg-RJ-cqh" id="eJY-5l-zCW"/>
                         <outlet property="newPasswordTextField" destination="I7U-U4-Ki1" id="SZD-Mu-PRR"/>
@@ -2913,6 +2922,6 @@ We recommend that you communicate the secret phrase to them verbally.</string>
     <inferredMetricsTieBreakers>
         <segue reference="g8c-CH-siA"/>
         <segue reference="MJS-cG-5Zy"/>
-        <segue reference="RyM-O8-ezd"/>
+        <segue reference="f0v-YF-ckE"/>
     </inferredMetricsTieBreakers>
 </document>

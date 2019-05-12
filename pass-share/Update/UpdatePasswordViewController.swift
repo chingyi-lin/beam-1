@@ -15,6 +15,7 @@ class UpdatePasswordViewController: UIViewController {
     
     var credentialID: String?
     fileprivate var request: AnyObject?
+    private var firstLaunch = true
     
     @IBOutlet weak var siteLogo: UIImageView!
     @IBOutlet weak var sitenameLabel: UILabel!
@@ -23,6 +24,7 @@ class UpdatePasswordViewController: UIViewController {
     @IBOutlet weak var newPasswordTextField: UITextField!
     @IBOutlet weak var launchBtnBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var launchBtn: UIButton!
+    @IBOutlet weak var doneBtn: UIBarButtonItem!
     
     @IBAction func generateNewPassword(_ sender: Any) {
         newPasswordTextField.text = generateRandomPassword()
@@ -30,6 +32,7 @@ class UpdatePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneBtn.isEnabled = false
         let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
         fetchSiteLogo(for: RealmAPI.shared.read(filterBy: credentialID!).domain)
         sitenameLabel.text = credential.sitename
@@ -42,6 +45,27 @@ class UpdatePasswordViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(AddRecipientViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if (!firstLaunch) {
+            doneBtn.isEnabled = true
+        }
+    }
+    
+    @IBAction func doneClicked(_ sender: UIBarButtonItem) {
+        let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
+        RealmAPI.shared.updateCredentialPassword(for: credential, with: self.newPasswordTextField.text!)
+        
+        let alert = UIAlertController(title: "Your new password has been saved to Beam.", message: "When you update your password, you can paste your new password into the fields.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Don't tell me again", style: .cancel, handler: {action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true)
+    }
     @IBAction func showPassword(_ sender: UIButton) {
         let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
         if self.currentPasswordLabel.text?.contains("•")  ?? false {
@@ -60,9 +84,9 @@ class UpdatePasswordViewController: UIViewController {
     }
     
     @IBAction func launchWebView(_ sender: Any) {
+        firstLaunch = false
         let alert = UIAlertController(title: "Allow Beam to copy the new password to your clipboard?", message: "When you update your password, you can paste your new password into the fields.", preferredStyle: .alert)
         
-        // TODO: implement keyboard
         alert.addAction(UIAlertAction(title: "Allow", style: .default, handler: {action in
             UIPasteboard.general.string = self.newPasswordTextField.text
             self.presentSafariWebView()
