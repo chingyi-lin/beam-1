@@ -27,6 +27,7 @@ class LoginFormTableViewController : UITableViewController {
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var showBtn: UIButton!
     
     var sitenameIsEmtpyBefore = true
     var urlIsEmtpyBefore = true
@@ -49,6 +50,14 @@ class LoginFormTableViewController : UITableViewController {
             passwordIsEmtpyBefore = triggerAnimationAndUpdateEmptyStatus(byCurrentStatus: passwordIsEmtpyBefore, with: passwordLabel, sender)
         default:
             print("no match")
+        }
+    }
+    @IBAction func showBtnClicked(_ sender: Any) {
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        if (passwordTextField.isSecureTextEntry) {
+            showBtn.setTitle("SHOW", for: .normal)
+        } else {
+            showBtn.setTitle("HIDE", for: .normal)
         }
     }
     override func viewDidLoad() {

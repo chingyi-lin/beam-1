@@ -28,13 +28,25 @@ class LoginDetailViewController: UIViewController {
     @IBOutlet weak var sharedWithPic: UIImageView!
     @IBOutlet weak var sharedWithPicLeadingConstraint: NSLayoutConstraint!
     
+    private var sharedWithPicOrigin: CGPoint?
+    private var originConstraintConstant: CGFloat?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
         websiteLabel.text = selectedLogin.domain
         usernameLabel.text = selectedLogin.username
         passwordLabel.text = "• • • • • • • • • •"
-        
+        sharedWithPicOrigin = sharedWithPic.frame.origin
+        originConstraintConstant = sharedWithPicLeadingConstraint.constant
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        resetSharedWithPics()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
         let accessArr = selectedLogin.accessArr
         var prevImage = sharedWithPic!
         if (accessArr.count >= 1) {
@@ -58,13 +70,15 @@ class LoginDetailViewController: UIViewController {
             displayVC.credentialID = self.credentialID
         }
     }
-    @IBAction func revealPassword(_ sender: Any) {
+    @IBAction func revealPassword(_ sender: UIButton) {
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
-        if self.passwordLabel.text?.contains("•")  ?? false {
-            self.passwordLabel.text = selectedLogin.password
-        } else {
-            self.passwordLabel.text = "• • • • • • • • • •"
-        }
+            if (self.passwordLabel.text?.contains("•")  ?? false) {
+               self.passwordLabel.text = selectedLogin.password
+                sender.setTitle("HIDE", for: .normal)
+            } else {
+               self.passwordLabel.text = "• • • • • • • • • •"
+                sender.setTitle("SHOW", for: .normal)
+            }
         
     }
     
@@ -84,7 +98,18 @@ class LoginDetailViewController: UIViewController {
         imageView.frame = CGRect(x: prevImageOrigin.x + offsetX, y: prevImageOrigin.y, width: 31, height: 31)
         view.addSubview(imageView)
         imageView.image = UIImage(named: contact.imgFileName + "_medium_31")
+        imageView.tag = 100
         
         return imageView
+    }
+    
+    func resetSharedWithPics() {
+        sharedWithPicLeadingConstraint.constant = originConstraintConstant!
+        sharedWithPic.frame = CGRect(origin: sharedWithPicOrigin!, size: sharedWithPic.frame.size)
+        for imageView in self.view.subviews {
+            if imageView.tag == 100 {
+                imageView.removeFromSuperview()
+            }
+        }
     }
 }

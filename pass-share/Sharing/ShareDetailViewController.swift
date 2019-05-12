@@ -60,11 +60,13 @@ class ShareDetailViewController: UIViewController {
         RealmAPI.shared.delete(data: access!)
         shareDetailViewControllerDelegate?.revoke()
     }
-    @IBAction func revealSecretPhrase(_ sender: Any) {
+    @IBAction func revealSecretPhrase(_ sender: UIButton) {
         if self.secretPhraseLabel.text?.contains("•") ?? false {
             self.secretPhraseLabel.text = access?.secretPhrase
+            sender.setTitle("HIDE", for: .normal)
         } else {
             self.secretPhraseLabel.text = "• • • • • • • • • • • • • • • •"
+            sender.setTitle("SHOW", for: .normal)
         }
     }
     

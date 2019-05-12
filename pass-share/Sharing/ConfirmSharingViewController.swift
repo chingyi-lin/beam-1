@@ -45,20 +45,24 @@ class ConfirmSharingViewController: UIViewController {
     @IBOutlet weak var currentPassword: UILabel!
     @IBOutlet weak var secretPhrase: UILabel!
     
-    @IBAction func revealPassword(_ sender: Any) {
+    @IBAction func revealPassword(_ sender: UIButton) {
         if self.currentPassword.text?.contains("•") ?? false {
             self.currentPassword.text = selectedLogin?.password
+            sender.setTitle("HIDE", for: .normal)
             
         } else {
             self.currentPassword.text = "• • • • • • • • • • • • • • • •"
+            sender.setTitle("SHOW", for: .normal)
         }
     }
     
-    @IBAction func revealSecretPhrase(_ sender: Any) {
+    @IBAction func revealSecretPhrase(_ sender: UIButton) {
         if self.secretPhrase.text?.contains("•")  ?? false {
             self.secretPhrase.text = self.newAccess?.secretPhrase
+            sender.setTitle("HIDE", for: .normal)
         } else {
             self.secretPhrase.text = "• • • • • • • • • •"
+            sender.setTitle("SHOW", for: .normal)
         }
     }
     

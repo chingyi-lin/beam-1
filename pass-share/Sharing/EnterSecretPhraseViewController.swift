@@ -12,9 +12,12 @@ class EnterSecretPhraseViewController: UIViewController {
     var credentialID: String?
     var newAccess: Access?
     
+    private var isEmtpyBefore = true
+    
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var secretPhraseTextField: UITextField!
     @IBOutlet weak var nextBtnBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var secretPhraseLabel: UILabel!
     
     override func viewDidLoad() {
         self.title = "Secret Phrase"
@@ -33,13 +36,14 @@ class EnterSecretPhraseViewController: UIViewController {
             nextVC.newAccess = self.newAccess
         }
     }
-    @IBAction func editDidChanged(_ sender: Any) {
+    @IBAction func editDidChanged(_ sender: UITextField) {
         var formIsValid = true
         if let isTextEmpty = secretPhraseTextField.text?.isEmpty {
             formIsValid = !isTextEmpty
         }
         nextBtn.isEnabled = formIsValid
         updateBtnStyle(byStage: nextBtn.isEnabled)
+        isEmtpyBefore = triggerAnimationAndUpdateEmptyStatus(byCurrentStatus: isEmtpyBefore, with: secretPhraseLabel, sender)
     }
     @IBAction func clickNext(_ sender: Any) {
         newAccess!.secretPhrase = self.secretPhraseTextField.text!
@@ -71,6 +75,18 @@ class EnterSecretPhraseViewController: UIViewController {
                         self.nextBtnBottomConstraint.constant = 45.00
                         self.view.layoutIfNeeded()
         }, completion: nil)
+    }
+    func triggerAnimationAndUpdateEmptyStatus(byCurrentStatus isEmptyBefore: Bool, with label: UILabel, _ sender: UITextField) -> Bool{
+        if (isEmptyBefore && !sender.text!.isEmpty) {
+            label.floatIn(dy: -18)
+            return false
+        }
+        else if (!isEmptyBefore && sender.text!.isEmpty){
+            label.floatOut()
+            return true
+        } else {
+            return isEmptyBefore
+        }
     }
 }
 extension EnterSecretPhraseViewController: UITextFieldDelegate {

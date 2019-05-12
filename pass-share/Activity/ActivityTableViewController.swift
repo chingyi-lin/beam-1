@@ -60,6 +60,7 @@ class ActivityTableViewController: UITableViewController {
             cell.actionableActivityTableViewCellDelegate = self
             cell.activityLabel?.text = activities[indexPath.row].text
             cell.timeLabel?.text = formatter.string(from: activities[indexPath.row].time)
+            cell.declineBtn.layer.borderColor = UIColor(red:0.06, green:0.11, blue:0.28, alpha:1.0).cgColor
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "displayActivityTableViewCell", for: indexPath) as! DisplayActivityTableViewCell

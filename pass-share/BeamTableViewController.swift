@@ -27,6 +27,7 @@ class BeamTableViewController: UITableViewController {
         if (RealmAPI.shared.readAll().count == 0) {
             renderBlankState()
         }
+        self.tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

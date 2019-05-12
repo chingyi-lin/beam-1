@@ -35,19 +35,21 @@ class UpdatePasswordViewController: UIViewController {
         sitenameLabel.text = credential.sitename
         usernameLabel.text = credential.username
         
-        let titleStr = "Launch " + credential.sitename + " to Update Password"
+        let titleStr = "LAUNCH " + credential.sitename.uppercased() + " TO UPDATE PASSWORD"
         launchBtn.setTitle(titleStr, for: .normal)
         // Adjust keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(AddRecipientViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddRecipientViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @IBAction func showPassword(_ sender: Any) {
+    @IBAction func showPassword(_ sender: UIButton) {
         let credential = RealmAPI.shared.readCredentialById(queryWith: credentialID!)
         if self.currentPasswordLabel.text?.contains("•")  ?? false {
             self.currentPasswordLabel.text = credential.password
+            sender.setTitle("HIDE", for: .normal)
         } else {
             self.currentPasswordLabel.text = "• • • • • • • • • •"
+            sender.setTitle("SHOW", for: .normal)
         }
     }
     func generateRandomPassword() -> String {
