@@ -52,13 +52,13 @@ class AddRecipientViewController: UIViewController, UITextViewDelegate {
         newContact.name = String(emailTextField.text!.split(separator: "@")[0]).capitalizingFirstLetter()
         newContact.initial = "JZ"
         switch newContact.email {
-        case let str where str.contains("chingyi"):
+        case let str where str.lowercased().contains("chingyi"):
             newContact.imgFileName = "profile_pic_user1"
-        case let str where str.contains("ayo"):
+        case let str where str.lowercased().contains("ayo"):
             newContact.imgFileName = "profile_pic_user2"
-        case let str where str.contains("amy"):
+        case let str where str.lowercased().contains("amy"):
             newContact.imgFileName = "profile_pic_user3"
-        case let str where str.contains("jing"):
+        case let str where str.lowercased().contains("jing"):
             newContact.imgFileName = "profile_pic_user4"
         default:
             newContact.imgFileName = "profile_pic_default"

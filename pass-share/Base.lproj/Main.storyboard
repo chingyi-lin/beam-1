@@ -815,7 +815,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                     <navigationItem key="navigationItem" title="Site" id="waM-HL-JVo">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="zY7-tB-Zez">
                             <connections>
-                                <action selector="cancel:" destination="FcO-TW-6B3" id="PFU-6v-WjB"/>
+                                <action selector="back:" destination="FcO-TW-6B3" id="wrI-y2-3dR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -827,6 +827,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         <outlet property="siteLogo" destination="ytc-fw-aj5" id="R8F-Jq-Pm7"/>
                         <outlet property="sitenameLabel" destination="oyx-qI-Mvv" id="nEQ-fC-yNS"/>
                         <segue destination="8FS-S9-hO5" kind="show" identifier="loginDetailVCToManageShareVC" id="LgK-ZD-8ZV"/>
+                        <segue destination="uI5-5g-1cH" kind="show" identifier="loginVCToLaunchWebVC" id="jJr-iR-y31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhY-tW-dUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2725,6 +2726,9 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <state key="normal" title="LAUNCH"/>
+                                <connections>
+                                    <action selector="launchBtnClicked:" destination="ohb-OU-EBP" eventType="touchUpInside" id="e55-Re-ko7"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow_32" translatesAutoresizingMaskIntoConstraints="NO" id="Q12-Ly-he5">
                                 <rect key="frame" x="327" y="232.5" width="32" height="32"/>
@@ -2863,6 +2867,21 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1O-Bi-MEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2870" y="2557"/>
+        </scene>
+        <!--Launch Web View Controller-->
+        <scene sceneID="MNL-I8-pcx">
+            <objects>
+                <viewController id="uI5-5g-1cH" customClass="LaunchWebViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FCc-lv-cGH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lYf-cU-wQV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AIj-Bp-O81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2351" y="3134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H3Z-CK-d9n">

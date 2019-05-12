@@ -10,6 +10,7 @@ import UIKit
 
 protocol LoginDetailViewControllerDelegate {
     func navigateToManageShareVC()
+    func launchBtnClicked()
 }
 
 class LoginDetailViewController: UIViewController {
@@ -48,13 +49,13 @@ class LoginDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
         let accessArr = selectedLogin.accessArr
-        var prevImage = sharedWithPic!
+        var currTargetImage = sharedWithPic!
         if (accessArr.count >= 1) {
             for i in 0..<accessArr.count {
                 sharedWithPicLeadingConstraint.constant += 34
-                moveImageView(&prevImage, offsetBy: 34)
+                moveImageView(&currTargetImage, offsetBy: 34)
                 let contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[i].grantToEmail)
-                prevImage = renderContactPic(nextTo: prevImage, offsetBy: -34, for: contact)
+                renderContactPic(nextTo: currTargetImage, offsetBy: -34, for: contact)
             }
         }
         if (selectedLogin.myAccess!.grantByEmail != "") {
@@ -70,6 +71,10 @@ class LoginDetailViewController: UIViewController {
             displayVC.credentialID = self.credentialID
         }
     }
+    @IBAction func launchBtnClicked(_ sender: Any) {
+        loginDetailViewControllerDelegate!.launchBtnClicked()
+    }
+    
     @IBAction func revealPassword(_ sender: UIButton) {
         let selectedLogin = RealmAPI.shared.read(filterBy: credentialID!)
             if (self.passwordLabel.text?.contains("•")  ?? false) {
@@ -85,31 +90,31 @@ class LoginDetailViewController: UIViewController {
     @IBAction func clickShareWith(_ sender: Any) {
         loginDetailViewControllerDelegate!.navigateToManageShareVC()
     }
+    @objc func dismissVC() {
+        self.dismiss(animated: true, completion: nil)
+    }
     func moveImageView(_ imageView: inout UIImageView, offsetBy offsetX: CGFloat) {
         let imageOrigin = imageView.frame.origin
         let imageSize = imageView.frame.size
         imageView.frame = CGRect(x: imageOrigin.x + offsetX, y: imageOrigin.y, width: imageSize.width, height: imageSize.height)
     }
     
-    func renderContactPic(nextTo prevImage: UIImageView, offsetBy offsetX: CGFloat, for contact: Contact) -> UIImageView{
+    func renderContactPic(nextTo prevImage: UIImageView, offsetBy offsetX: CGFloat, for contact: Contact) {
         let prevImageOrigin = prevImage.frame.origin
         let imageView = UIImageView()
-        
         imageView.frame = CGRect(x: prevImageOrigin.x + offsetX, y: prevImageOrigin.y, width: 31, height: 31)
-        view.addSubview(imageView)
         imageView.image = UIImage(named: contact.imgFileName + "_medium_31")
         imageView.tag = 100
-        
-        return imageView
+        view.addSubview(imageView)
     }
     
     func resetSharedWithPics() {
-        sharedWithPicLeadingConstraint.constant = originConstraintConstant!
-        sharedWithPic.frame = CGRect(origin: sharedWithPicOrigin!, size: sharedWithPic.frame.size)
         for imageView in self.view.subviews {
             if imageView.tag == 100 {
                 imageView.removeFromSuperview()
             }
         }
+        sharedWithPicLeadingConstraint.constant = originConstraintConstant!
+        sharedWithPic.frame = CGRect(origin: sharedWithPicOrigin!, size: sharedWithPic.frame.size)
     }
 }

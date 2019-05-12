@@ -11,8 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     var credentialID: String?
-    
-    @IBOutlet weak var cancelBtn: UIButton!
+
     @IBOutlet weak var detailView: UIView!
     
     @IBOutlet weak var sitenameLabel: UILabel!
@@ -24,15 +23,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var segmentedControlBar: UILabel!
     @IBOutlet weak var siteLogo: UIImageView!
     
-    @IBAction func cancel(_ sender: Any) {
-        let transition = CATransition()
-        transition.duration = 0.25
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromLeft
-        self.view.window!.layer.add(transition, forKey: kCATransition)
-        
-        dismiss(animated: false, completion: nil)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSegmentedControlBtn()
@@ -65,6 +55,11 @@ class LoginViewController: UIViewController {
             let displayVC = segue.destination as! ManageShareViewController
             displayVC.credentialID = self.credentialID
         }
+        if (segue.identifier == "loginVCToLaunchWebVC") {
+            let domain = RealmAPI.shared.readCredentialById(queryWith: self.credentialID!).domain
+            let displayVC = segue.destination as! LaunchWebViewController
+            displayVC.domain = domain
+        }
     }
     @IBAction func back(_ sender: Any) {
         // Animation: right to left
@@ -73,7 +68,7 @@ class LoginViewController: UIViewController {
         transition.type = CATransitionType.push
         transition.subtype = CATransitionSubtype.fromLeft
         self.view.window!.layer.add(transition, forKey: kCATransition)
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func showComponent(_ sender: UISegmentedControl) {
@@ -125,5 +120,9 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginDetailViewControllerDelegate {
     func navigateToManageShareVC() {
         self.performSegue(withIdentifier: "loginDetailVCToManageShareVC", sender: self)
+    }
+    
+    func launchBtnClicked() {
+        self.performSegue(withIdentifier: "loginVCToLaunchWebVC", sender: self)
     }
 }

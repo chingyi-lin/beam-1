@@ -34,6 +34,7 @@ class BeamTableViewController: UITableViewController {
         print("reloading data: child view")
         super.viewWillAppear(animated)
         print("credential empty")
+        resetSharedWithPics()
         credentials = [Credential]()
         let queryResult = RealmAPI.shared.readAll()
         if (queryResult.count != 0) {
@@ -67,10 +68,12 @@ class BeamTableViewController: UITableViewController {
         if (accessArr.count == 1){
             let contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[0].grantToEmail)
             cell.shareWithPic.image = UIImage(named: contact.imgFileName + "_small_22")
+            cell.shareWithPic.tag = 100
         }
         if (accessArr.count > 1) {
             var contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[0].grantToEmail)
             cell.shareWithPic.image = UIImage(named: contact.imgFileName + "_small_22")
+            cell.shareWithPic.tag = 100
             var prevImageOrigin = cell.shareWithPic.frame.origin
             for i in 1..<accessArr.count {
                 let imageView = UIImageView()
@@ -78,6 +81,7 @@ class BeamTableViewController: UITableViewController {
                 view.addSubview(imageView)
                 contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[i].grantToEmail)
                 imageView.image = UIImage(named: contact.imgFileName + "_small_22")
+                imageView.tag = 100
                 prevImageOrigin = imageView.frame.origin
             }
         }
@@ -142,6 +146,13 @@ class BeamTableViewController: UITableViewController {
         button.setAttributedTitle(attributedTitle, for: .normal)
         button.center.x = self.view.center.x // for vertical
         self.view.addSubview(button)
+    }
+    func resetSharedWithPics() {
+        for imageView in self.view.subviews {
+            if imageView.tag == 100 {
+                imageView.removeFromSuperview()
+            }
+        }
     }
     
     @objc func addBtnClicked() {

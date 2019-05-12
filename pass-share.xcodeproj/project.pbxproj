@@ -43,6 +43,7 @@
 		D716F7682268262600D1F77D /* ManageShareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F7672268262600D1F77D /* ManageShareTableViewController.swift */; };
 		D716F76A2268267500D1F77D /* AddRecipientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F7692268267500D1F77D /* AddRecipientViewController.swift */; };
 		D716F76F226827BA00D1F77D /* ManageShareTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F76E226827BA00D1F77D /* ManageShareTableCell.swift */; };
+		D741E0282287F8B300BEE514 /* LaunchWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D741E0272287F8B200BEE514 /* LaunchWebViewController.swift */; };
 		D74A349222767C8B0059609B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A349122767C8B0059609B /* ActivityViewController.swift */; };
 		D74A3494227682770059609B /* DisplayActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A3493227682770059609B /* DisplayActivityTableViewCell.swift */; };
 		D74A3496227682840059609B /* ActionableActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A3495227682840059609B /* ActionableActivityTableViewCell.swift */; };
@@ -138,6 +139,7 @@
 		D716F7672268262600D1F77D /* ManageShareTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageShareTableViewController.swift; sourceTree = "<group>"; };
 		D716F7692268267500D1F77D /* AddRecipientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientViewController.swift; sourceTree = "<group>"; };
 		D716F76E226827BA00D1F77D /* ManageShareTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageShareTableCell.swift; sourceTree = "<group>"; };
+		D741E0272287F8B200BEE514 /* LaunchWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWebViewController.swift; sourceTree = "<group>"; };
 		D74A349122767C8B0059609B /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		D74A3493227682770059609B /* DisplayActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayActivityTableViewCell.swift; sourceTree = "<group>"; };
 		D74A3495227682840059609B /* ActionableActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionableActivityTableViewCell.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				D716F7502264181B00D1F77D /* LoginViewController.swift */,
 				D716F75B2265608F00D1F77D /* LoginDetailViewController.swift */,
 				D74A34C82282C2890059609B /* LoginActivityTableViewController.swift */,
+				D741E0272287F8B200BEE514 /* LaunchWebViewController.swift */,
 				D74A34AA2276EA950059609B /* UIView.swift */,
 			);
 			path = "pass-share";
@@ -557,6 +560,7 @@
 				D716F7662268254A00D1F77D /* ManageShareViewController.swift in Sources */,
 				D74A34C12280BCF40059609B /* PrimaryButtonSmall.swift in Sources */,
 				D716F747225FB95800D1F77D /* LoginFormTableViewController.swift in Sources */,
+				D741E0282287F8B300BEE514 /* LaunchWebViewController.swift in Sources */,
 				D74A349A22768ABB0059609B /* ActivityTableViewController.swift in Sources */,
 				6D2194C62259932D0089924D /* Object+CKRecord.swift in Sources */,
 				D74A34AB2276EA950059609B /* UIView.swift in Sources */,
