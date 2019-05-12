@@ -25,6 +25,12 @@ final class RealmAPI {
         }
     }
     
+    func deleteAll() {
+        try! realm.write {
+            realm.deleteAll()
+        }
+    }
+    
     func update(data: Object) {
         try! realm.write {
             realm.add(data, update: true)
@@ -40,6 +46,19 @@ final class RealmAPI {
     func updateCredentialPassword(for data: Credential, with password: String) {
         try! realm.write {
             data.setPassword(password)
+        }
+    }
+    
+    func updateProfileSyncOption(for data: Profile, with cloudSync: Bool) {
+        try! realm.write {
+            data.cloudSync = cloudSync
+        }
+    }
+    
+    func updateProfileNameAndEmail(for data: Profile, with name: String, with email: String) {
+        try! realm.write {
+            data.name = name
+            data.email = email
         }
     }
     
@@ -65,6 +84,10 @@ final class RealmAPI {
     
     func readContactByEmail(filterBy contactEmail: String) -> Contact {
         return realm.objects(Contact.self).filter("email = '\(contactEmail)'").first!
+    }
+    
+    func readCurrentProfile() -> Profile {
+        return realm.objects(Profile.self).first!
     }
     
     func readAllActivity() -> Results<Activity> {

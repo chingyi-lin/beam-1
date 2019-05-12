@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("First launch, setting UserDefault.")
             UserDefaults.standard.set(true, forKey: "launchedBefore")
             writeDemoDataForAcceptFlow()
+            writeUserProfile()
             print("loading demo")
         }
         return true
@@ -59,5 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RealmAPI.shared.write(data: contact)
     }
     
+    func writeUserProfile() {
+        RealmAPI.shared.write(data: Profile())
+    }
 }
 
