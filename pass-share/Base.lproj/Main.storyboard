@@ -73,7 +73,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1j-uH-JbI">
-                                            <rect key="frame" x="143" y="89" width="115" height="40"/>
+                                            <rect key="frame" x="143" y="86.5" width="115" height="40"/>
                                             <color key="backgroundColor" red="0.063625387847423553" green="0.10857107490301132" blue="0.27912247180938721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="115" id="Gl0-b0-Pw5"/>
@@ -92,14 +92,13 @@
                                             </connections>
                                         </button>
                                         <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-j3-UgO">
-                                            <rect key="frame" x="16" y="89" width="115" height="40"/>
-                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <rect key="frame" x="16" y="86.5" width="115" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="115" id="1F3-tc-hOO"/>
                                                 <constraint firstAttribute="height" constant="40" id="VKk-8k-OI6"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" red="0.062745098039215685" green="0.10980392156862745" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="DECLINE"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -108,19 +107,22 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                     <integer key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" red="0.062745098040000002" green="0.10980392160000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Xqi-j3-UgO" secondAttribute="bottom" constant="13" id="6U2-5f-Dcx"/>
                                         <constraint firstItem="uVI-g9-fGi" firstAttribute="leading" secondItem="INo-QG-OUE" secondAttribute="leading" constant="18" id="Bso-dt-VMz"/>
                                         <constraint firstItem="fke-ze-xM5" firstAttribute="leading" secondItem="INo-QG-OUE" secondAttribute="leading" constant="18" id="CHl-BW-XyV"/>
                                         <constraint firstAttribute="trailing" secondItem="uVI-g9-fGi" secondAttribute="trailing" constant="18" id="LHv-y2-QfQ"/>
                                         <constraint firstAttribute="trailing" secondItem="fke-ze-xM5" secondAttribute="trailing" constant="18" id="QgW-Jq-T5N"/>
                                         <constraint firstItem="Xqi-j3-UgO" firstAttribute="leading" secondItem="INo-QG-OUE" secondAttribute="leading" constant="16" id="XmA-Tg-Jpz"/>
-                                        <constraint firstItem="Xqi-j3-UgO" firstAttribute="top" secondItem="uVI-g9-fGi" secondAttribute="bottom" constant="15" id="aAT-9t-KZA"/>
                                         <constraint firstItem="X1j-uH-JbI" firstAttribute="leading" secondItem="Xqi-j3-UgO" secondAttribute="trailing" constant="12" id="c5z-hH-eE4"/>
+                                        <constraint firstAttribute="bottom" secondItem="X1j-uH-JbI" secondAttribute="bottom" constant="13" id="hho-ye-fxQ"/>
                                         <constraint firstItem="fke-ze-xM5" firstAttribute="top" secondItem="INo-QG-OUE" secondAttribute="top" constant="12" id="lC3-sH-cOZ"/>
-                                        <constraint firstItem="X1j-uH-JbI" firstAttribute="top" secondItem="uVI-g9-fGi" secondAttribute="bottom" constant="15" id="rd8-J2-Q9W"/>
                                         <constraint firstItem="uVI-g9-fGi" firstAttribute="top" secondItem="fke-ze-xM5" secondAttribute="bottom" constant="5" id="vPb-xF-FDv"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -2106,7 +2108,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
             <objects>
                 <tableViewController id="aPb-nk-2BG" customClass="SetDurationOptionTableViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fun-QG-cWj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="469"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -2126,14 +2128,13 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The receiver can only launch the webpage from the in-app browser. The receiver will not be able to see the password." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1T-hq-BCd">
-                                                    <rect key="frame" x="17" y="50" width="341" height="54"/>
+                                                    <rect key="frame" x="17" y="50" width="308" height="54"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.52549019607843139" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="b1T-hq-BCd" secondAttribute="trailing" constant="17" id="7Ib-Bw-Yz5"/>
                                                 <constraint firstItem="b1T-hq-BCd" firstAttribute="leading" secondItem="ZQp-FM-d4H" secondAttribute="leading" constant="17" id="GAt-a1-ufK"/>
                                                 <constraint firstItem="qCl-j0-w3f" firstAttribute="leading" secondItem="ZQp-FM-d4H" secondAttribute="leading" constant="17" id="e5l-TS-lGe"/>
                                                 <constraint firstItem="qCl-j0-w3f" firstAttribute="top" secondItem="ZQp-FM-d4H" secondAttribute="top" constant="15" id="gS7-9K-S9R"/>
@@ -2141,6 +2142,9 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                                 <constraint firstAttribute="trailing" secondItem="qCl-j0-w3f" secondAttribute="trailing" constant="14" id="tVe-VW-onh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="b1T-hq-BCd" secondAttribute="trailing" constant="50" id="Cg7-dp-Sa8"/>
+                                        </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5Qu-1i-Zha">
                                         <rect key="frame" x="0.0" y="120" width="375" height="120"/>
@@ -2150,18 +2154,20 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires in 30 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNb-xk-GzC">
-                                                    <rect key="frame" x="17" y="11.5" width="344" height="21"/>
+                                                    <rect key="frame" x="17" y="15" width="308" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="vNb-xk-GzC" secondAttribute="trailing" constant="14" id="5Oe-Kd-L3d"/>
                                                 <constraint firstItem="vNb-xk-GzC" firstAttribute="leading" secondItem="lG8-uw-2Nr" secondAttribute="leading" constant="17" id="6sI-kp-HHR"/>
-                                                <constraint firstItem="vNb-xk-GzC" firstAttribute="centerY" secondItem="lG8-uw-2Nr" secondAttribute="centerY" id="lf2-1n-qYV"/>
+                                                <constraint firstItem="vNb-xk-GzC" firstAttribute="top" secondItem="lG8-uw-2Nr" secondAttribute="top" constant="15" id="UTY-p1-Olh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vNb-xk-GzC" secondAttribute="trailing" constant="50" id="IBF-LC-FCQ"/>
+                                        </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="H8w-hv-Idj">
                                         <rect key="frame" x="0.0" y="240" width="375" height="120"/>
@@ -2177,7 +2183,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The receiver will only have access to your login in their Beam account for 30 days." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oS-y9-Ss4">
-                                                    <rect key="frame" x="17" y="56" width="341" height="36"/>
+                                                    <rect key="frame" x="17" y="56" width="308" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.50196078430000002" green="0.52549019610000003" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2186,12 +2192,14 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             <constraints>
                                                 <constraint firstItem="0HP-3H-RvL" firstAttribute="top" secondItem="Eek-tS-8bd" secondAttribute="top" constant="14" id="4xk-fF-0If"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0HP-3H-RvL" secondAttribute="trailing" constant="14" id="W37-m3-3sK"/>
-                                                <constraint firstAttribute="trailing" secondItem="6oS-y9-Ss4" secondAttribute="trailing" constant="17" id="akh-cl-keD"/>
                                                 <constraint firstItem="0HP-3H-RvL" firstAttribute="leading" secondItem="Eek-tS-8bd" secondAttribute="leading" constant="17" id="dDP-ER-Cbb"/>
                                                 <constraint firstItem="6oS-y9-Ss4" firstAttribute="top" secondItem="Eek-tS-8bd" secondAttribute="topMargin" constant="45" id="p2H-61-so3"/>
                                                 <constraint firstItem="6oS-y9-Ss4" firstAttribute="leading" secondItem="Eek-tS-8bd" secondAttribute="leading" constant="17" id="v74-D9-KOf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="6oS-y9-Ss4" secondAttribute="trailing" constant="50" id="eNs-3l-k6i"/>
+                                        </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MYp-SB-V50">
                                         <rect key="frame" x="0.0" y="360" width="375" height="120"/>
@@ -2201,18 +2209,20 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WO-i8-CaQ">
-                                                    <rect key="frame" x="17" y="11.5" width="344" height="21"/>
+                                                    <rect key="frame" x="17" y="15" width="308" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7WO-i8-CaQ" firstAttribute="centerY" secondItem="VQJ-DJ-PLJ" secondAttribute="centerY" id="C9i-2T-UAH"/>
-                                                <constraint firstAttribute="trailing" secondItem="7WO-i8-CaQ" secondAttribute="trailing" constant="14" id="EbV-LH-1Cy"/>
+                                                <constraint firstItem="7WO-i8-CaQ" firstAttribute="top" secondItem="VQJ-DJ-PLJ" secondAttribute="top" constant="15" id="8rl-5a-TIq"/>
                                                 <constraint firstItem="7WO-i8-CaQ" firstAttribute="leading" secondItem="VQJ-DJ-PLJ" secondAttribute="leading" constant="17" id="dje-7B-Sm9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7WO-i8-CaQ" secondAttribute="trailing" constant="50" id="mGe-Q5-NS2"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -2225,7 +2235,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wtg-uS-Rjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="2431"/>
+            <point key="canvasLocation" x="2784.8000000000002" y="2430.1349325337333"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pEl-2r-hiu">
@@ -2866,7 +2876,7 @@ We recommend that you communicate the secret phrase to them verbally.</string>
         <image name="success1x" width="150" height="143"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l6H-PP-2us"/>
+        <segue reference="g8c-CH-siA"/>
         <segue reference="a9c-fu-0GZ"/>
         <segue reference="f0v-YF-ckE"/>
     </inferredMetricsTieBreakers>

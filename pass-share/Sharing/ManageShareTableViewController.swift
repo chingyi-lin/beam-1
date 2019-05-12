@@ -52,7 +52,7 @@ class ManageShareTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ManageShareTableCell", for: indexPath) as! ManageShareTableCell
-        // Configure the cell
+        // Configure the cell contents
         let contact = RealmAPI.shared.readContactByEmail(filterBy: accessArr[indexPath.row].grantToEmail)
         
         cell.receiverName.text = contact.name

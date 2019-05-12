@@ -16,10 +16,19 @@ class SetDurationOptionTableViewController: UITableViewController {
     
     var setDurationOptionTableViewControllerDelegate: SetDurationOptionTableViewControllerDelegate!
     
+    
     private var oneTimeCellExpanded: Bool = false
     private var thirtyDaysCellExpanded: Bool = false
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.selectionStyle =  UITableViewCell.SelectionStyle.none
+        cell.tintColor = UIColor(red:0.00, green:0.72, blue:0.89, alpha:1.0)
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+        
         if (indexPath.row == 0 ) {
             thirtyDaysCellExpanded = false
             if oneTimeCellExpanded {
@@ -27,8 +36,6 @@ class SetDurationOptionTableViewController: UITableViewController {
             } else {
                 oneTimeCellExpanded = true
             }
-            tableView.beginUpdates()
-            tableView.endUpdates()
         }
         if (indexPath.row == 2) {
             oneTimeCellExpanded = false
@@ -37,12 +44,27 @@ class SetDurationOptionTableViewController: UITableViewController {
             } else {
                 thirtyDaysCellExpanded = true
             }
-            tableView.beginUpdates()
-            tableView.endUpdates()
         }
+        tableView.beginUpdates()
+        tableView.endUpdates()
         print("select row at index: \(indexPath.row)")
         setDurationOptionTableViewControllerDelegate.rowDidSelect(indexPath.row)
         
+    }
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        // Invoked so we can prepare for a change in selection.
+        // Remove previous selection, if any.
+        if let selectedIndex = self.tableView.indexPathForSelectedRow {
+            // Note: Programmatically deslecting does NOT invoke tableView(:didSelectRowAt:), so no risk of infinite loop.
+            self.tableView.deselectRow(at: selectedIndex, animated: false)
+            // Remove the visual selection indication.
+            self.tableView.cellForRow(at: selectedIndex)?.accessoryType = .none
+            oneTimeCellExpanded = false
+            thirtyDaysCellExpanded = false
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+        return indexPath
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.row == 0 ) {
