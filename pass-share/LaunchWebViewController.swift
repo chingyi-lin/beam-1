@@ -15,6 +15,9 @@ class LaunchWebViewController: UIViewController, WKNavigationDelegate {
     var progressView: UIProgressView!
     var webView: WKWebView!
     
+    @IBOutlet weak var backBtn: UIBarButtonItem!
+    @IBOutlet weak var forwardBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let config = WKWebViewConfiguration()
@@ -32,6 +35,9 @@ class LaunchWebViewController: UIViewController, WKNavigationDelegate {
         webView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
         
+        backBtn.isEnabled = false
+        forwardBtn.isEnabled = false
+        
         //add progresbar to navigation bar
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
@@ -45,25 +51,40 @@ class LaunchWebViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: urlString)!
         
         webView.load(URLRequest(url: url))
-
-        // Adding refresh button
-        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
-        toolbarItems = [refresh]
         navigationController?.isToolbarHidden = false
     }
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         //remove observers
         webView.removeObserver(self, forKeyPath: "estimatedProgress")
         //remove progress bar from navigation bar
         progressView.removeFromSuperview()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isToolbarHidden = true
     }
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             self.progressView.progress = Float(webView.estimatedProgress)
         }
     }
+    
+    @IBAction func goForward(_ sender: Any) {
+        webView.goForward()
+    }
+    
+    @IBAction func goBackward(_ sender: Any) {
+        webView.goBack()
+    }
+    
+    @IBAction func refresh(_ sender: Any) {
+        webView.reload()
+    }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = webView.title
+        backBtn.isEnabled = webView.canGoBack
+        forwardBtn.isEnabled = webView.canGoForward
         hideProgressView()
     }
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {

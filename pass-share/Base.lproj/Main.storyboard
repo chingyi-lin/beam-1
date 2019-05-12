@@ -723,7 +723,7 @@ Don’t know your phrase? Reach out to the sender!</string>
             </objects>
             <point key="canvasLocation" x="-3402.4000000000001" y="1797.7511244377813"/>
         </scene>
-        <!--Site-->
+        <!--Login View Controller-->
         <scene sceneID="U45-Fe-pRv">
             <objects>
                 <viewController id="FcO-TW-6B3" customClass="LoginViewController" customModule="pass_share" customModuleProvider="target" sceneMemberID="viewController">
@@ -812,7 +812,7 @@ Don’t know your phrase? Reach out to the sender!</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qT6-qI-gNi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Site" id="waM-HL-JVo">
+                    <navigationItem key="navigationItem" id="waM-HL-JVo">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="zY7-tB-Zez">
                             <connections>
                                 <action selector="back:" destination="FcO-TW-6B3" id="wrI-y2-3dR"/>
@@ -2878,6 +2878,31 @@ We recommend that you communicate the secret phrase to them verbally.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lYf-cU-wQV"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="back" image="go-back" id="GgH-bH-Wyb">
+                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="goBackward:" destination="uI5-5g-1cH" id="JBS-iQ-IxT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="forward" image="go-forward" width="32" id="on8-vb-tUG">
+                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="goForward:" destination="uI5-5g-1cH" id="ZFD-rj-DLW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="refresh" id="sja-W9-GMC">
+                            <color key="tintColor" red="0.0" green="0.72156862749999995" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="refresh:" destination="uI5-5g-1cH" id="4Ry-90-eQG"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backBtn" destination="GgH-bH-Wyb" id="5QI-kH-sar"/>
+                        <outlet property="forwardBtn" destination="on8-vb-tUG" id="qoV-Lh-qvb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIj-Bp-O81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2927,6 +2952,8 @@ We recommend that you communicate the secret phrase to them verbally.</string>
         <image name="add_20" width="25" height="25"/>
         <image name="earth_150" width="150" height="143"/>
         <image name="friends" width="25" height="25"/>
+        <image name="go-back" width="24" height="20.5"/>
+        <image name="go-forward" width="24" height="22.5"/>
         <image name="home_150" width="150" height="153.5"/>
         <image name="lock" width="25" height="25"/>
         <image name="profile_pic_blank_large_50" width="55" height="55"/>
